@@ -1,0 +1,180 @@
+﻿
+/*头部样式*/
+.nav1{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 40px 0;
+}
+.nav_left{
+	float: left;
+}
+.nav_center{
+	float: left;
+	margin: 0 35px;
+}
+.nav_right{
+	float: right;
+}
+.juxing{
+	float: left;
+	background: #db2c28;
+	width: 100px;
+	height: 90px;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+.juxing i{
+	display: block;
+	font-size: 38px;
+	color: #fff;
+}
+.juxing i{color: #fff;}
+.juxing p{
+	font-size: 16px;
+	color: #fff;
+}
+.pic{margin-left: 30px;}
+
+
+
+
+.dl_navbox{
+	width: 100%;
+	background: url(../images/dl_nav.png) top center no-repeat;
+}
+.dl_nav{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.dl_nav ul li{
+	padding:0 36px;
+	float: left;
+
+}
+.dl_nav ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	color: #fff;
+	line-height: 60px;
+	text-align: center;
+}
+.dl_bigbox{
+	width: 100%;
+	padding: 50px 0;
+	background: url(../images/dl_bg.png) center no-repeat;
+}
+.dl_box{
+	width: 1200px;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.36);
+}
+.dl{
+	padding-top: 40px;
+}
+.dl_img{
+	float: left;
+	width: 600px;
+	padding-left: 50px;
+}
+.dl_title{
+	float: left;
+	margin-left: 120px;
+	position: relative;
+}
+.dl_title:after{
+	content: '';
+	width: 96px;
+	height: 2px;
+	background: #db2c28;
+	position: absolute;
+	left: 20px;
+	top: 64px;
+}
+.dl_title:before{
+	content: '';
+	width: 96px;
+	height: 2px;
+	background: #db2c28;
+	position: absolute;
+	right: 20px;
+	top: 64px;
+}
+.dl_title h4{
+	font-size: 25px;
+	color: #db2c28;
+	text-align: center;
+	letter-spacing:8px;
+	margin-top: 50px;
+}
+
+.hengxian{
+	width: 1px;
+	height: 415px;
+	background: #bcbcbc;
+	margin: 0 auto;
+}
+.dl_input{
+	position: relative;
+}
+.dl_input input{
+	display: block;
+	width: 360px;
+	height: 50px;
+	background: #e5e5e5;
+	border: none;
+	border-radius: 5px;
+	padding-left: 50px;
+	font-size: 16px;
+	color: #333333;
+	margin-bottom: 20px;
+}
+.ziti{
+	position: absolute;
+	left: 15px;
+	top: 10px;
+}
+.ziti i{
+	font-size: 22px;
+	color: #868686;
+}
+.dl_btn{
+	width: 360px;
+	height: 50px;
+	background: #db2c28;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	color: #fff;
+}
+.wx{
+	cursor: pointer;
+	float: left;
+	margin-top: 20px;
+}
+.wx i{
+	font-size: 22px;
+	color: #51bc79;
+}
+.wx a{
+	font-size: 14px;
+	color: #333333;
+	padding-left: 10px;
+}
+.mm{
+	float: right;
+	margin-top: 25px;
+}
+.mm span{
+	font-size: 14px;
+	color: #333333;	
+}
+.mm a{
+	font-size: 14px;
+	color: #333333;	
+	padding-left: 20px;
+}

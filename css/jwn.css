@@ -1,0 +1,139 @@
+﻿
+.zg_box{
+	width:100%;
+	background: url(../images/banner1.png) top center no-repeat;
+}
+.zg_info{
+	width:1200px;
+	margin:0 auto;
+}
+.zg_top{
+	height:480px;
+	padding-top: 40px;
+}
+.nav_left{
+	float: left;
+}
+.nav_center{
+	float: left;
+}
+.nav_righter{
+	float: right;
+}
+.nav_righter i{
+	font-size: 20px;
+	color: #db2c28;
+}
+.nav_righter a{
+	font-size: 14px;
+	color: #db2c28;
+}
+
+
+.rh_list ul li{
+	overflow: hidden;
+	line-height: 30px;
+	border-bottom: 1px solid #cfcfcf;
+	padding: 15px 0;
+	margin: 0 15px;
+	cursor: pointer;
+	color: #333333;
+}
+.rh_list ul li p{
+	float: left;
+	font-size: 16px;
+	border-left: 3px solid #bfbfbf;
+	padding-left: 20px;
+}
+.rh_list ul li i{
+	float: right;
+}
+.jwn_box{margin-bottom: 30px; cursor: pointer;}
+.jwn_img{
+	float: left;
+}
+.jwn_text{
+	float: left;
+	margin-left: 20px;
+}
+.jwn_text h4{
+	font-size: 16px;
+	color: #333333;
+	font-weight: bold;
+}
+.jwn_text p{
+	width: 565px;
+	font-size: 14px;
+	color: #474747;
+	line-height: 24px;
+	margin-top: 20px;
+	height: 110px;
+	overflow: hidden;
+}
+.jwn_text span{
+	float: left;
+	font-size: 14px;
+	color: #666666;
+	margin-top: 20px;
+}
+.jwn_text i{
+	float: right;
+	font-style: normal;
+	font-size: 14px;
+	color: #666666;
+	margin-top: 20px;
+}
+.jwn_list{
+	width: 105%;
+	margin: 45px auto 0;
+}
+.jwn_list ul li{
+	float: left;
+	margin-right: 20px;
+}
+.jwn_list ul li a{
+	font-size: 14px;
+	color: #666666;
+	padding: 5px 10px;
+	border: 1px solid #cccccc;
+}
+.jwn_list ul li:hover a{
+	color: #fff;
+	background: #db2c28;	
+	padding: 5px 10px;
+	text-decoration: none;
+	border: 1px solid #db2c28;
+}
+.jwn_list ul li.active a{
+	color: #fff;
+	background: #db2c28;
+	border: 1px solid #db2c28;
+}
+.nav.nav-pills>li.active>a{
+    background-color: #fff;
+	color:#db2c28;
+}
+.nav.nav-pills>li>a,
+.nav.nav-tabs>li>a{
+	color:#000;
+}
+.nav-tabs>li{
+	margin-bottom: -2px;
+}
+.nav.nav-tabs>li>a{
+	font-size: 16px
+}
+.nav.nav-tabs{
+	border-bottom:solid 2px #db2c28;
+}
+.nav-pills .active{
+	border-bottom: 3px solid #db2c28;
+}
+.nav.nav-tabs>li.active>a{
+	color:#db2c28;
+	border: 2px solid #db2c28;
+	border-bottom:2px solid #fff;
+}
+.my_ghcontentleft{
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.26);
+}

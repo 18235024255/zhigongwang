@@ -1,0 +1,373 @@
+.nav_box{
+	width: 100%;
+	background: url(../images/top_banner.jpg) top center no-repeat;
+}
+.nav1{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 40px 0;
+}
+.nav_left{
+	float: left;
+}
+.tubiao{
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.tubiao i{
+	display: block;
+	font-size: 35px;
+	color: #f2a40d;
+}
+
+.nav_center{
+	float: left;
+}
+.nav_right{
+	float: right;
+}
+.juxing{
+	float: left;
+	background: #db2c28;
+	width: 100px;
+	height: 90px;
+	border-radius: 5px;
+	text-align: center;
+}
+.juxing i{
+	display: block;
+	font-size: 38px;
+	color: #fff;
+}
+.juxing i{color: #fff;}
+.juxing p{
+	font-size: 16px;
+	color: #fff;
+}
+
+
+.wechat-mask {
+	position: absolute;
+	right: 75px;
+	top: 155px;
+}
+.wechat-mask .jq{
+	width: 520px;
+	padding: 15px 20px;
+	background: #fff;
+	box-shadow: 0 0 7px rgba(0,0,0,0.36);
+	position: absolute;
+	top:0;
+	right: 0;
+}
+.showhd{
+	display: block !important;
+}
+.showmask2,.showmask1{
+	z-index: 50;
+	display: none;
+}
+.content,.xiala,.top-arrow2,.top-arrow2ccc,.top-arrow1,.top-arrow1ccc{
+	display: none;
+}
+.top-arrow2{
+	width: 25px;
+	height: 25px;
+	background-color: white;
+	box-shadow: -2px -2px 7px rgba(0,0,0,0.36);
+	position: absolute;
+	right: 170px;
+	top: -13px;
+	transform: rotate(45deg);
+	z-index: 5;
+}
+.top-arrow2ccc{
+	width: 25px;
+	height: 25px;
+	transform: rotate(45deg);
+	position: absolute;
+	right: 170px;
+	top: -12px;
+	background-color: #fff;
+	z-index: 60;
+}
+.top-arrow1{
+	width: 25px;
+	height: 25px;
+	background-color: white;
+	box-shadow: -2px -2px 7px rgba(0,0,0,0.36);
+	position: absolute;
+	right: 298px;
+	top: -13px;
+	transform: rotate(45deg);
+	z-index: 5;
+}
+.top-arrow1ccc{
+	width: 25px;
+	height: 25px;
+	transform: rotate(45deg);
+	position: absolute;
+	right: 298px;
+	top: -12px;
+	background-color: #fff;
+	z-index: 60;
+}
+.wechat-mask .jq_list{
+	border-bottom: 1px solid #d7d7d7;
+	padding: 10px 0;
+}
+.wechat-mask .jq_list ul{margin: 0;padding: 0;}
+.wechat-mask .jq_list ul li{
+	float: left;
+	line-height: 35px;
+	margin-right: 5px;
+	text-align: center;
+}
+.wechat-mask .jq_list ul li a{
+	font-size: 14px;
+	color: #333333;
+	padding: 5px 10px;
+}
+.wechat-mask .jq_list ul li.active a{background: #db2c28;color: #fff;padding: 5px 10px;}
+.wechat-mask .jq_list ul li a:hover{background: #db2c28;color: #fff;padding: 5px 10px;}
+.wechat-mask .jq_list ul li:first-child a{background: none;color: #db2c28;font-weight: bold;}
+
+
+
+
+.pic{margin-left: 30px;}
+.list_box{
+	width: 1200px;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.7);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin-top: 135px;
+}
+.list{
+	margin: 0 auto;
+}
+.list ul{margin: 0; padding: 0;}
+.list ul li{
+	overflow: hidden;
+	float: left;
+	width: 90px;
+	text-align: center;
+	margin-right: 30px;
+}
+.list ul li a{
+	font-size: 15px;
+	color: #666666;
+	line-height: 34px;
+	margin-left: 5px;
+}
+.list ul li i{
+	font-size: 16px;
+	line-height: 34px;
+}
+.list ul li i{color: #666666;}
+.list ul li a{color: #666666;}
+.list ul li:hover{
+	background: #db2c28;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.list ul li:hover a{color: #fff;}
+.list ul li:hover i{color: #fff;}
+.list ul li.active{
+	background: #db2c28;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.list ul li.active i{color: #fff;}
+.list ul li.active a{color: #fff;}
+
+.rh_title h4{
+	font-size: 28px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	background: #db2c28;
+	line-height: 80px;
+}
+.rh_list ul li{
+	overflow: hidden;
+	line-height: 30px;
+	border-bottom: 1px solid #cfcfcf;
+	padding: 15px 0;
+	margin: 0 15px;
+}
+.rh_list ul li p{
+	float: left;
+	font-size: 16px;
+	color: #333333;
+	border-left: 3px solid #bfbfbf;
+	padding-left: 20px;
+}
+.rh_list ul li i{
+	float: right;
+}
+.jianjie_title h4{
+	font-size: 16px;
+	color: #121212;
+	font-weight: bold;
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 10px;
+}
+.jianjie_title p.one{
+	margin-top: 20px;
+}
+.jianjie_title p{
+	text-indent: 37px;
+	font-size: 16px;
+	color: #333333;
+	line-height: 40px;
+}
+.online{
+	width: 80px;
+	height: 2px;
+	background: #db2c28;
+	margin-top: -2px;
+}
+.my_gh{
+	background: #fff;
+	padding: 15px;
+}
+.my_ghtitleleft{
+	float: left;
+}
+.my_ghtitleleft i{
+	font-size: 22px;
+	color: #db2c28;
+}
+.my_ghtitleleft a{
+	font-size: 14px;
+	color: #333333;
+}
+.my_ghtitleleft span{
+	font-size: 14px;
+	color: #db2c28;
+	font-weight: bold;
+}
+.my_ghtitleright{
+	float: right;
+}
+.my_ghtitleright a{
+	font-size: 14px;
+	color: #db2c28;
+	font-weight: bold;
+}
+.sch_left{
+	width: 260px;
+	height: 60px;
+	background-color: #db2c28;
+}
+.sch_left h4{
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	line-height: 60px;
+}
+.sch{
+	margin-top: -75px;
+}
+.sch_right{
+	float: left;
+	margin: -20px 15px 20px 60px;
+}
+
+.my_ghcontent{margin-top: 20px;}
+.my_ghcontentleft{
+	float: left;
+	width: 285px;
+	background: #fff;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.26);
+	padding-bottom: 20px;
+}
+
+
+
+
+.btop{
+	margin-bottom: 10px;
+	margin-top: -10px;
+}
+.dizhi a{
+	font-size:14px;
+	color: #fff;
+}
+.dizhi span{
+	font-size:14px;
+	color: #fff;
+	margin-left: 15px;
+}
+.work{margin: 40px auto 0;}
+.work_content h4{
+	font-size: 16px;
+	color: #121212;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.work_content span{
+	display: block;
+	font-size: 16px;
+	color: #333333;
+	width: 785px;
+	line-height: 29px;
+	margin-top: 10px;
+}
+.work_content i{
+	display: block;
+	font-size: 16px;
+	color: #333333;
+	font-style: normal;
+	line-height: 29px;
+}
+.work_content p{
+	font-size: 16px;
+	color: #333333;
+	line-height: 36px;
+}
+.dongtai{margin: 35px auto 0;}
+
+
+.jwn_box{border-bottom: 1px dashed #cccccc;padding: 15px 0 0 0;}
+.jwn_img{
+	float: left;
+}
+.wid92{
+	width: 92%;
+}
+.jwn_text{
+	float: left;
+	margin-left: 30px;
+}
+.jwn_text h4{
+	font-size: 16px;
+	color: #333333;
+	font-weight: bold;
+}
+.jwn_text p{
+	width: 565px;
+	height: 95px;
+	font-size: 14px;
+	color: #474747;
+	line-height: 24px;
+	margin-top: 20px;
+	text-overflow: ellipsis;
+}
+.jwn_text span{
+	float:left;
+	margin-right: 6px;
+	margin-top: 25px;
+	font-size: 14px;
+	color: #666666;
+}
+.jwn_text i{
+	font-style: normal;
+	float: right;
+	margin-top: 25px;
+}

@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8"/>
+	<link rel="icon" href="images/picture.png" type="image/x-icon"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="css/denglu.css" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<!--全局样式-->
+	<link rel="stylesheet" href="css/style.css">
+	<title>阳泉市总工会</title>
+</head>
+<body>
+<div id="wrap">
+
+
+	<div class="nav1">
+		<div class="nav_left">
+			<a href=""><img src="images/logo.png"></a>
+		</div>
+		<div class="nav_center clearfix">
+			<div class="tubiao">
+				<p>{{nowTime}}</p>
+				<p>{{nowDay}}</p>
+			</div>
+			<div class="tianqi">
+				<iframe width="350" scrolling="no" height="60" frameborder="0" allowtransparency="true"
+						src="//i.tianqi.com/index.php?c=code&id=12&icon=1&num=5&site=12"></iframe>
+			</div>
+		</div>
+		<!--微信矩阵开始-->
+		<div class="nav_right clearfix" >
+			<!--网站集群-->
+			<div class="juxing" id="showmask1">
+				<i class="icon iconfont icon-pingtai"  style="margin-top: 5px"></i>
+				<p>网站集群</p>
+
+				<div class="top-arrow1"></div>
+				<div class="top-arrow1ccc"></div>
+			</div>
+			<div class="wechat-mask clearfix">
+				<div class="jq showmask1">
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">市</a></li>
+							<li><a href="">阳泉</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">区/县</a></li>
+							<li><a href="">阳泉城区</a></li>
+							<li><a href="">阳泉矿区</a></li>
+							<li><a href="">阳泉郊区</a></li>
+							<li><a href="">平定县</a></li>
+							<li><a href="">盂县</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<!--微信矩阵-->
+			<div class="juxing pic" id="showmask2" >
+				<i class="icon iconfont icon-weixin2" style="margin-top: 5px"></i>
+				<p>微信矩阵</p>
+				<div class="top-arrow2"></div>
+				<div class="top-arrow2ccc"></div>
+			</div>
+			<div class="wechat-mask clearfix">
+
+
+				<div class="jq showmask2">
+
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">市</a></li>
+							<li><a href="">阳泉</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">区/县</a></li>
+							<li><a href="">阳泉城区</a></li>
+							<li><a href="">阳泉矿区</a></li>
+							<li><a href="">阳泉郊区</a></li>
+							<li><a href="">平定县</a></li>
+							<li><a href="">盂县</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">产业工会</a></li>
+							<li><a href="">非公企业工会</a></li>
+							<li><a href="">财贸轻纺烟草工会</a></li>
+							<li><a href="">农林水工会</a></li>
+							<li><a href="">省煤炭工会</a></li>
+							<li><a href="">机冶建材工会</a></li>
+							<li><a href="">省直机关工会工委</a></li>
+							<li><a href="">省监狱工会</a></li>
+							<li><a href="">信息业工会</a></li>
+							<li><a href="">建筑业工会</a></li>
+							<li><a href="">直属基层工委</a></li>
+							<li><a href="">省公路运输工委</a></li>
+							<li><a href="">电业工会</a></li>
+							<li><a href="">教科文卫体工会</a></li>
+							<li><a href="">太铁工会</a></li>
+							<li><a href="">金融工委</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--微信矩阵结束-->
+	</div>
+	<div class="dl_navbox">
+		<div class="dl_nav">
+			<ul class="clearfix">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="zzjg.html">组织机构</a></li>
+				<li><a href="xwzx.html">新闻资讯</a></li>
+				<li><a href="zg_index.html">服务大厅</a></li>
+				<li><a href="ztzx.html">专题中心</a></li>
+				<li><a href="jnts.html">技能提升</a></li>
+				<li><a href="data.html">数据中心</a></li>
+				<li><a href="zlzx.html">资料中心</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="dl_bigbox">
+		<div class="dl_box">
+			<div class="dl clearfix">
+				<div class="dl_img">
+					<a href=""><img src="images/dl_img.png"></a>
+				</div>
+				<div class="dl_title">
+					<h4>登录</h4>
+
+					<div class="dl_input" style="margin-top: 50px;">
+						<input type="text" placeholder="用户名"  v-model="username"
+							   onkeyup="this.value=this.value.replace(/\D/g,'')"
+							   onafterpaste="this.value=this.value.replace(/\D/g,'')"/>
+						<div class="ziti">
+							<i class="icon iconfont icon-yonghu"></i>
+						</div>
+					</div>
+
+					<div class="dl_input">
+						<input type="password" placeholder="密码" v-model="password" @keyup.enter="login"/>
+						<div class="ziti">
+							<i class="icon iconfont icon-mima"></i>
+						</div>
+					</div>
+
+					<button class="dl_btn" @click="login">登录</button>
+					<div class="dl_more clearfix">
+                        <div class="modal fade" id="myModal" tabindexsubstr="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	                        <div class="modal-dialog" style="height: 100%; overflow: hidden;margin-top: 180px">
+		                        <div class="modal-content" >
+			                        <div class="modal-header">
+
+				                      <div class="tishi_title clearfix">
+					                      <span>温馨提示</span>
+					                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size: 30px">
+						                      &times;
+					                      </button>
+				                      </div>
+		                              <div class="tishi">
+                                         <div class="tishi_box">
+			                                <div class="mm_cz">
+				                                <i class="icon iconfont icon-zhuyi"></i>
+				                                <span></span>
+			                                </div>
+			                                <div class="dl_anniu" style="margin-bottom: 55px;text-align: center;" >
+				                                <button class="mLogin" @click="goToSer('zhuce.html')">立即注册</button>
+			                                </div>
+		                                 </div>
+	                                  </div>
+			                        </div>
+
+		                        </div>
+	                        </div>
+                        </div>
+
+
+						<div class="mm">
+							<a href="zhmm.html" target="_blank">忘记密码？</a>
+							<a href="zhuce.html" target="_blank">立即注册</a>
+						</div>
+					</div>
+				</div>
+				<div class="hengxian"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="zg_bottom" style="border-top:2px solid #db2c28;background-color: #d9d9d9;padding: 20px;">
+		<div style="width:1200px;margin:30px auto;text-align:center;">
+			<div>地址：山西省阳泉市桃南东路192号   电话：2022724</div>
+			<div>E--mail:szghwgb@163.com</div>
+			<div>版权所有：© 阳泉市总工会 版权所有</div>
+			<div>备案：晋ICP备13007903-1</div>
+			<div class="copy_img">
+				<a href="javascript:;"><img src="images/footer_img.png"></a>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+
+
+		/*微信矩阵 网站集群*/
+        $('#showmask2').mouseenter(function () {
+            $('.showmask2').show();
+            $('.top-arrow2').show()
+            $('.top-arrow2ccc').show()
+            $('.showmask1').hide()
+            $('.top-arrow1').hide()
+            $('.top-arrow1ccc').hide()
+
+        });
+        $('.showmask2').mouseleave(function () {
+            $('.showmask2').hide()
+            $('.top-arrow2').hide()
+            $('.top-arrow2ccc').hide()
+        });
+        $('#showmask1').mouseenter(function () {
+            $('.showmask1').show()
+            $('.top-arrow1').show()
+            $('.top-arrow1ccc').show()
+            $('.showmask2').hide()
+            $('.top-arrow2').hide()
+            $('.top-arrow2ccc').hide()
+        });
+        $('.showmask1').mouseleave(function () {
+            $('.showmask1').hide()
+            $('.top-arrow1').hide()
+            $('.top-arrow1ccc').hide()
+        });
+
+        $('.hideMask').mouseover(function () {
+
+            $('.xiala').hide();
+            $('.content').hide()
+        })
+		$('.ceshi').click(function(){
+			$('.nologin-maskbox').css('display','block');
+			$('.nologin-mask').css('top','0px')
+
+		 })
+
+		$('.nologin-title i').click(function(){
+			$('.nologin-maskbox').hide();
+             $('.nologin-mask').css('top','-200px')
+
+             $('.nologin-maskbox').css('display','none');
+		 })
+		$('.nologin-close input').click(function(){
+			$('.nologin-maskbox').hide();
+             $('.nologin-mask').css('top','-200px')
+             $('.nologin-maskbox').css('display','none');
+
+
+         })
+
+
+
+
+    })
+</script>
+<script src="js/vue2.5.22.js"></script>
+<script src="js/usertoken.js"></script>
+<script>
+	var vm = new Vue({
+		el:'#wrap',
+		data:{
+            username:'',
+			password:'',
+            nowTime:'',
+            nowDay:''
+		},
+		methods:{
+
+			login(){
+                    var that = this
+				    if(that.username.length != 11){
+				    	 $('#myModal').modal();
+					     $('.mm_cz>span').html('请输入11位手机号码~~');
+						 $(".dl_anniu").hide();
+					}else if(!(/^1[345678]\d{9}$/.test(that.username))){
+                         $('#myModal').modal();
+					     $('.mm_cz>span').html('手机号格式不正确！');
+					     $(".dl_anniu").hide();
+					}else{
+
+                        $.ajax({
+                            url: unionUrl + "/sso/ssoUser/login/phone",
+
+                            data: {
+                                "phone": that.username,
+                                "password": that.password,
+                                "systemCode": 'S1003',
+                                "source":'3',
+                            },
+                            async:true,
+                            dataType: "json",
+                            success: function (result) {
+
+                                if(result.code == 0){
+                                    console.log(result)
+                                    var userId = result.data.token +'-'+
+										result.data.user.phone +'-'+
+										result.data.user.realName;
+
+
+									 localStorage.setItem('tok',userId);
+									 var str  = localStorage.getItem('tok');
+									 console.log(str);
+                                     // history.go(-1);
+									 window.open('index.html','_self')
+
+                                }else{
+
+
+									if(result.msg === '电话号码不存在！'){
+										// $('#myModal2').css('display','block')
+										$('#myModal').modal();
+					                    $('.mm_cz>span').html('您尚未注册！');
+					                    $(".dl_anniu").show();
+									}else{
+                                        $('#myModal').modal();
+					                    $('.mm_cz>span').html(result.msg);
+					                    $(".dl_anniu").hide();
+					                    that.password = ''
+
+									}
+                                }
+
+
+
+                            }
+                        })
+
+
+
+					}
+
+
+				},
+            goToSer(path){
+                window.open(path,'_self')
+            },
+		},
+		mounted(){
+
+            this.nowTime = nowTimeDay;
+            getDay();
+            this.nowDay = nowDay;
+		}
+	})
+</script>
+
+
+</html>

@@ -1,0 +1,3128 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阳泉市总工会</title>
+	<link rel="icon" href="images/picture.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/flyz.css">
+
+	<!--全局样式-->
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+
+		.sm_img img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+		}
+		.sc_tp{
+			width: 210px;
+			height: 240px;
+			position: relative;
+		}
+		.sm_img input{
+			opacity:0 ;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.my-fuwu{
+			transition: 1s;
+			display: none;
+			overflow: hidden;
+		}
+		.hei{
+			display: block;
+			transition: 1s;
+		}
+		.rotate{
+			transform: rotate(90deg);
+			transition: 1s;
+		}
+		.my-fuwu li p{
+			border-left: none !important;
+			margin-left: 30px;
+		}
+		.IDzheng-wrap{
+			position: absolute;
+			left: 109px;
+			top: 1px;
+			width: 236px;
+			height: 137px;
+			z-index: 5;
+			margin-left: 15px;
+		}
+		.IDzheng-wrap img {
+			width: 100%;
+			height: 100%;
+		}
+		.green{
+			color: green;
+		}
+		.jwn_box{
+			border-bottom: 1px dashed #cccccc;
+			padding: 15px 0;
+		}
+		.jwn_img{
+			float: left;
+			width: 250px;
+			height: 189px;
+		}
+		.jwn_img>img{
+			width: 100%;
+			height: 100%;
+		}
+		.jwn_text{
+			float: left;
+			margin-left: 20px;
+			width: 556px;
+		}
+		.jwn_text h4{
+			font-size: 16px;
+			color: #333333;
+			font-weight: bold;
+		}
+		.jwn_text p{
+			width: 565px;
+			font-size: 14px;
+			color: #474747;
+			line-height: 24px;
+			margin-top: 20px;
+		}
+		.jwn_text span{
+			float:left;
+			margin-right: 6px;
+			margin-top: 30px;
+			font-size: 14px;
+			color: #666666;
+			width: 200px;
+		}
+		.jwn_text i{
+			float: right;
+			font-style: normal;
+			font-size: 14px;
+			color: #666666;
+			margin-top: 30px;
+		}
+		.layer-button div{
+			width: 110px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			background: #cccccc;
+			border: none;
+			color: #000;
+			display: inline-block;
+			cursor: pointer;
+		}
+		.layer-button div.actived{
+			background: #db2c28;
+			color: #fff;
+		}
+		.rh_list li.active i {
+         color:#db2c28;
+		}
+		.same_box{
+			margin-bottom: 15px;
+		}
+		.dafubox{
+			height: 262px;
+			overflow: hidden;
+			overflow-y: auto;
+			margin-top: 15px;
+		}
+	</style>
+</head>
+<body>
+<div id="nameselect" v-cloak>
+	<div class="zg_box">
+		<div class="zg_info">
+			<div class="zg_top">
+				<div class="nav_left">
+					<a href="##"><img src="images/logo.png"></a>
+				</div>
+				<div class="tubiao">
+					<p>{{nowTime}}</p>
+					<p>{{nowDay}}</p>
+				</div>
+				<div class="nav_center clearfix">
+					<div class="tianqi">
+						<iframe width="350" scrolling="no" height="60" frameborder="0" allowtransparency="true"
+								src="//i.tianqi.com/index.php?c=code&id=12&icon=1&num=5&site=12"></iframe>
+					</div>
+				</div>
+				<div class="nav_righter" onclick="window.open('index.html','_self')">
+					<i class="icon iconfont icon--fanhuishouye"></i>
+					<a href="javascript:;">返回首页</a>
+				</div>
+			</div>
+			<!--选项卡区-->
+			<div class="my_gh clearfix">
+				<div class="my_ghtitle clearfix">
+					<div class="my_ghtitleleft">
+						<i class="icon iconfont icon-shouye"></i>
+						<a href="index.html">当前位置：首页></a>
+						<span>法律援助</span>
+					</div>
+					<div class="my_ghtitleright">
+						<a href="zg_index.html"> <返回服务大厅</a>
+					</div>
+				</div>
+
+				<div class="my_ghcontent  clearfix">
+
+					<div class="my_ghcontentleft">
+						<div class="rh_title">
+							<h4>法律援助</h4>
+						</div>
+						<div class="rh_list">
+							<ul>
+								<li class="securitySettings same">
+									<p class="bordred">法律咨询</p>
+									<i class="icon iconfont icon-jiaobiao" style="color: rgb(219, 44, 40);"></i>
+								</li>
+								<ul class="my-fuwu">
+									<li class="my-union">
+										<p>法律咨询申请</p>
+										<!-- <i class="icon iconfont icon-jiaobiao"></i> -->
+									</li>
+									<li class="my-transfer">
+										<p>我的咨询</p>
+										<!-- <i class="icon iconfont icon-jiaobiao"></i> -->
+
+									</li>
+								</ul>
+								<li class="personalinfo same">
+									<p>法律援助</p>
+									<i class="icon iconfont icon-jiaobiao"></i>
+								</li>
+                                <ul class="my-fuwu">
+									<li class="my-tiao">
+										<p>我要调解</p>
+										<!-- <i class="icon iconfont icon-jiaobiao"></i> -->
+									</li>
+									<li class="my-dai">
+										<p>我要代书</p>
+										<!-- <i class="icon iconfont icon-jiaobiao"></i> -->
+									</li>
+									<li class="my-zhong">
+										<p>我要仲裁</p>
+										<!-- <i class="icon iconfont icon-jiaobiao"></i> -->
+									</li>
+									<li class="my-su">
+										<p>我要诉讼</p>
+										<!-- <i class="icon iconfont icon-jiaobiao"></i> -->
+									</li>
+								</ul>
+								<li class="nameAttest">
+									<p>八大员快速通道</p>
+									<i class="icon iconfont icon-jiaobiao"></i>
+								</li>
+								<li class="ChairmanMailbox same">
+									<p>援助记录</p>
+									<i class="icon iconfont icon-jiaobiao"></i>
+								</li>
+								<ul class="my-fuwu">
+									<li class="my-over" @click="yuanOver()">
+										<p>已完成</p>
+										<!-- <i class="icon iconfont icon-jiaobiao"></i> -->
+									</li>
+									<li class="my-wei" @click="yuanWei()">
+										<p>未完成</p>
+										<!-- <i class="icon iconfont icon-jiaobiao"></i> -->
+
+									</li>
+								</ul>
+								<!-- 任务列表 -->
+								<li class="renwu_list same">
+									<p>任务列表</p>
+									<i class="icon iconfont icon-jiaobiao"></i>
+								</li>
+								<ul class="my-fuwu">
+									<li class="my-renwuover" @click="over()">
+										<p>已完成</p>
+										<!-- <i class="icon iconfont icon-jiaobiao"></i> -->
+									</li>
+									<li class="my-renwuwei" @click="wei()">
+										<p>未完成</p>
+										<!-- <i class="icon iconfont icon-jiaobiao"></i> -->
+
+									</li>
+								</ul>
+								<li class="Lawyerservice">
+									<p>律师入驻</p>
+									<i class="icon iconfont icon-jiaobiao"></i>
+								</li>
+								<li class="Myanswer">
+									<p>我来答</p>
+									<i class="icon iconfont icon-jiaobiao"></i>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="toggWrap clearfix" >
+						<!--法律咨询-->
+						<div class="my_personalinfo tab-togg on">
+							<div class="layer-button">
+								<div class="actived" @click="yuanzhutList()">援助案例</div>
+								<div style="margin-left: 15px;" @click="yuanList()">律师说法</div>
+							</div>
+							<div class="jwn_box clearfix" v-for="item in newsList"  @click="sendId(item.id)">
+								<div class="jwn_img">
+									<img v-else="" :src="item.pubPritureurl" width="250px"/>
+
+									<img v-if="item.pubPritureurl == '' " src="images/noPic.png" width="250px"/>
+									<img v-else-if="item.pubPritureurl == null " src="images/noPic.png" width="250px"/>
+
+								</div>
+								<div class="jwn_text">
+									<h4>{{item.pubTitle}}</h4>
+									<p v-html="item.pubContent">
+									</p>
+									<span>{{item.createTime}}</span>
+									<i>发布者：{{item.pubName}}</i>
+								</div>
+							</div>
+						</div>
+						<!--法律咨询申请-->
+						<div class="my-enterUnion tab-togg">
+							<div class="sq">
+								<div class="sq_list">
+									<h4>法律咨询申请</h4>
+								</div>
+								<form action="" method="">
+									<div class="sq_content">
+										<span><i>*</i>姓名：</span>
+										<input type="text" placeholder="请输入姓名" name="text" v-model="conName"/>
+									</div>
+									<div class="sq_content">
+										<span><i>*</i>咨询类别：</span>
+										<select class="st1" v-model="conType" @change="send($event)">
+											<option  v-for="item in zixunBox" :value="item.id">{{item.conName}}</option>
+										</select>
+									</div>
+									<div class="sq_content">
+										<span><i>*</i>咨询主题：</span>
+										<input type="text" placeholder="请输入主题" name="text" v-model="conTheme"/>
+									</div>
+									<div class="sq_content">
+										<span><i>*</i>咨询内容：</span>
+										<textarea placeholder="请输入咨询内容(最多500字)" v-model="conContent"></textarea>
+									</div>
+									<div class="sm_box clearfix" >
+										<div class="sm_text">
+											<span><i>*</i>上传照片：</span>
+										</div>
+										<div class="sm_img sc_tp">
+											<img src="images/greyheader.jpg"  id="idimg" />
+
+											<input class="stopClick" type="file" id="renxiang"  onchange="previewFile()"
+												   @change="renupdate" style="cursor: pointer" v-model="files">
+												   
+										</div>
+									</div>
+									<div class="sq_content">
+										<span><i>*</i>所在工会：</span>
+										<select class="st1" v-model="conLocation" @change="sendCountry($event)">
+											<option v-for="item in diquBox" :value="item.id">{{item.locationName}}</option>
+										</select>
+										<!-- <input type="text" placeholder="请输入联系电话" name="text" v-model="conLocation"/> -->
+									</div>
+									<div class="sq_content">
+										<span><i>*</i>联系电话：</span>
+										<input type="text" placeholder="请输入联系电话" name="text" v-model="conPhone"/>
+									</div>
+
+									<div class="anniu">
+										<button type="button" class="tijiao active" @click="zixunTi()">提交</button>
+										<button type="reset" class="chongzhi">重置信息</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!--我的咨询-->
+						<div class="my-turnUnion  tab-togg">
+							<div class="layer-reply">
+								<div class="layer-titlebox">
+									<div class="big_box" style="margin-bottom: 20px;" v-for="item in myzixunBox ">
+										<div>
+											<div class="layer-title clearfix">
+												<h4>{{item.tAttConsults.conTheme}}</h4>
+												<span>#农民工工资#</span>
+											</div>
+											<p class="lpic">
+												{{item.tAttConsults.conContent}}
+											</p>
+											<i>{{item.tAttConsults.createTime}}</i>
+										</div>
+										<div class="layer-content clearfix">
+											<i class="icon iconfont icon-dahuifu"></i>
+											<span>律师回复(2条)</span>
+										</div>
+										<div class="layer-person clearfix">
+											<div class="layer-img">
+												<img src="images/user.png" />
+											</div>
+											<div class="layer-text">
+												<h4>刘静律师</h4>
+												<span>2019-05-10</span>
+												<p>律师服务态度很好，很专业，真正的为职工着想。律师服务态度很好</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--法律援助-->
+						<div class="shiming tab-togg" >
+							法律援助
+						</div>
+						<!--八大员快速通道-->
+						<div class="xinxiang  tab-togg">
+							八大员快速通道
+							八大员快速通道
+						</div>
+						<!--援助记录-->
+						<!-- <div class="my-yuanzhu tab-togg">
+                            援助记录
+                            援助记录
+                        </div> -->
+						<!--律师入驻-->
+						<div class="layer-ruzhu tab-togg">
+							<div class="rh_boxed">
+								<div class="rh_text">
+									<h4>律师入驻</h4>
+									<i>入驻须知：</i>
+									<span>社会律师入驻应当具备以下条件：</span>
+									<p>1、政治素质高，拥护党的理论和路线方针政策，一般应是中国共产党党员；</p>
+									<p>2、具有良好的职业道德和社会责任感</p>
+									<p>3、在所从事的劳动纠纷调解、仲裁、职工法律维权等领域具有一定影响和经验的法律专家，或者具有2年以上执业经验，专业能力较强的律师；</p>
+									<p>4、严格遵纪守法，未受过刑事处分，包括司法行政部门的行政处罚或者律师协会的行业处分；</p>
+									<p>5、阳泉市总工会规定的其他要求</p>
+								</div>
+								<div class="dl_more clearfix">
+									<input id="readme" class="checkbox" type="checkbox"/>
+									<label for="protocol">
+										我已阅读并同意以上入驻须知
+									</label>
+								</div>
+								<div class="layer-btn">
+									<button class="btn">确定</button>
+								</div>
+							</div>
+							<div class="layer-table erji">
+								<div class="sq_list" style="margin-bottom: 30px;">
+									<h4>律师入驻</h4>
+								</div>
+								<form action="" method="post">
+									<div class="zj_content">
+										<span><i>*</i>姓名：</span>
+										<input type="text" name="name" v-model="attName" class="stopClick"
+											   placeholder="请输入姓名"/>
+									</div>
+									<div class="zj_xb clearfix">
+										<div class="zj_sex">
+											<span style="margin: 10px 50px 0 0;"><i>*</i>性别：</>
+										</div>
+										<div class="zj_input">
+											<input id="man" type="radio" checked="checked" name="sex" style="margin: 0px 20px;" />男
+											<input id="woman" type="radio"  name="sex" style="margin: 0px 20px 0px 40px;"/>女
+										</div>
+									</div>
+
+									<div class="mz_content" >
+										<span><i>*</i>民族：</span>
+										<select  class="st1 stopClick " v-model="nationality" @change="sendMinzu($event)">
+											<option  v-for="item in minZu" :value="item.id">{{item.nationName}}</option>
+										</select>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>身份证号：</span>
+										<input class="stopClick" type="text"
+											   name="hm" maxlength="18" placeholder="请输入18位身份证号" v-model="attIdcard"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>户籍所在地：</span>
+										<input type="text" name="name" placeholder="请输入户籍所在地" v-model="attPlaceofdomicile"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>联系电话：</span>
+										<input type="text" name="name" placeholder="请输入联系电话" v-model="attPhone"/>
+									</div>
+									<div class="mz_content" >
+										<span><i>*</i>学历：</span>
+										<select  class="st1" v-model="attEducation">
+											<option>请选择</option>
+											<option>本科</option>
+											<option>专科</option>
+											<option>高中</option>
+											<option>初中</option>
+											<option>小学</option>
+										</select>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>毕业学校：</span>
+										<input type="text" name="name" placeholder="请输入毕业学校" v-model="attGraduate"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>执业机构：</span>
+										<input type="text" name="name" placeholder="请输入执业机构" v-model="attActuator"/>
+									</div>
+									<div class="mz_content" >
+										<span><i>*</i>服务区县：</span>
+										<select  class="st1" v-model="servicecountyName" @change="sendMinQu($event)">
+											<option v-for="item in country" :value="item.id">{{item.servicecountyName}}</option>
+
+										</select>
+									</div>
+									<div class="mz_content" >
+										<span><i>*</i>党派：</span>
+										<select  class="st1" v-model="attParty">
+											<option>请选择</option>
+											<option>共产党</option>
+											<option>共产党</option>
+											<option>民进党</option>
+										</select>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>争议案由：</span>
+										<input type="text" name="name" placeholder="简要说明争议焦点"/>
+									</div>
+									<div class="ly_contentbox clearfix">
+										<div class="ly_content">
+											<span><i>*</i>擅长领域：</span>
+										</div>
+										<div class="ly_list">
+											<ul class="clearfix" v-model="begootatName" >
+												<li v-for="(item,index) in lingyu" @click="dianji(index)">{{item.begootatName}}</li>
+
+											</ul>
+										</div>
+									</div>
+									<div class="sm_box clearfix">
+										<div class="sm_text">
+											<span><i>*</i>上传身份证件：</span>
+											
+										</div>
+										<!--身份证正面-->
+										<div class="sm_img zj_pic">
+											<div class="tianjia1">
+												<img src="images/sfz_z.png"  id="idimg17" />
+												<input class="stopClick" id="idfile17" type="file" @change="IDzhengupdatels" onchange="previewFile17()" >
+											</div>
+										</div>
+
+										<!--上传执业证书：-->
+										<div class="sm_img zj_fanpic">
+											<div class="tianjia1">
+												<img src="images/sfz_f.png"  id="idimg18" />
+												<input class="stopClick" type="file" id="idfile18" @change="IDfanupdatels" onchange="previewFile18()">
+											</div>
+										
+										</div>
+									</div>
+									<div class="sm_box clearfix">
+										<div class="sm_text">
+											<span><i>*</i>上传执业证书：</span>
+											
+										</div>
+										<div class="sm_img tianjia1">
+											<img src="images/yingyepic.png" id="idimg19"/>
+											<input type="file" id="idfile19"  onchange="previewFile19()"
+												   @change="yingyePicSendls">
+										</div>
+									</div>
+
+									<div class="anniu" style="text-align: center;">
+										<button type="button" class="tijiao active" @click="adRuzhu">提交</button>
+										<button type="reset" class="chongzhi">重置信息</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!--我来答-->
+						<div class="my-answer tab-togg">
+							<div class="reply" v-for="item in meDa">
+								<div class="same_box">
+									<div class="layer-titlebox" >
+										<div class="layer-title clearfix">
+											<h4>{{item.tAttConsults.conTheme}}</h4>
+											<span>#农民工工资#</span>
+										</div>
+										<p class="lpic">
+											{{item.tAttConsults.conContent}}
+										</p>
+										<i>{{item.tAttConsults.createTime}}</i>
+									</div>
+									<!-- 我来答按钮 -->
+									<div class="answer-circle">
+										<i class="icon iconfont icon-huida"></i>
+										<span>我来答</span>
+									</div>
+									<!-- 评价框 -->
+									<div class="pingjia_kuang" style="display: none;">
+										<textarea class="answer-textarea" v-model="answerKu"></textarea>
+										<div class="answer-btn" @click="faBiao()">
+											<button>发表评价</button>
+										</div>
+									</div>
+									<!-- 律师回复 -->
+									<div class="layer-content clearfix" style="margin-top: 20px;">
+										<i class="icon iconfont icon-dahuifu"></i>
+										<span>律师回复(2条)</span>
+									</div>
+									<div class="dafubox">
+										<div class="layer-content clearfix" style="padding-bottom: 10px;margin-bottom: 20px;" >
+											<div class="layer-person clearfix">
+												<div class="layer-img">
+													<img src="images/user.png" />
+												</div>
+												<div class="layer-text">
+													<h4>{{item.tConRelayList.attName}}</h4>
+													<p>{{item.tConRelayList.createTime}}</p>
+													<p>{{item.tConRelayList.relayContent}}</p>
+												</div>
+											</div>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<!--法律咨询申请-->
+						<!-- 我要调解 -->
+						<div class="my-tiaojie  tab-togg">
+							<div class="layer-table acted">
+								<div class="sq_list" style="margin-bottom: 30px;">
+									<h4>我要调解</h4>
+								</div>
+								<form action="" method="post">
+									<div class="zj_content">
+										<span><i>*</i>姓名：</span>
+										<input type="text" name="name" v-model="userName" class="stopClick"
+											   placeholder="请输入姓名"/>
+									</div>
+									<div class="zj_xb clearfix">
+										<div class="zj_sex">
+											<span style="margin: 10px 50px 0 0;"><i>*</i>性别：</span>
+										</div>
+										<div class="zj_input">
+											<input id="man" type="radio" checked="checked" name="sex" style="margin: 0px 20px;" />男
+											<input id="woman" type="radio"  name="sex" style="margin: 0px 20px 0px 40px;"/>女
+										</div>
+									</div>
+
+									<div class="mz_content" >
+										<span><i>*</i>民族：</span>
+										<select  class="st1 stopClick " v-model="nationality" >
+											<option  v-for="item in minZu">{{item.nationName}}</option>
+										</select>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>职业：</span>
+										<input type="text" name="name" placeholder="请输入职业"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>身份证号：</span>
+										<input class="stopClick" type="text"
+											   name="hm" maxlength="18" placeholder="请输入18位身份证号" v-model="IDnumber"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>户籍所在地：</span>
+										<input type="text" name="name" placeholder="请输入户籍所在地"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>联系电话：</span>
+										<input type="text" name="name" placeholder="请输入联系电话"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>单位名称：</span>
+										<input type="text" name="name" placeholder="请输入单位名称"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>单位地址：</span>
+										<input type="text" name="name" placeholder="请输入单位地址"/>
+									</div>
+									<div class="mz_content" >
+										<span><i>*</i>申请类别：</span>
+										<select  class="st1">
+											<option>请选择</option>
+											<option>请选择</option>
+											<option>请选择</option>
+											<option>请选择</option>
+										</select>
+									</div>
+									<div class="sq_content">
+										<span><i>*</i>所在工会：</span>
+										<select class="st1" v-model="conLocation" @change="sendCountry($event)">
+											<option v-for="item in diquBox" :value="item.id">{{item.locationName}}</option>
+										</select>
+										<!-- <input type="text" placeholder="请输入联系电话" name="text" v-model="conLocation"/> -->
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>争议案由：</span>
+										<input type="text" name="name" placeholder="简要说明争议焦点"/>
+									</div>
+									<div class="sq_content">
+										<span><i>*</i>案情描述：</span>
+										<textarea placeholder="请输入咨询内容(最多500字)"></textarea>
+									</div>
+									<div class="sm_box clearfix">
+										<div class="sm_text">
+											<span><i>*</i>上传身份证件：</span>
+											
+										</div>
+										<!--身份证正面-->
+										<div class="sm_img zj_pic">
+											<div class="tianjia1">
+												<img src="images/sfz_z.png"  id="idimg1" />
+												<input class="stopClick" id="idfile1" type="file" @change="IDtiaozdate" onchange="previewFile1()" >
+												
+											</div>
+										</div>
+
+										<!--身份证反面-->
+										<div class="sm_img zj_fanpic" style="margin-left: 10px;">
+											<div class="tianjia1">
+												<img src="images/sfz_f.png"  id="idimg2" />
+												<input class="stopClick" type="file" id="idfile2" @change="IDtiaofdate" onchange="previewFile2()">
+												
+											</div>
+											
+										</div>
+									</div>
+									<div class="sm_box clearfix">
+										<div class="sm_text">
+											<span><i>*</i>上传资料：</span>
+											
+										</div>
+										<!--上传资料图片1-->
+										<div class="sm_img zj_pic">
+											<div class="tianjia1">
+												<img src="images/cl-l.png"  id="idimg3" />
+												<input class="stopClick" id="idfile3" type="file" @change="ziliaoOnedate" onchange="previewFile3()" >
+												
+											</div>
+										</div>
+
+										<!--传资料图片2-->
+										<div class="sm_img zj_fanpic" style="margin-left: 10px;">
+											<div class="tianjia1">
+												<img src="images/cl-r.png"  id="idimg4" />
+												<input class="stopClick" type="file" id="idfile4" @change="ziliaoTwodate" onchange="previewFile4()">
+												
+											</div>
+											
+										</div>
+									</div>
+									<div class="anniu" style="text-align: center;">
+										<button type="button" class="tijiao active" @click="addTiaojie()">提交</button>
+										<button type="reset" class="chongzhi">重置信息</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- 我要代书 -->
+						<div class="my-daishu  tab-togg">
+							<div class="rh_textbox">
+								<div class="rh_text">
+									<h4>我要代书</h4>
+									<i>申请工会法律援助注意事项：</i>
+									<span>援助范围</span>
+									<p>1.劳动争议案件；</p>
+									<p>2.因劳动权益涉及的职工人身权、民主权、财产权受到侵犯的案件；</p>
+									<p>3.工会工作者因履行职责合法权益受到侵犯的案件；</p>
+									<p>4.工会组织合法权益受到侵犯的案件；</p>
+									<p>5.其他需要提供法律服务的事项。</p>
+								</div>
+								<div class="rh_text">
+									<span>申请条件</span>
+									<p>符合下列条件之一的职工，可以申请免费的劳动争议诉讼服务：</p>
+									<p>1.农民工；</p>
+									<p>2.本市低保、失业证持有者；</p>
+									<p>3.符合本市低收入家庭认定标准的职工；</p>
+									<p>4.属于阳泉市总工会在“困难帮扶服务系统”中认定的困难职工；</p>
+									<p>5.残疾人；</p>
+									<p>6.收入低于本市最低工资标准的工会会员互助服务卡的持卡职工；</p>
+									<p>7.因履行工作职责，合法权益受到侵害的工会工作者；</p>
+									<p>8.因特殊情况，经审核，需要提供法律援助的其他人员。</p>
+								</div>
+								<div class="rh_text">
+									<span>需要准备的材料</span>
+									<p>1.身份证原件及复印件；</p>
+									<p>2.低保证、低收入证明、失业证、残疾证、工会会员互助服务卡或经济状况证明等；</p>
+									<p>3.农民工无法确认为农村户口的，需提供户口本原件、户主页和本人页复印件；</p>
+									<p>4.案件的起诉书、上诉书、仲裁申请书、受理案件通知书等法律文书复印件；</p>
+								</div>
+								<div class="dl_more clearfix">
+									<input id="readme" class="checkbox" type="checkbox"/>
+									<label for="protocol">
+										我承诺我符合上诉工会法律援助的申请条件
+									</label>
+								</div>
+								<div class="layer-btn">
+									<button>确定</button>
+								</div>
+							</div>
+							<div class="layer-table acted">
+								<div class="sq_list" style="margin-bottom: 30px;">
+									<h4>我要代书</h4>
+								</div>
+								<form action="" method="post">
+									<div class="zj_content">
+										<span><i>*</i>姓名：</span>
+										<input type="text" name="name" v-model="userName" class="stopClick"
+											   placeholder="请输入姓名"/>
+									</div>
+									<div class="zj_xb clearfix">
+										<div class="zj_sex">
+											<span style="margin: 10px 50px 0 0;"><i>*</i>性别：</span>
+										</div>
+										<div class="zj_input">
+											<input id="man1" type="radio" checked="checked" name="sex" style="margin: 0px 20px;" />男
+											<input id="woman1" type="radio"  name="sex" style="margin: 0px 20px 0px 40px;"/>女
+										</div>
+									</div>
+
+									<div class="mz_content" >
+										<span><i>*</i>民族：</span>
+										<select  class="st1 stopClick " v-model="nationality" >
+											<option  v-for="item in minZu">{{item.nationName}}</option>
+										</select>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>职业：</span>
+										<input type="text" name="name" placeholder="请输入职业"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>身份证号：</span>
+										<input class="stopClick" type="text"
+											   name="hm" maxlength="18" placeholder="请输入18位身份证号" v-model="IDnumber"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>户籍所在地：</span>
+										<input type="text" name="name" placeholder="请输入户籍所在地"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>联系电话：</span>
+										<input type="text" name="name" placeholder="请输入联系电话"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>单位名称：</span>
+										<input type="text" name="name" placeholder="请输入单位名称"/>
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>单位地址：</span>
+										<input type="text" name="name" placeholder="请输入单位地址"/>
+									</div>
+									<div class="mz_content" >
+										<span><i>*</i>申请类别：</span>
+										<select  class="st1" >
+											<option>请选择</option>
+											<option>请选择</option>
+											<option>请选择</option>
+											<option>请选择</option>
+										</select>
+									</div>
+									<div class="sq_content">
+										<span><i>*</i>所在工会：</span>
+										<select class="st1" v-model="conLocation" @change="sendCountry($event)">
+											<option v-for="item in diquBox" :value="item.id">{{item.locationName}}</option>
+										</select>
+										<!-- <input type="text" placeholder="请输入联系电话" name="text" v-model="conLocation"/> -->
+									</div>
+									<div class="zj_content">
+										<span><i>*</i>争议案由：</span>
+										<input type="text" name="name" placeholder="简要说明争议焦点"/>
+									</div>
+									<div class="sq_content">
+										<span><i>*</i>案情描述：</span>
+										<textarea placeholder="请输入咨询内容(最多500字)"></textarea>
+									</div>
+									<div class="sm_box clearfix">
+										<div class="sm_text">
+											<span><i>*</i>上传身份证件：</span>
+											
+										</div>
+										<!--身份证正面-->
+										<div class="sm_img zj_pic" >
+											<div class="tianjia1">
+												<img src="images/sfz_z.png"id="idimg5" />
+												<input class="stopClick" id="idfile5" type="file" @change="daishuZdate" onchange="previewFile5()" >
+											</div>
+										</div>
+
+										<!--身份证反面-->
+										<div class="sm_img zj_fanpic" style="margin-left: 10px;">
+											<div class="tianjia1">
+												<img src="images/sfz_f.png" id="idimg6" />
+												<input class="stopClick" type="file" id="idfile6" @change="daishufdate" onchange="previewFile6()">
+											</div>
+											
+										</div>
+									</div>
+									<div class="sm_box clearfix">
+										<div class="sm_text">
+											<span><i>*</i>上传资料：</span>
+											
+										</div>
+										<!--身份证正面-->
+										<div class="sm_img zj_pic" >
+											<div class="tianjia1">
+												<img src="images/cl-l.png" id="idimg7" />
+												<input class="stopClick" id="idfile7" type="file" @change="daishuOnedate" onchange="previewFile7()" >
+											</div>
+										</div>
+
+										<!--身份证反面-->
+										<div class="sm_img zj_fanpic" style="margin-left: 10px;">
+											<div class="tianjia1">
+												<img src="images/cl-r.png" id="idimg8" />
+												<input class="stopClick" type="file" id="idfile8" @change="daishuTwodate" onchange="previewFile8()">
+											</div>
+											
+										</div>
+									</div>
+									<div class="anniu" style="text-align: center;">
+										<button type="button" class="tijiao active" @click="addDaishu()">提交</button>
+										<button type="reset" class="chongzhi">重置信息</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- 我要仲裁 -->
+						<div class="my-zhongcai  tab-togg">
+							<div class="sq_list" style="margin-bottom: 30px;">
+								<h4>我要仲裁</h4>
+							</div>
+							<form action="" method="post">
+								<div class="zj_content">
+									<span><i>*</i>姓名：</span>
+									<input type="text" name="name" v-model="userName" class="stopClick"
+										   placeholder="请输入姓名"/>
+								</div>
+								<div class="zj_xb clearfix">
+									<div class="zj_sex">
+										<span style="margin: 10px 50px 0 0;"><i>*</i>性别：</span>
+									</div>
+									<div class="zj_input">
+										<input id="man2" type="radio" checked="checked" name="sex" style="margin: 0px 20px;" />男
+										<input id="woman2" type="radio"  name="sex" style="margin: 0px 20px 0px 40px;"/>女
+									</div>
+								</div>
+
+								<div class="mz_content" >
+									<span><i>*</i>民族：</span>
+									<select  class="st1 stopClick " v-model="nationality" >
+										<option  v-for="item in minZu">{{item.nationName}}</option>
+									</select>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>职业：</span>
+									<input type="text" name="name" placeholder="请输入职业"/>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>身份证号：</span>
+									<input class="stopClick" type="text"
+										   name="hm" maxlength="18" placeholder="请输入18位身份证号" v-model="IDnumber"/>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>户籍所在地：</span>
+									<input type="text" name="name" placeholder="请输入户籍所在地"/>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>联系电话：</span>
+									<input type="text" name="name" placeholder="请输入联系电话"/>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>单位名称：</span>
+									<input type="text" name="name" placeholder="请输入单位名称"/>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>单位地址：</span>
+									<input type="text" name="name" placeholder="请输入单位地址"/>
+								</div>
+								<div class="mz_content" >
+									<span><i>*</i>申请类别：</span>
+									<select  class="st1">
+										<option>请选择</option>
+										<option>请选择</option>
+										<option>请选择</option>
+										<option>请选择</option>
+									</select>
+								</div>
+								<div class="sq_content">
+									<span><i>*</i>所在工会：</span>
+									<select class="st1" v-model="conLocation" @change="sendCountry($event)">
+										<option v-for="item in diquBox" :value="item.id">{{item.locationName}}</option>
+									</select>
+									<!-- <input type="text" placeholder="请输入联系电话" name="text" v-model="conLocation"/> -->
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>争议案由：</span>
+									<input type="text" name="name" placeholder="简要说明争议焦点"/>
+								</div>
+								<div class="sq_content">
+									<span><i>*</i>案情描述：</span>
+									<textarea placeholder="请输入咨询内容(最多500字)"></textarea>
+								</div>
+								<div class="sm_box clearfix">
+									<div class="sm_text">
+										<span><i>*</i>上传身份证件：</span>
+										
+									</div>
+									<!--身份证正面-->
+									<div class="sm_img zj_pic" >
+										<div class="tianjia1">
+											<img src="images/sfz_z.png" id="idimg9" />
+											<input class="stopClick" id="idfile9" type="file" @change="ZCzhengupdate" onchange="previewFile9()" >
+										</div>
+									</div>
+
+									<!--身份证反面-->
+									<div class="sm_img zj_fanpic" style="margin-left: 10px;">
+										<div class="tianjia1">
+											<img src="images/sfz_f.png" id="idimg10" />
+											<input class="stopClick" type="file" id="idfile10" @change="ZCfanupdate" onchange="previewFile10()">
+										</div>
+										
+									</div>
+								</div>
+								<div class="sm_box clearfix">
+									<div class="sm_text">
+										<span><i>*</i>上传资料：</span>
+										
+									</div>
+									<!--上传资料正面-->
+									<div class="sm_img zj_pic" >
+										<div class="tianjia1">
+											<img src="images/cl-l.png"  id="idimg11" />
+											<input class="stopClick" id="idfile11" type="file" @change="zhongOnedate" onchange="previewFile11()" >
+										</div>
+									</div>
+
+									<!--上传资料反面-->
+									<div class="sm_img zj_fanpic" style="margin-left: 10px;">
+										<div class="tianjia1">
+											<img src="images/cl-r.png"  id="idimg12" />
+											<input class="stopClick" type="file" id="idfile12" @change="zhongTwodate" onchange="previewFile12()">
+										</div>
+										
+									</div>
+								</div>
+								<div class="anniu" style="text-align: center;">
+									<button type="button" class="tijiao active" @click="addZhoncai()">提交</button>
+									<button type="reset" class="chongzhi">重置信息</button>
+								</div>
+							</form>
+						</div>
+						<!-- 我要诉讼 -->
+						<div class="my-susong  tab-togg">
+							<div class="sq_list" style="margin-bottom: 30px;">
+								<h4>我要诉讼</h4>
+							</div>
+							<form action="" method="post">
+								<div class="zj_content">
+									<span><i>*</i>姓名：</span>
+									<input type="text" name="name" v-model="userName" class="stopClick"
+										   placeholder="请输入姓名"/>
+								</div>
+								<div class="zj_xb clearfix">
+									<div class="zj_sex">
+										<span style="margin: 10px 50px 0 0;"><i>*</i>性别：</span>
+									</div>
+									<div class="zj_input">
+										<input id="man3" type="radio" checked="checked" name="sex" style="margin: 0px 20px;" />男
+										<input id="woman3" type="radio"  name="sex" style="margin: 0px 20px 0px 40px;"/>女
+									</div>
+								</div>
+
+								<div class="mz_content" >
+									<span><i>*</i>民族：</span>
+									<select  class="st1 stopClick " v-model="nationality" >
+										<option  v-for="item in minZu">{{item.nationName}}</option>
+									</select>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>职业：</span>
+									<input type="text" name="name" placeholder="请输入职业"/>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>身份证号：</span>
+									<input class="stopClick" type="text"
+										   name="hm" maxlength="18" placeholder="请输入18位身份证号" v-model="IDnumber"/>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>户籍所在地：</span>
+									<input type="text" name="name" placeholder="请输入户籍所在地"/>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>联系电话：</span>
+									<input type="text" name="name" placeholder="请输入联系电话"/>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>单位名称：</span>
+									<input type="text" name="name" placeholder="请输入单位名称"/>
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>单位地址：</span>
+									<input type="text" name="name" placeholder="请输入单位地址"/>
+								</div>
+								<div class="mz_content" >
+									<span><i>*</i>申请类别：</span>
+									<select  class="st1">
+										<option>请选择</option>
+										<option>请选择</option>
+										<option>请选择</option>
+										<option>请选择</option>
+									</select>
+								</div>
+								<div class="sq_content">
+									<span><i>*</i>所在工会：</span>
+									<select class="st1" v-model="conLocation" @change="sendCountry($event)">
+										<option v-for="item in diquBox" :value="item.id">{{item.locationName}}</option>
+									</select>
+									<!-- <input type="text" placeholder="请输入联系电话" name="text" v-model="conLocation"/> -->
+								</div>
+								<div class="zj_content">
+									<span><i>*</i>争议案由：</span>
+									<input type="text" name="name" placeholder="简要说明争议焦点"/>
+								</div>
+								<div class="sq_content">
+									<span><i>*</i>案情描述：</span>
+									<textarea placeholder="请输入咨询内容(最多500字)"></textarea>
+								</div>
+								<div class="sm_box clearfix">
+									<div class="sm_text">
+										<span><i>*</i>上传身份证件：</span>
+										
+									</div>
+									<!--身份证正面-->
+									<div class="sm_img zj_pic" >
+										<div class="tianjia1">
+											<img src="images/sfz_z.png" id="idimg13" />
+											<input class="stopClick" id="idfile13" type="file" @change="Suzhengupdate" onchange="previewFile13()" >
+										</div>
+									</div>
+
+									<!--身份证反面-->
+									<div class="sm_img zj_fanpic" style="margin-left: 10px;">
+										<div class="tianjia1">
+											<img src="images/sfz_f.png" id="idimg14" />
+											<input class="stopClick" type="file" id="idfile14" @change="Sufanupdate" onchange="previewFile14()">
+										</div>
+										
+									</div>
+								</div>
+								<div class="sm_box clearfix">
+									<div class="sm_text">
+										<span><i>*</i>上传资料：</span>
+										
+									</div>
+									<!--身份证正面-->
+									<div class="sm_img zj_pic">
+										<div class="tianjia1">
+											<img src="images/cl-l.png" id="idimg15" />
+											<input class="stopClick" id="idfile15" type="file" @change="suOnedate" onchange="previewFile15()" >
+										</div>
+									</div>
+
+									<!--身份证反面-->
+									<div class="sm_img zj_fanpic" style="margin-left: 10px;">
+										<div class="tianjia1">
+											<img src="images/cl-r.png" id="idimg16" />
+											<input class="stopClick" type="file" id="idfile16" @change="suTwodate" onchange="previewFile16()">
+										</div>
+										
+									</div>
+								</div>
+								<div class="anniu" style="text-align: center;">
+									<button type="button" class="tijiao active" @click="addSuong()">提交</button>
+									<button type="reset" class="chongzhi">重置信息</button>
+								</div>
+							</form>
+						</div>
+						<!-- 援助记录 已完成-->
+						<div class="renwu_over tab-togg">
+							<div class="success clearfix" v-for="item in yuanyiBox">
+								<div class="success-text">
+									<span>{{item.aidDisputes}}</span>
+								</div>
+								<div class="success-time">
+									<i>{{item.createTime}}</i>
+								</div>
+							</div>
+							<!-- <div class="success clearfix">
+								<div class="success-text">
+									<span>在工作中受伤致残，单位不管，我该怎么维权？</span>
+								</div>
+								<div class="success-time">
+									<i>2019-03-10</i>
+								</div>
+							</div>
+							<div class="success clearfix">
+								<div class="success-text">
+									<span>在工作中受伤致残，单位不管，我该怎么维权？</span>
+								</div>
+								<div class="success-time">
+									<i>2019-03-10</i>
+								</div>
+							</div> -->
+							<div class="jwn_list">
+								<ul class="clearfix">
+									<li class="active"><a href="">1</a></li>
+									<li><a href="">2</a></li>
+									<li><a href="">3</a></li>
+									<li><a href="">4</a></li>
+									<li><a href="">5</a></li>
+									<li><a href="">6</a></li>
+									<li><a href="">上一页</a></li>
+									<li><a href="">下一页</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- 援助记录 未完成-->
+						<div class="renwu_myover tab-togg">
+							<div class="success clearfix" v-for="item in yuanweuBox">
+								<div class="success-text">
+									<span>{{item.aidDisputes}}</span>
+								</div>
+								<div class="success-time">
+									<i>{{item.createTime}}</i>
+								</div>
+							</div>
+							<!-- <div class="details-box">
+								<div class="details">
+									<i class="icon iconfont icon-wendang"></i>
+									<span>援助详情</span>
+								</div>
+								<div class="xian"></div>
+								<div class="layer-titlebox">
+									<div class="layer-title clearfix">
+										<h4>关于拖欠工资问题</h4>
+									</div>
+									<div class="information">
+										<ul class="clearfix">
+											<li>
+												<i class="icon iconfont icon-nan"></i>
+												<span>张先生</span>
+											</li>
+											<li>
+												<span>29岁</span>
+											</li>
+											<li>
+												<span>阳煤集团职工</span>
+											</li>
+											<li>
+												<span>手机号:13003581234</span>
+											</li>
+										</ul>
+									</div>
+									<div class="channel">
+										<ul class="clearfix">
+											<li>
+												<span>2019-03-10</span>
+											</li>
+											<li>
+												<span>申请诉讼</span>
+											</li>
+											<li>
+												<span>工伤维权</span>
+											</li>
+										</ul>
+									</div>
+									<p class="lpic" style="margin-top: 0;">
+										今天，记者获悉，从5月13日开始，摩拜将
+										在上海地区执行新版计费规则，用车费用
+										由起步价和时长费两部分组成。起步价为
+										1元，15分钟以内为起步价，超过15分钟
+										收取时长费，即每15分钟0.5元，不满15
+										分钟的以15分钟计
+									</p>
+								</div>
+							</div>
+							<div class="details">
+								<i class="icon iconfont icon-jindu1"></i>
+								<span>受理进度</span>
+							</div>
+							<div class="xian"></div>
+							<div class="channel-list">
+								<ul class="clearfix">
+									<li>
+										<i class="icon iconfont icon-shenhe"></i>
+										<p>已受理</p>
+									</li>
+									<li class="before">
+										<div class="sh_tubiao jindu1"></div>
+									</li>
+									<li>
+										<i class="icon iconfont icon-shenhe"></i>
+										<p>正在诉讼</p>
+									</li>
+									<li class="before">
+										<div class="sh_tubiao jindu1"></div>
+									</li>
+									<li>
+										<i class="icon iconfont icon-shenhe"></i>
+										<p>已完结</p>
+									</li>
+								</ul>
+							</div> -->
+						</div>
+						<!-- 任务列表 -->
+						<!-- 已完成 -->
+						<div class="my-overcountt  tab-togg" >
+							<div class="successbox">
+								<!-- <div class="success clearfix" v-for="item in yuanjiOver" >
+                                    <div class="success-text">
+                                        <span>{{item.aidCaseinformation}}</span>
+                                    </div>
+                                    <div class="success-time">
+                                        <i>{{item.createTime}}</i>
+                                    </div>
+                                </div> -->
+								<div class="success clearfix">
+									<div class="success-text">
+										<span>在工作中受伤致残，单位不管，我该怎么维权？</span>
+									</div>
+									<div class="success-time">
+										<i>2019-03-10</i>
+									</div>
+								</div>
+								<div class="success clearfix">
+									<div class="success-text">
+										<span>在工作中受伤致残，单位不管，我该怎么维权？</span>
+									</div>
+									<div class="success-time">
+										<i>2019-03-10</i>
+									</div>
+								</div>
+								<div class="success clearfix">
+									<div class="success-text">
+										<span>在工作中受伤致残，单位不管，我该怎么维权？</span>
+									</div>
+									<div class="success-time">
+										<i>2019-03-10</i>
+									</div>
+								</div>
+								<div class="success clearfix">
+									<div class="success-text">
+										<span>在工作中受伤致残，单位不管，我该怎么维权？</span>
+									</div>
+									<div class="success-time">
+										<i>2019-03-10</i>
+									</div>
+								</div>
+								<div class="success clearfix">
+									<div class="success-text">
+										<span>在工作中受伤致残，单位不管，我该怎么维权？</span>
+									</div>
+									<div class="success-time">
+										<i>2019-03-10</i>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- 未完成 -->
+						<div class="my-weicountt  tab-togg">
+							<div class="details-box">
+								<div class="details">
+									<i class="icon iconfont icon-wendang"></i>
+									<span>援助详情</span>
+								</div>
+								<div class="xian"></div>
+								<div class="layer-titlebox">
+									<div class="layer-title clearfix">
+										<h4>关于拖欠工资问题</h4>
+									</div>
+									<i>2019-03-10</i>
+									<p class="lpic" style="margin-top: 0;">
+										今天，记者获悉，从5月13日开始，摩拜将
+										在上海地区执行新版计费规则，用车费用
+										由起步价和时长费两部分组成。起步价为
+										1元，15分钟以内为起步价，超过15分钟
+										收取时长费，即每15分钟0.5元，不满15
+										分钟的以15分钟计
+									</p>
+								</div>
+								<div class="details">
+									<i class="icon iconfont icon-jindu1"></i>
+									<span>受理进度</span>
+								</div>
+								<div class="xian"></div>
+								<div class="details-list">
+									<ul class="clearfix">
+										<li>
+											<i class="icon iconfont icon-shenhe"></i>
+											<p>正在审核</p>
+										</li>
+										<li class="before">
+											<div class="sh_tubiao jindu1"></div>
+										</li>
+										<li>
+											<i class="icon iconfont icon-shenhe"></i>
+											<p>已受理</p>
+										</li>
+										<li class="before">
+											<div class="sh_tubiao jindu1"></div>
+										</li>
+										<li>
+											<i class="icon iconfont icon-shenhe"></i>
+											<p>正在诉讼</p>
+										</li>
+										<li class="before">
+											<div class="sh_tubiao jindu1"></div>
+										</li>
+										<li>
+											<i class="icon iconfont icon-shenhe"></i>
+											<p>已完结</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 底部 -->
+	<div class="zg_bottom" style="border-top:2px solid #db2c28;background-color: #d9d9d9;padding: 20px;">
+		<div style="width:1200px;margin:30px auto;text-align:center;">
+			<div>地址：山西省阳泉市桃南东路192号   电话：2022724</div>
+			<div>E--mail:szghwgb@163.com</div>
+			<div>版权所有：© 阳泉市总工会 版权所有</div>
+			<div>备案：晋ICP备13007903-1</div>
+			<div class="copy_img">
+				<span><img src="images/footer_img.png"></span>
+			</div>
+		</div>
+	</div>
+	<!--右侧功能栏-->
+	<div class="slide">
+		<ul>
+			<li class="open-hyzx">
+				<i class="icon iconfont icon-member"></i>
+				<a href="##">{{membercenter}}</a>
+			</li>
+			<li>
+				<i class="icon iconfont icon-xiaoxi"></i><a href="##">消息通知</a>
+				<div class="tz-bage">
+					<span class="bage">10</span>
+				</div>
+			</li>
+
+			<li class="kefu"><i class="icon iconfont icon-kefu1 "></i><a href="##">智能客服</a></li>
+			<li><i class="icon iconfont icon-xinlang"></i><a href="##">微博</a></li>
+			<li><i class="icon iconfont icon-weixin2"></i><a href="##">微信</a></li>
+			<li><i class="icon iconfont icon-APP"></i><a href="##">APP</a></li>
+			<li id="top"><i class="icon iconfont icon-fanhuidingbu-"></i><a href="##">TOP</a></li>
+		</ul>
+		<div class="sina">
+			<a href="">
+				<img src="images/sina.png" width="100px" height="100px">
+			</a>
+			<p>新浪微博二维码</p>
+		</div>
+		<div class="ewm">
+			<a href="">
+				<img src="images/erweima.jpg" width="100px" height="100px">
+			</a>
+			<p>工会微信公众号</p>
+		</div>
+		<div class="exit">
+			<img :src="userHeaderPic" width="80px" height="80px" onclick="window.open('hyzx.html')"/>
+			<p class="phoneUser">{{userPhone}}</p>
+			<button @click="clear()">退出</button>
+		</div>
+		<div class="appDoload">
+			<div class="ang">
+				<p>安卓用户下载</p>
+				<img src="images/android.jpg" alt="安卓系统下载">
+			</div>
+			<div class="ios">
+				<p>IOS用户下载</p>
+				<img src="images/android.jpg" alt="IOS系统下载">
+			</div>
+		</div>
+	</div>
+		<!--智能客服-->
+	<div class="customer-service" >
+		<div class="kf_box">
+			<div class="kf clearfix">
+				<div class="kf_left">
+					<a href=""><img src="images/gh_x.png" width="23px" height="23px"></a>
+					<span>工会智能小K</span>
+				</div>
+				<div class="kf_right">
+					<i class="icon iconfont icon-xiajiantou"></i>
+				</div>
+			</div>
+		</div>
+		<div class="chat_box">
+			<div id="chat" class="chat clearfix">
+				<div class="chat_left">
+					<a href=""><img src="images/gh_l.png" style="margin-bottom: 5px;"></a>
+					<span>客服</span>
+					<i>{{kfnowTime}}</i>
+					<p>我是阳泉工会智能机器人，请问您有什么需要吗？</p>
+				</div>
+
+			</div>
+			<div class="down"></div>
+			<div class="shuru">
+				<input type="text" placeholder="请输入文字..."  v-model="userinp"/>
+			</div>
+			<div class="send clearfix">
+				<div class="send_left">
+					<i class="icon iconfont icon-smiling" ></i>
+				</div>
+				<div class="send_right">
+					<button type="button" @click="sendModel">发送</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/vue2.5.22.js"></script>
+<script src="js/axios.0.18.0.js"></script>
+<script src="js/qs.6.60.js"></script>
+<script src="js/usertoken.js"></script>
+<script type="text/javascript">
+	
+    function previewFile() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg');
+        var file = document.getElementById('renxiang').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+
+</script>
+<script>
+    var vm = new Vue({
+        el: "#nameselect",
+        data: {
+        	newsList:[],
+        	zixunBox:[],
+        	diquBox:[],
+        	myzixunBox:[],
+        	meDa:[],
+            phone:'',
+            userinp:'',
+			userPhone:'',
+            usertoken:'',
+            minZu:[],
+            imgArr:[],
+            attName:'',
+            attIdcard:'',
+            attPlaceofdomicile:'',
+            attPhone:'',
+            attEducation:'',
+            attGraduate:'',
+            attActuator:'',
+            attParty:'',
+            quxianId:'',
+
+			/*实名认证*/
+			renpic:'',      //人像采集
+			IDzhengpic:'',	//正面身份证
+			IDfanpic:'',    //反面身份证
+            userName:'',	//姓名
+            nationality:'', //民族
+            birthday:'',	//出生日期
+            IDnumber:'',	//证件号码
+            IDpositive:'',
+            IDanti:'',
+            country:[],
+            servicecountyName:'',
+            lingyu:[],
+            begootatName:'',
+
+            showIdfan:'',
+			showIdzheng:'',
+			showPerpeo:'',
+
+         	/*个人信息*/
+            loginAccount:'',  //登录账号
+            loginName:'',			 //真实姓名
+			loginNumber:'',   //手机号码
+            membercenter:'',
+			kfnowTime:'',
+            
+
+
+			pubType:1,
+            conName:'',
+            conType:'',
+            conTheme:'',
+            conContent:'',
+            conPhone:'',
+            files:'',
+            conLocation:'',
+
+            nowTime:'',
+            nowDay:'',
+
+            meDahui:'',
+            answerKu:'',
+            yuanjiOver:[],
+            leixingId:'',
+            countryId:'',
+            mingzuId:'',
+            IDcardzheng:[],
+            IDcardfan:[],
+            ZHIYEzheng:[],
+            arri:[],
+            zixunId:'',
+            // 我要调解
+            IDtiaoz:'',
+            IDtiaof:'',
+            ziliaoOne:'',
+            ziliaoTwo:'',
+            daishuZ:'',
+            daishuF:'',
+            daishuOne:'',
+            daishuTwo:'',
+            zhongz:'',
+            zhongf:'',
+            zhongOne:'',
+            zhongTwo:'',
+            susongz:'',
+            susongf:'',
+            susongOne:'',
+            susongTwo:'',
+            yuanyiBox:[],
+            userHeaderPic:'',
+            yuanweuBox:[],
+            checkedValue:'',
+            list:[{value:'男'},{value:'女'}],
+
+
+
+        },
+        methods:{
+             //援助案例/律师说法
+             yuanzhutList(){
+             	const that = this;
+             	 $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/api/tAttPublicity/selectAllByPage",
+                    data:{
+                        pubType:1,
+                        "pageNum":1,
+                        "pageSize":10,
+                        "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result.data);
+                    	that.newsList = result.data.list;
+
+                    }
+                })
+             },
+             
+             yuanList(){
+             	const that = this;
+             	$.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/api/tAttPublicity/selectAllByPage",
+                    data:{
+                        pubType:2,
+                        "pageNum":1,
+                        "pageSize":10,
+                        "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result.data);
+                    	that.newsList = result.data.list;
+
+                    }
+                })
+             },
+             sendId(id){
+                        // console.log(id)
+                        window.location.href=('yz_xq.html' + '?'+id);
+            },
+
+            // 律师列表
+            lvshiList(){
+            	var that = this
+            	 $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tAttorney/selectAll",
+                    data:{
+                        "attState":2,
+                        "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result.data);
+
+                    }
+                })
+
+            },
+            // 发表评价
+            faBiao(){
+            	var that = this
+            	console.log(that.answerKu)
+                console.log(that.zixunId)
+            	 $.ajax({
+             	 	type:"post",             	
+                    // url: unionUrl + "/legalaidweb/tConRelay/add",
+                    url:"http://192.168.3.118:5556/legalaidweb/tConRelay/add",   
+                    contentType:'application/x-www-form-urlencoded',
+                    data:{
+                        "consultsId":that.zixunId,
+                        "relayContent":that.answerKu,
+	                    "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result);
+
+                    }
+                })
+
+            },
+            clear(){
+            	  sessionStorage.clear();
+            	  window.open("denglu.html","_self")
+            },
+             send(event){
+           	  var a = this.ProductActive = event.target.value;
+           	  this.leixingId = a;
+           },
+           sendCountry(event){
+              var b = this.ProductActive = event.target.value;
+           	  this.countryId = b;
+           },
+           // 民族数字
+           sendMinzu(event){
+           	  var c = this.ProductActive = event.target.value;
+           	  this.mingzuId = c;
+           },
+           sendMinQu(event){
+           	  var d = this.ProductActive = event.target.value;
+           	  this.quxianId = d;
+           },
+            // 领域ID
+            dianji(index){
+            	console.log(index)
+            },
+            // 律师入住提交
+            adRuzhu(){
+            	  var that=this
+            	 
+                  var arr=[];
+                  var result=arr.push(that.IDcardzheng,that.IDcardfan,that.ZHIYEzheng)
+                  console.log(arr)
+                 
+                   var myform=new FormData();
+                   for(let i in arr){
+                      myform.append("files",arr[i]);
+                      console.log(arr[i]);
+                    }
+                  myform.append("attName",that.attName);
+                  myform.append("attSex",1);
+                  myform.append("attNation",that.mingzuId);
+                  myform.append("attIdcard",that.attIdcard);
+                  myform.append("attPlaceofdomicile",that.attPlaceofdomicile);
+                  myform.append("attPhone", that.attPhone);
+                  myform.append("attEducation",that.attEducation);
+                  myform.append("attGraduate", "财金大学");
+                  myform.append("attActuator", "普罗迪克");
+                  myform.append("attServicecounty",that.attGraduate);
+                  myform.append("attParty",that.attActuator);
+                  myform.append("attBegootat","1,2,3");
+                  myform.append("token",userTok.token);
+                  $.ajax({
+                    url: unionUrl + "/legalaidweb/tAttorney/insertTAttorneyPC.json",   
+                    // url:"http://192.168.3.220:5556/legalaidweb/tAttorney/insertTAttorneyPC.json",                
+                    data:myform,                    
+                    type:"post",
+                    contentType:false,
+                    processData:false,
+                    async:false,
+                    success:  function (result) {
+                    	console.log(result);
+
+                    }
+                })
+            },
+           // 法律咨询申请提交
+           zixunTi(){
+           	    const that = this;
+                   var form = new FormData();
+                  console.log(that.imgArr)
+                  form.append("conName",that.conName);
+                  form.append("conType",that.leixingId);
+                  form.append("conTheme",that.conTheme);
+                  form.append("conContent",that.conContent);
+                  form.append("conPhone",that.conPhone);
+                  form.append("conLocation",that.countryId);
+                  form.append("files",that.imgArr);
+                  form.append("token",userTok.token); 
+                  $.ajax({
+                    //url:"http://192.168.3.220:5556/legalaidweb/tAttConsults/insertPC.json",
+                     url: unionUrl + "/legalaidweb/tAttConsults/insertPC.json",
+                    type:"POST",
+                    contentType:false,
+                    processData:false,
+                    async:false,
+                    data:form,
+                    success:function(data){
+                         console.log(data.msg);
+                         console.log(data);
+                    },
+                      error:function(){
+                           alert("提交失败");
+                      }
+                  })
+           },
+           // 任务列表已完成
+           over(){
+           	    const that = this;
+           	    $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tAttorney/queryMissionList.json",
+                    data:JSON.stringify({
+                    	  "token":userTok.token,
+                    	  status:0,
+                    }),
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result);
+                    	// that.yuanjiOver = result.data.list;
+
+                    }
+                })
+           },
+           // 任务列表未完成
+           wei(){
+           	    const that = this;
+           	    $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tAttorney/queryMissionList.json",
+                    data:{
+                    	 "token":userTok.token,
+                    	 status:1,
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result);
+                    	// that.newsList = result.data.list;
+
+                    }
+                })
+           },
+           // 援助记录已完成yuanOver yuanWei
+           yuanOver(){
+                 const that = this;
+                 $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/api/tAttAid/selectAllByPage",
+                    data:{
+                    	 "token":userTok.token,
+                    	 "pageNum":1,
+                    	 "pageSize":10,
+                    	  status:3,
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result.data.list);
+                    	that.yuanyiBox = result.data.list;
+
+                    }
+                })
+           },
+           // 援助记未已完成
+           yuanWei(){
+                 const that = this;
+                 $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/api/tAttAid/selectAllByPage",
+                    data:{
+                    	 "token":userTok.token,
+                    	 "pageNum":1,
+                    	 "pageSize":10,
+                    	  status:99,
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result.data.list);
+                    	that.yuanweuBox = result.data.list;
+
+                    }
+                })
+           },
+            //客服
+            sendModel(){
+                kfhuifu();
+			},
+			//身份证图片上传
+            renupdate (e){  // 上传照片
+            	var that= this
+            	var file = e.target.files[0]
+            	// console.log(file);
+            	that.imgArr=file
+            	
+                
+            },
+            IDzhengupdatels(e){
+                  var that= this
+            	  var file = e.target.files[0]
+            	  // console.log(file);
+            	  that.IDcardzheng=file
+            },
+            IDfanupdatels(e){
+                  var that= this
+            	  var file = e.target.files[0]
+            	  // console.log(file);
+            	  that.IDcardfan=file
+            },
+            yingyePicSendls(e){
+                  var that= this
+            	  var file = e.target.files[0]
+            	  // console.log(file);
+            	  that.ZHIYEzheng=file
+            },
+            // 我要调解身份证正面
+            IDtiaozdate (e){  // 上传照片
+				var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+      //                   that.IDfanpic = response.data.data.filePath
+						// console.log(that.IDfanpic)
+						that.IDtiaoz=response.data.data.newFileName
+                    })
+            },
+            // 我要调解身份证反面
+            IDtiaofdate(e){
+                var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+      //                   that.IDfanpic = response.data.data.filePath
+						// console.log(that.IDfanpic)
+						that.IDtiaof=response.data.data.newFileName
+                    })
+            },
+            // 我要调解资料1
+            ziliaoOnedate(e){
+               
+               var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+      //                   that.IDfanpic = response.data.data.filePath
+						// console.log(that.IDfanpic)
+						that.ziliaoOne=response.data.data.newFileName
+                    })
+
+            },
+            // 我要调解资料2
+            ziliaoTwodate(e){
+               
+               var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+      //                   that.IDfanpic = response.data.data.filePath
+						
+						that.ziliaoTwo=response.data.data.newFileName
+						console.log(that.ziliaoTwo)
+                    })
+            },
+            // 我要调解提交
+            addTiaojie(){
+            	var that=this
+            	console.log(that.checkedValue)
+            	console.log(that.IDtiaoz)
+            	console.log(that.IDtiaof)
+            	console.log(that.ziliaoOne)
+            	console.log(that.ziliaoTwo)
+                    var myform=new FormData();
+                    myform.append("aidItems",1)
+                    myform.append("aidSex",1)
+                    myform.append("aidNation",1)
+                    myform.append("aidOccupation",1)
+                    myform.append("aidIdcard","141034199508250075")
+                    myform.append("aidRegistered","山西太原")
+                    myform.append("aidPhone","15340673221")
+                    myform.append("aidCompanyname","山西普罗迪克科技有限公司")
+                    myform.append("aidUnitaddress","山西省阳泉市")
+                    myform.append("aidType","6")
+                    myform.append("aidDisputes","社会保险233")
+                    myform.append("aidCasedescription","公司到底缴社会保险")
+                    myform.append("aidEightshots","1")
+                    myform.append("aidIdcardup",that.IDtiaoz)
+                    myform.append("aidIdcarddown",that.IDtiaof)
+                    myform.append("aidProxymaterials",that.ziliaoOne)
+                    myform.append("aidCaseinformation",that.ziliaoTwo)
+                    myform.append("token",userTok.token);
+                    $.ajax({
+                        // url: unionUrl + "/legalaidweb/api/tAttAid/add",     
+                        url:"http://192.168.3.118:5556/legalaidweb/api/tAttAid/add",            
+                        data:myform,     
+                        type:"post",
+                        contentType:false,
+                        processData:false,
+                        async:false,
+                        success:  function (result) {
+                    	   console.log(result);
+                    }
+                })
+            },
+            // 我要代书身份证证正面
+            daishuZdate(e){
+            	var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.daishuZ=response.data.data.newFileName
+						console.log(that.daishuZ)
+                    })
+            },
+            // 我要代书身份证证反面
+            daishufdate(e){
+            	var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.daishuF=response.data.data.newFileName
+						console.log(that.daishuF)
+                    })
+            },
+             // 我要代书资料1
+             daishuOnedate(e){
+             	var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.daishuOne=response.data.data.newFileName
+						console.log(that.daishuOne)
+                    })
+             },
+             // 我要代书资料2
+             daishuTwodate(e){
+             	var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.daishuTwo=response.data.data.newFileName
+						console.log(that.daishuTwo)
+                    })
+             },
+             // 我要代书提交
+             addDaishu(){
+             	    var that=this
+            	    console.log(that.daishuZ)
+            	    console.log(that.daishuF)
+            	    console.log(that.daishuOne)
+            	    console.log(that.daishuTwo)
+                    var myform=new FormData();
+                    myform.append("aidItems",2)
+                    myform.append("aidSex",1)
+                    myform.append("aidNation",1)
+                    myform.append("aidOccupation",1)
+                    myform.append("aidIdcard","141034199508250075")
+                    myform.append("aidRegistered","山西太原")
+                    myform.append("aidPhone","15340673221")
+                    myform.append("aidCompanyname","山西普罗迪克科技有限公司")
+                    myform.append("aidUnitaddress","山西省阳泉市")
+                    myform.append("aidType","6")
+                    myform.append("aidDisputes","社会保险233")
+                    myform.append("aidCasedescription","公司到底缴社会保险")
+                    myform.append("aidEightshots","1")
+                    myform.append("aidIdcardup",that.daishuZ)
+                    myform.append("aidIdcarddown",that.daishuF)
+                    myform.append("aidProxymaterials",that.daishuOne)
+                    myform.append("aidCaseinformation",that.daishuTwo)
+                    myform.append("token",userTok.token);
+                    $.ajax({
+                        // url: unionUrl + "/legalaidweb/api/tAttAid/add",     
+                        url:"http://192.168.3.118:5556/legalaidweb/api/tAttAid/add",            
+                        data:myform,     
+                        type:"post",
+                        contentType:false,
+                        processData:false,
+                        async:false,
+                        success:  function (result) {
+                    	   console.log(result);
+                    }
+                })
+             },
+             // 我要仲裁身份证正面
+             ZCzhengupdate(e){
+                 var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.zhongz=response.data.data.newFileName
+						console.log(that.zhongz)
+                    })
+             },
+             // 我要仲裁身份证反面
+             ZCfanupdate(e){
+             	var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.zhongf=response.data.data.newFileName
+						console.log(that.zhongf)
+                    })
+             },
+             // 我要仲裁资料1
+             zhongOnedate(e){
+             	var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.zhongOne=response.data.data.newFileName
+						console.log(that.zhongOne)
+                    })
+             },
+             // 我要仲裁资料2
+             zhongTwodate(e){
+             	var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.zhongTwo=response.data.data.newFileName
+						console.log(that.zhongTwo)
+                    })
+             },
+             // 我要仲裁提交
+             addZhoncai(){
+             	    var that=this
+            	    console.log(that.zhongz)
+            	    console.log(that.zhongf)
+            	    console.log(that.zhongOne)
+            	    console.log(that.zhongTwo)
+                    var myform=new FormData();
+                    myform.append("aidItems",3)
+                    myform.append("aidSex",1)
+                    myform.append("aidNation",1)
+                    myform.append("aidOccupation",1)
+                    myform.append("aidIdcard","141034199508250075")
+                    myform.append("aidRegistered","山西太原")
+                    myform.append("aidPhone","15340673221")
+                    myform.append("aidCompanyname","山西普罗迪克科技有限公司")
+                    myform.append("aidUnitaddress","山西省阳泉市")
+                    myform.append("aidType","6")
+                    myform.append("aidDisputes","社会保险233")
+                    myform.append("aidCasedescription","公司到底缴社会保险")
+                    myform.append("aidEightshots","1")
+                    myform.append("aidIdcardup",that.zhongz)
+                    myform.append("aidIdcarddown",that.zhongf)
+                    myform.append("aidProxymaterials",that.zhongOne)
+                    myform.append("aidCaseinformation",that.zhongTwo)
+                    myform.append("token",userTok.token);
+                    $.ajax({
+                        // url: unionUrl + "/legalaidweb/api/tAttAid/add",     
+                        url:"http://192.168.3.118:5556/legalaidweb/api/tAttAid/add",            
+                        data:myform,     
+                        type:"post",
+                        contentType:false,
+                        processData:false,
+                        async:false,
+                        success:  function (result) {
+                    	   console.log(result);
+                    }
+                })
+             },
+            // 我要诉讼身份证正面
+            Suzhengupdate(e){
+                var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.susongz=response.data.data.newFileName
+                    })
+            },
+            // 我要诉讼身份证反面
+            Sufanupdate(e){
+            	var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.susongf=response.data.data.newFileName
+                    })
+            },
+            // 我要诉讼材料1
+            suOnedate(e){
+            	var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.susongOne=response.data.data.newFileName
+                    })
+            },
+            // 我要诉讼材料2
+            suTwodate(e){
+            	var that = this
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+						
+						that.susongTwo=response.data.data.newFileName
+                    })
+            },
+            // 我要诉讼提交
+            addSuong(){
+            	    var that=this
+            	    console.log(that.susongz)
+            	    console.log(that.susongf)
+            	    console.log(that.susongOne)
+            	    console.log(that.susongTwo)
+                    var myForm=new FormData()
+                    myForm.append("aidItems",4)
+                    myForm.append("aidSex",1)
+                    myForm.append("aidNation",1)
+                    myForm.append("aidOccupation",1)
+                    myForm.append("aidIdcard","141034199508250075")
+                    myForm.append("aidRegistered","山西太原")
+                    myForm.append("aidPhone","15340673221")
+                    myForm.append("aidCompanyname","山西普罗迪克科技有限公司")
+                    myForm.append("aidUnitaddress","山西省阳泉市")
+                    myForm.append("aidType","6")
+                    myForm.append("aidDisputes","社会保险233")
+                    myForm.append("aidCasedescription","公司到底缴社会保险")
+                    myForm.append("aidEisuzongfghtshots","1")
+                    myForm.append("aidIdcardup",that.susongz)
+                    myForm.append("aidIdcarddown",that.susongf)
+                    myForm.append("aidProxymaterials",that.susongOne)
+                    myForm.append("aidCaseinformation",that.susongTwo)
+                    myForm.append("token",userTok.token);
+                    $.ajax({
+                        // url: unionUrl + "/legalaidweb/api/tAttAid/add",     
+                        url:"http://192.168.3.118:5556/legalaidweb/api/tAttAid/add",        
+                        data:myForm,     
+                        type:"post",
+                        contentType:false,
+                        processData:false,
+                        async:false,
+                        success:function (result) {
+                    	   console.log(result);
+                    }
+                })
+            },
+			//获取用户信息
+			getUserInfo(){
+                var that = this
+                that.loginAccount = userTok.phone,  //登录账号
+                that.loginName = userTok.name,		//真实姓名
+                that.loginNumber = userTok.phone    //手机号码
+
+			},
+
+            gotoAdd(){
+			    window.open('grrh.html')
+			}
+
+        },
+        mounted(){
+             
+            const that = this;
+            // 援助案例/律师说法
+            that.yuanzhutList();
+            that.getUserInfo();
+            that.lvshiList()
+            that.nowTime = nowTimeDay;
+
+            getDay();
+            that.nowDay = nowDay;
+             //咨询类别
+                $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tType/GetTypeAll",
+                    // url:'http://ftu.dev.puluodike.cn/zgfww/tType/GetTypeAll',
+                    data:{
+                         "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	// console.log(result);
+                    	that.zixunBox = result.data;
+
+                    }
+                })
+                // 所在地：
+                $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tLocation/GetLocation",
+                    data:{
+                        // pubType:2,
+                        // "pageNum":1,
+                        // "pageSize":10,
+                         "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	// console.log(result.data);
+                    	that.diquBox = result.data;
+
+                    }
+                })
+                //我的咨询
+                $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tAttConsults/queryConsultsList",
+                    data:{
+                    	userid:"dasdw111",
+                        "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result.data);
+                    	that.myzixunBox = result.data;
+
+                    }
+                })
+                //民族接口
+                $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tNation/GetNationList",
+                    data:{              
+                        "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	// console.log(result.data);
+                    	that.minZu = result.data;
+
+                    }
+                })
+                 // 服务区县：
+                $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tServicecounty/GettServicecountyList",
+                    data:{              
+                        "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	// console.log(result.data);
+                    	that.country = result.data;
+
+                    }
+                })
+                 // 擅长领域：
+                  $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tBegootat/GetBegootatList.json",
+                    data:{              
+                        "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	// console.log(result.data);
+                    	that.lingyu = result.data;
+
+
+                    }
+                })
+               // 我来答
+                $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tAttConsults/queryConsultsAllList",
+                    data:{
+                        "conState":2,
+                        "pageNum":1,
+                        "pageSize":10,
+                        "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result);
+                    	that.meDa = result.data;
+                    	// that.zixunId=result.data[0].tConRelayList[0].id;
+
+                    }
+                })
+                // 查看律师是否成功入住
+                 $.ajax({
+             	 	type:"post",
+                    url: unionUrl + "/legalaidweb/tAttorney/queryBystate",
+                    data:{
+                       
+                        "token":userTok.token
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                    	console.log(result)
+                    	if (result.code==200) {
+                    		console.log("您已成功入住律师！");
+                    	}else if (result.code==500) {
+                    		console.log("入驻失败！");
+                    	}
+
+                    }
+                })
+			//获取用户手机号
+            var chanpass = location.search
+            that.usertoken = chanpass.substring(1)
+			that.kfnowTime = nowTime   //获取客服当前时间
+
+
+			
+
+            //实名制查询   显示图片 名字
+            $.ajax({
+                type: 'post',
+                url: unionUrl + "/passLaborweb/api/laborun/realnameRecord/queryRealnameRecord",
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    "token": userTok.token
+                }),
+                async: false,
+                success: function (result) {
+                    console.log(result);
+                   if(result.data.total == 1){
+					    //用户头像
+                        that.userHeaderPic = result.data.content[0].portraitPic;
+						console.log('已经实名制')
+					}else{
+					    that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    }
+
+                }
+
+            })
+
+
+        }
+
+
+
+    })
+
+
+</script>
+<!--智能客服-->
+<script src="js/znkf.js"></script>
+<!--上传图片 显示缩略图-->
+<script>
+	$(".ly_list ul li").on("click",function(){
+           $(this).toggleClass("mao");
+          
+     })
+     $(".answer-circle").on("click",function(){
+     	$(".pingjia_kuang").toggle();
+     })
+     // 身份证正面
+    function previewFile1() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg1');
+        var file = document.getElementById('idfile1').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+
+
+    function previewFile2() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg2');
+        var file = document.getElementById('idfile2').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile3() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg3');
+        var file = document.getElementById('idfile3').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile4() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg4');
+        var file = document.getElementById('idfile4').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile5() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg5');
+        var file = document.getElementById('idfile5').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile6() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg6');
+        var file = document.getElementById('idfile6').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile7() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg7');
+        var file = document.getElementById('idfile7').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile8() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg8');
+        var file = document.getElementById('idfile8').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile9() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg9');
+        var file = document.getElementById('idfile9').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile10() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg10');
+        var file = document.getElementById('idfile10').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile11() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg11');
+        var file = document.getElementById('idfile11').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile12() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg12');
+        var file = document.getElementById('idfile12').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile13() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg13');
+        var file = document.getElementById('idfile13').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile14() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg14');
+        var file = document.getElementById('idfile14').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile15() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg15');
+        var file = document.getElementById('idfile15').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile16() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg16');
+        var file = document.getElementById('idfile16').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile17() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg17');
+        var file = document.getElementById('idfile17').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile18() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg18');
+        var file = document.getElementById('idfile18').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+    function previewFile19() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg19');
+        var file = document.getElementById('idfile19').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+
+
+</script>
+<script>
+	$(function () {
+         
+		/*
+		*  1.要点击的元素 类名
+		*	2.要切换的元素 tab
+		* */
+		var heig = $('.tab-togg').height();
+		$('.my_ghcontent').css('height',heig)
+		
+		$(".btn").on("click",function(){
+            var dd=$(".erji").height();
+            // console.log(dd)
+            $('.my_ghcontent').css('height',dd)
+		})
+		// var heig = $('.layer-table').height();
+		// $('.layer-table').css('height',heig)
+		
+		
+		function tabtogg(clicClass,togclass,clica,clici) {
+            $(clicClass).click(function () {
+                $('.tab-togg').removeClass('on')
+                $(togclass).addClass('on')
+                var hei = $(togclass).height();
+                $('.my_ghcontent').css('height',hei)
+                $('.rh_list li p').removeClass('bordred')
+                $(clica).addClass('bordred')
+                $('.rh_list li i').css('color','#000')
+                $(clici).css('color','#db2c28')
+            })
+
+        }
+
+
+ 
+        tabtogg('.securitySettings','.my_personalinfo','.securitySettings p','.securitySettings i')
+        tabtogg('.personalinfo','.shiming','.personalinfo p','.personalinfo i')
+        tabtogg('.nameAttest','.xinxiang','.nameAttest p','.nameAttest i')
+        tabtogg('.ChairmanMailbox','.my-yuanzhu','.ChairmanMailbox p','.ChairmanMailbox i')
+        tabtogg('.Lawyerservice','.layer-ruzhu','.Lawyerservice p','.Lawyerservice i')
+        tabtogg('.Myanswer','.my-answer','.Myanswer p','.Myanswer i')
+        // tabtogg('.renwu_list','.xinxiang','.renwu_list p','.renwu_list i')
+
+		
+		
+		
+		tabtogg('.my-union','.my-enterUnion','.my-union p','.my-union i')
+        tabtogg('.my-transfer','.my-turnUnion','.my-transfer p','.my-transfer i')
+        tabtogg('.my-tiao','.my-tiaojie','.my-tiao p','.my-tiao i')
+        tabtogg('.my-dai','.my-daishu','.my-dai p','.my-dai i')
+        tabtogg('.my-zhong','.my-zhongcai','.my-zhong p','.my-zhong i')
+        tabtogg('.my-su','.my-susong','.my-su p','.my-su i')
+        tabtogg('.my-over','.renwu_over','.my-over p','.my-over i')
+        tabtogg('.my-wei','.renwu_myover','.my-wei p','.my-wei i')
+        tabtogg('.unit-crate','.unit-building','.unit-crate p','.unit-crate i')
+		tabtogg('.legal-person','.legal-content','.legal-person p','.legal-person i')
+		tabtogg('.my-letter','.my-letterbox','.my-letter p','.my-letter i')
+		// tabtogg('.securitySettings ','.my-enterUnion','.securitySettings  p','.securitySettings  i')
+		tabtogg('.my-renwuover','.my-overcountt','.my-renwuover p','.my-renwuover i')
+		tabtogg('.my-renwuwei','.my-weicountt','.my-renwuwei p','.my-renwuwei i')
+
+
+		$('.same').click(function () {
+            $(this).next().addClass("hei").prev().siblings().removeClass("hei");
+            $(this).find("i").addClass("rotate").parent().siblings().find("i").removeClass("rotate");
+			if($(this).next().hasClass('hei')){
+				// alert(111);
+				// $(this).prev().removeClass('active');
+                $(this).next().removeClass('hei')
+                $(this).find("i").removeClass('rotate')
+
+			}else{
+				// $(this).prev().addClass('active');
+                $(this).next().addClass('hei')
+                $(this).find("i").addClass('rotate')
+			}
+        })
+		$('.layer-btn button').click(function(){
+			$('.rh_boxed').css('display','none');
+			$('.layer-table').css('display','block');
+		})
+
+   })
+	// 援助案例、律师说法切换
+	$(".layer-button>div").on("click",function(){
+		$(this).addClass("actived").siblings().removeClass("actived");
+	})
+</script> <!-- 改成你的路径 -->
+</html>

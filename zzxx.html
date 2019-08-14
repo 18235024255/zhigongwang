@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阳泉市总工会</title>
+	<link rel="icon" href="images/picture.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/iconfont.css">
+	<!--全局样式-->
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		.my-fuwu li p{
+			border-left: none !important;
+			margin-left: 30px;
+		}
+		.mailbox{
+			width: 600px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.mailbox h4{
+			font-size: 24px;
+			color: rgb(255,152,0);
+			text-align: center;
+		}
+		.mail-content{
+			margin-top: 30px;
+			overflow: hidden;
+		}
+		.mail-content i{
+			float: left;
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 34px;
+			color: #db2c28;
+			font-style: normal;
+		}
+		.mail-content span{
+			float: left;
+			width: 590px;
+			font-size: 16px;
+			line-height: 34px;
+			color: #000;
+			padding-left: 10px;
+		}
+		.mail-time{
+			margin-top: 20px;
+			float: right;
+			width: 100%;
+		}
+		.mail-time i{
+			font-style: normal;
+			font-size: 14px;
+			color: #999999;
+		}
+		.mail-time span{
+			font-size: 14px;
+			color: #999999;
+			padding-left: 15px;
+		}
+		.mail-xian{
+			margin: 30px auto 0;
+			width: 600px;
+			height: 2px;
+			background: #cccccc;
+		}
+		.mail-reply{
+			width: 600px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.reply-title{
+			width: 600px;
+			margin: 30px auto 0;
+			overflow: hidden;
+		}
+		.reply-left{
+			float: left;
+		}
+		.reply-left h4{
+			font-size: 20px;
+			color: #db2c28;
+			font-weight: bold;
+		}
+		.reply-right{
+			float: right;
+		}
+		.reply-right span{
+			display: block;
+			width: 90px;
+			font-size: 14px;
+			color: #fff;
+			background-color: rgb(139, 195, 74);
+			text-align: center;
+			line-height: 30px;
+			border-radius: 5px;
+		}
+		.reply-text p{
+			width: 600px;
+			margin: 30px auto 0;
+			font-size: 16px;
+			line-height: 34px;
+			color: #000;
+			text-indent: 32px;
+		}
+		.mainRen{
+			margin-right: 47%;
+		}
+
+	</style>
+</head>
+<body>
+<div id="nameselect" v-cloak>
+	<div class="zg_box">
+		<div class="zg_info">
+			<div class="zg_top">
+				<div class="nav_left">
+					<a href="##"><img src="images/logo.png"></a>
+				</div>
+				<div class="tubiao">
+					<p>{{nowTime}}</p>
+					<p>{{nowDay}}</p>
+				</div>
+				<div class="nav_center clearfix">
+					<div class="tianqi">
+						<iframe width="350" scrolling="no" height="60" frameborder="0" allowtransparency="true"
+								src="//i.tianqi.com/index.php?c=code&id=12&icon=1&num=5&site=12"></iframe>
+					</div>
+				</div>
+				<div class="nav_righter" onclick="window.open('index.html','_self')">
+					<i class="icon iconfont icon--fanhuishouye"></i>
+					<a href="javascript:;">返回首页</a>
+				</div>
+			</div>
+			<!--选项卡区-->
+			<div class="my_gh clearfix">
+				<div class="my_ghtitle clearfix">
+					<div class="my_ghtitleleft">
+						<i class="icon iconfont icon-shouye"></i>
+						<a href="index.html">当前位置：首页></a>
+						<span>我的信箱详情</span>
+					</div>
+					<div class="my_ghtitleright">
+						<span style="margin-right: 20px;cursor: pointer;line-height: 31px;color: #db2c28;" onclick="javascript:window.history.back(-1);">返回上一页</span>
+					</div>
+				</div>
+				<div style="margin: 50px 0 200px 0">
+					<div class="mailbox" >
+						<h4>我的信箱详情</h4>
+						<div class="mail-content">
+							<i>*</i>
+							<span>标题：{{xinTitle}}</span>
+						</div>
+						<div class="mail-content">
+							<i>*</i>
+							<span>
+								{{xinContent}}
+							</span>
+						</div>
+						<div class="mail-time">
+							<i>写信人:</i><span class="mainRen">{{xinPerpon}}</span>
+
+							<i>发表时间</i><span>{{xinCreateTime}}</span>
+						</div>
+					</div>
+					<div class="mail-xian"></div>
+					<div class="mail-reply">
+						<div class="reply-title">
+							<div class="reply-left">
+								<h4>回复内容</h4>
+							</div>
+							<div class="reply-right">
+								<span>已回复</span>
+							</div>
+						</div>
+						<div class="reply-text">
+							<p>{{huiReplyContent}}
+							</p>
+						</div>
+							<div class="mail-time">
+								<!--<i>回复人:</i><span class="mainRen">{{xqList.reply.replyUserName}}</span>-->
+								<i>回复人:</i><span class="mainRen">阳泉市总工会</span>
+
+								<i>发表时间</i><span>{{huireplyTime}}</span>
+							</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+
+		<!-- 底部 -->
+		<div class="zg_bottom" style="border-top:2px solid #db2c28;background-color: #d9d9d9;padding: 20px;">
+				<div style="width:1200px;margin:30px auto;text-align:center;">
+					<div>地址：山西省阳泉市桃南东路192号   电话：2022724</div>
+					<div>E--mail:szghwgb@163.com</div>
+					<div>版权所有：© 阳泉市总工会 版权所有</div>
+					<div>备案：晋ICP备13007903-1</div>
+					<div class="copy_img">
+						<a href="javascript:;"><img src="images/footer_img.png"></a>
+					</div>
+				</div>
+			</div>
+
+		<!--右侧功能栏-->
+		<div class="slide">
+			<ul>
+				<li class="open-hyzx">
+					<i class="icon iconfont icon-member"></i>
+					<a>{{membercenter}}</a>
+				</li>
+				<li>
+					<i class="icon iconfont icon-xiaoxi"></i><a href="##">消息通知</a>
+					<div class="tz-bage">
+						<span class="bage">10</span>
+					</div>
+				</li>
+				<li class="kefu"><i class="icon iconfont icon-kefu1 "></i><a href="##">智能客服</a></li>
+				<li><i class="icon iconfont icon-xinlang"></i><a href="##">微博</a></li>
+				<li><i class="icon iconfont icon-weixin2"></i><a href="##">微信</a></li>
+				<li><i class="icon iconfont icon-APP"></i><a href="##">APP</a></li>
+				<li id="top"><i class="icon iconfont icon-fanhuidingbu-"></i><a href="##">TOP</a></li>
+			</ul>
+			<div class="sina">
+				<a href="">
+					<img src="images/sina.png" width="100px" height="100px">
+				</a>
+				<p>新浪微博二维码</p>
+			</div>
+			<div class="ewm">
+				<a href="">
+					<img src="images/erweima.jpg" width="100px" height="100px">
+				</a>
+				<p>工会微信公众号</p>
+			</div>
+			<div class="exit">
+				<img :src="userHeaderPic" width="80px" height="80px" onclick="window.open('hyzx.html')"/>
+				<p class="phoneUser">{{userPhone}}</p>
+				<button @click="clear()">退出</button>
+			</div>
+			<div class="appDoload">
+				<div class="ang">
+					<p>安卓用户下载</p>
+					<img src="images/android.jpg" alt="安卓系统下载">
+				</div>
+				<div class="ios">
+					<p>IOS用户下载</p>
+					<img src="images/android.jpg" alt="IOS系统下载">
+				</div>
+			</div>
+		</div>
+
+		<!--智能客服-->
+		<div class="customer-service" >
+			<div class="kf_box">
+				<div class="kf clearfix">
+					<div class="kf_left">
+						<a href=""><img src="images/gh_x.png" width="23px" height="23px"></a>
+						<span>工会智能小K</span>
+					</div>
+					<div class="kf_right">
+						<i class="icon iconfont icon-xiajiantou"></i>
+					</div>
+				</div>
+			</div>
+			<div class="chat_box">
+				<div id="chat" class="chat clearfix">
+					<div class="chat_left">
+						<a href=""><img src="images/gh_l.png" style="margin-bottom: 5px;"></a>
+						<span>客服</span>
+						<i>{{kfnowTime}}</i>
+						<p>我是阳泉工会智能机器人，请问您有什么需要吗？</p>
+					</div>
+
+				</div>
+				<div class="down"></div>
+				<div class="shuru">
+					<input type="text" placeholder="请输入文字..."  v-model="userinp"/>
+				</div>
+				<div class="send clearfix">
+					<div class="send_left">
+						<i class="icon iconfont icon-smiling" ></i>
+					</div>
+					<div class="send_right">
+						<button type="button" @click="sendModel">发送</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</body>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vue2.5.22.js"></script>
+<script src="js/axios.0.18.0.js"></script>
+<script src="js/qs.6.60.js"></script>
+<script src="js/usertoken.js"></script>
+
+
+
+<script>
+    var vm = new Vue({
+        el: "#nameselect",
+        data: {
+            phone:'',
+            userinp:'',
+			userPhone:'',
+            usertoken:'',
+
+         	/*个人信息*/
+            loginAccount:'',  //登录账号
+            loginName:'',	  //真实姓名
+			loginNumber:'',   //手机号码
+            membercenter:'',
+			kfnowTime:'',
+			xqList:[],
+            nowTime:'',
+            nowDay:'',
+            userHeaderPic:'',
+
+            xinTitle:'',	//标题
+			xinContent:'', //写信内容
+			xinPerpon:'',  //写信人
+            xinCreateTime:'', //发送时间
+            huiReplyContent:'', //回复内容
+            huireplyTime:''		//回复时间
+        },
+        methods:{
+            //客服
+            sendModel(){
+                kfhuifu();
+			},
+
+            emailLise(){
+                var that = this
+                var aaa = window.location.search;
+                var urlID = aaa.substring(1);
+                $.ajax({
+                        url: baseUrl + "/api/cms/message/item/"+urlID,
+                        data: {
+                        },
+                        async:true,
+                        dataType: "json",
+                        success: function (result) {
+							console.log(result);
+							that.xqList=result.data
+
+							that.xinTitle = that.xqList.ask.title;	                   //信标题
+							that.xinContent = that.xqList.ask.content;                //写信内容
+							that.xinPerpon = that.xqList.ask.realName;               //写信人
+							that.xinCreateTime = that.xqList.ask.createTime;        //写信时间
+							that.huiReplyContent = that.xqList.reply.replyContent; //回复内容
+							that.huireplyTime = that.xqList.reply.replyDate;      //回复时间
+                        }
+                    })
+            },
+
+        },
+
+        mounted(){
+
+            const that = this;
+            that.emailLise();
+			that.kfnowTime = nowTime;  //获取客服当前时间
+
+            that.nowTime = nowTimeDay;
+            getDay();
+            that.nowDay = nowDay;
+
+
+
+           //实名制查询   显示用户头像 名字
+             
+              if(userTok.token != null){
+                   $.ajax({
+                        type: 'post',
+                        url: unionUrl + "/passLaborweb/api/laborun/realnameRecord/queryRealnameRecord",
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                        "token": userTok.token
+                    }),
+                    async: false,
+                    success: function (result) {
+                    console.log(result);
+
+                    if (result.data.total == 1) {
+                        //用户头像
+                        that.userHeaderPic = result.data.content[0].portraitPic;
+                        console.log('已经实名制')
+                    } else if (result.data.total == 0) {
+                        that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    } else {
+                        that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    }
+
+
+                     }
+
+                   })
+              }
+            
+
+        }
+
+    
+
+
+    })
+
+
+</script>
+<!--智能客服-->
+<script src="js/znkf.js"></script>
+
+
+</html>

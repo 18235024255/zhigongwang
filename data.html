@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" href="images/picture.png" type="image/x-icon"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>阳泉市总工会</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" >
+	<!--全局样式-->
+	<link rel="stylesheet" href="css/style.css">
+	<!--大数据样式-->
+	<link href="echarts/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="nav_box" id="nameselect" v-cloak>
+
+	<div class="nav1">
+		<div class="nav_left" title="阳泉市总工会">
+			<a href="javascript:;"><img src="images/logo.png"></a>
+		</div>
+		<div class="tubiao">
+			<p>{{nowTime}}</p>
+			<p>{{nowDay}}</p>
+		</div>
+		<div class="nav_center clearfix">
+			<div class="tianqi">
+				<iframe width="350" scrolling="no" height="60" frameborder="0" allowtransparency="true"
+						src="//i.tianqi.com/index.php?c=code&id=12&icon=1&num=5&site=12"></iframe>
+			</div>
+		</div>
+		<!--微信矩阵开始-->
+		<div class="nav_right clearfix" >
+			<!--网站集群-->
+			<div class="juxing" id="showmask1">
+				<i class="icon iconfont icon-pingtai"></i>
+				<p>网站集群</p>
+				
+				<div class="top-arrow1"></div>
+				<div class="top-arrow1ccc"></div>
+				</div>
+			<div class="wechat-mask clearfix">
+					<div class="jq showmask1">
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">市</a></li>
+							<li><a href="">阳泉</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">区/县</a></li>
+							<li><a href="">阳泉城区</a></li>
+							<li><a href="">阳泉矿区</a></li>
+							<li><a href="">阳泉郊区</a></li>
+							<li><a href="">平定县</a></li>
+							<li><a href="">盂县</a></li>
+						</ul>
+					</div>
+	
+				</div>
+				</div>
+			<!--微信矩阵-->
+			<div class="juxing pic" id="showmask2" >
+				<i class="icon iconfont icon-weixin2"></i>
+				<p>微信矩阵</p>
+				<div class="top-arrow2"></div>
+				<div class="top-arrow2ccc"></div>
+			</div>
+			<div class="wechat-mask clearfix">
+					
+				
+				<div class="jq showmask2">
+
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">市</a></li>
+							<li><a href="">阳泉</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">区/县</a></li>
+							<li><a href="">阳泉城区</a></li>
+							<li><a href="">阳泉矿区</a></li>
+							<li><a href="">阳泉郊区</a></li>
+							<li><a href="">平定县</a></li>
+							<li><a href="">盂县</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">产业工会</a></li>
+							<li><a href="">非公企业工会</a></li>
+							<li><a href="">财贸轻纺烟草工会</a></li>
+							<li><a href="">农林水工会</a></li>
+							<li><a href="">省煤炭工会</a></li>
+							<li><a href="">机冶建材工会</a></li>
+							<li><a href="">省直机关工会工委</a></li>
+							<li><a href="">省监狱工会</a></li>
+							<li><a href="">信息业工会</a></li>
+							<li><a href="">建筑业工会</a></li>
+							<li><a href="">直属基层工委</a></li>
+							<li><a href="">省公路运输工委</a></li>
+							<li><a href="">电业工会</a></li>
+							<li><a href="">教科文卫体工会</a></li>
+							<li><a href="">太铁工会</a></li>
+							<li><a href="">金融工委</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<!--微信矩阵结束-->
+	</div>
+	<div class="list_online">
+		 <div class="search clearfix">
+			  
+
+				<input type="text" placeholder="请输入关键字" style="height: 38px" class="text" id="ser-text"  v-model="serKwords"/>
+				<input type="button" class="button serbutton" value="搜索" @click="goToSer('ssjg.html')"/>
+		    </div>
+	    </div>
+	<div class="list_box">
+		<div class="menu">
+			<ul class="clearfix">
+				<li class=" hideMask">
+					<a href="index.html">
+						<i class="icon iconfont icon-shouye"></i>首页
+					</a>
+				</li>
+				<li class="tissue-jg">
+					<a href="zzjg.html">
+						<i class="icon iconfont icon-zuzhijigou1"></i>组织机构
+					</a>
+				</li>
+				<li class="news-zx">
+					<a href="xwzx.html">
+						<i class="icon iconfont icon-xinwen2"></i>新闻资讯
+					</a>
+				</li>
+				<li class="hideMask">
+					<a href="zg_index.html">
+						<i class="icon iconfont icon-daohangtubiao_fuwudating"></i>服务大厅
+					</a>
+				</li>
+				<li class="hideMask">
+					<a href="ztzx.html">
+						<i class="icon iconfont icon-zhuanti"></i>专题中心
+					</a>
+				</li>
+				<li class="hideMask">
+					<a href="jnts.html">
+						<i class="icon iconfont icon-shu1"></i>技能提升
+					</a>
+				</li>
+				<li class="hideMask active">
+					<a href="javascript:;">
+						<i class="icon iconfont icon-shuju"></i>数据中心
+					</a>
+				</li >
+				<li class="hideMask">
+					<a href="zlzx.html">
+						<i class="icon iconfont icon-ziliao"></i>资料中心
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--新闻资讯-->
+		<div class="content clearfix">
+			<div class="content_left" style="margin-top: -10px">
+				<ul>
+
+					<li v-for="(item,index) in mask1left"
+						@click="rightContent(item.categoryId)"
+						:key="index">
+						<a href="javascript:;">{{item.categoryName}}</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="content_center">
+				<ul>
+					<li v-for="(item,name) in mask1right" @click="sendId(item.contentId)">
+						<a href="javascript:;">
+							<div class="circle"></div>
+							{{item.title}}
+						</a>
+						<span>【{{item.inputdate}}】</span>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<!--组织机构-->
+		<div class="xiala">
+			<div class="xiala_left">
+				<ul>
+					<li><a href="javascript:;">市总简介</a></li>
+					<li><a href="javascript:;">市总领导</a></li>
+					<li class="active1"><a href="javascript:;">内设机构</a></li>
+				</ul>
+			</div>
+			<div class="xiala_right">
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">市总部门：</a></li>
+						<li><a href="javascript:;">办公室</a></li>
+						<li><a href="javascript:;">组织部</a></li>
+						<li><a href="javascript:;">宣教部</a></li>
+						<li><a href="javascript:;">经济部</a></li>
+						<li><a href="javascript:;">保障部</a></li>
+						<li><a href="javascript:;">劳保部</a></li>
+						<li><a href="javascript:;">法工部</a></li>
+						<li><a href="javascript:;">女工部</a></li>
+						<li><a href="javascript:;">财务部</a></li>
+						<li><a href="javascript:;">网络部</a></li>
+						<li><a href="javascript:;">党工部</a></li>
+					</ul>
+				</div>
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">地方工会：</a></li>
+						<li><a href="javascript:;">平定县总工会</a></li>
+						<li><a href="javascript:;">盂县总工会</a></li>
+						<li><a href="javascript:;">城区总工会</a></li>
+						<li><a href="javascript:;">矿区总工会</a></li>
+						<li><a href="javascript:;">郊区总工会</a></li>
+						<li><a href="javascript:;">经济开发区总工会</a></li>
+					</ul>
+				</div>
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">产业工会：</a></li>
+						<li><a href="javascript:;">阳泉市煤矿电力工会</a></li>
+						<li><a href="javascript:;">阳泉市公交建通工会</a></li>
+						<li><a href="javascript:;">阳泉市文教卫生工会</a></li>
+						<li><a href="javascript:;">阳泉市财贸工会</a></li>
+						<li><a href="javascript:;">阳泉市市直机关工会</a></li>
+					</ul>
+				</div>
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">市直机关工会委员会：</a></li>
+						<li><a href="javascript:;">阳泉煤业(集团)有限责任公司工会</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+</div>
+<div class="center_1">
+    <div class="shuju_box">
+        <div class="shuji_zi">
+            <img src="images/shuju_zi.png">
+        </div>
+        <div class="shuju_title">
+			<h4>工会数据<span>（截至2019年6月20日）</span></h4>
+			<div class="online"></div>
+		</div>
+        <ul class="clearfix">
+            <li>
+                <strong>2861</strong>
+				<span>个</span>
+                <div class="text">全市工会组织</div>
+            </li>
+            <li>
+                <strong>340491</strong>
+                <span>人</span>
+                <div class="text">职工人数</div>
+            </li>
+            <li>
+                <strong>334692</strong>
+                <span>人</span>
+                <div class="text">全市工会会员</div>
+            </li>
+        </ul>
+    </div>
+    <div class="data_box">
+        <div class="data_title">
+            阳泉市总工会
+        </div>
+        <div class="same_box">
+        	<div>
+        		<div class="zong" id="chart4" style="width: 100%; height: 480px;"></div>
+        	</div>
+        	<div>
+        		<ul class="shuju_list">
+        			<li>
+        				<div class="biao" style="background: #36D7B6;"></div>
+        				<div>镇街帮扶站 335 个，占比 <em>16.25% </em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #8E44AD"></div>
+        				<div>区县职工服务中心 40 个，占比 <em>1.6%</em></div>
+        				
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #F3C301"></div>
+        				<div>乡镇街道工会 1025 个，占比 <em>40.9%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #FF7132"></div>
+        				<div>区县总工会 40 个，占比 <em>1.6%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #2F353B"></div>
+        				<div>市级机关联合会 1 个，占比 <em>0.04%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #E74F5B"></div>
+        				<div>非农民工会员 330 万人，占比 <em>43.42%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #C8D046"></div>
+        				<div>非会员职工 40 万人 ，占比 <em>5.26%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #3598DC;"></div>
+        				<div>农民工会员 390万人，占比 <em>51.32%</em></div>
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    <div class="data_box">
+        <div class="data_title">
+            促进职工就业创业
+        </div>
+        <div class="same_box">
+        	<div>
+        		<div id="chart1" style="width: 100%; height: 480px;margin-top: -70px;"></div>
+        	</div>
+        	<div>
+        		<ul class="shuju_list" style="margin-top: 109px;">
+        			<li>
+        				<div class="biao" style="background: #DDDF00"></div>
+        				<div>帮扶获得职工技能证书 520 人，占比 <em>16.25% </em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #e7505a"></div>
+        				<div>职业技能培训 6900 人，占比 <em>1.6%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #3598DC"></div>
+        				<div>家政服务培训 1900 人，占比 <em>40.9%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #32C5D2"></div>
+        				<div>创业培训 1300 人，占比 <em>1.6%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #816EA3;"></div>
+        				<div>免费就业服务 1500 人，占比 <em>0.04%</em></div>
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    <div class="data_box">
+        <div class="data_title">
+            帮扶服务职工群众
+        </div>
+        <div class="same_box">
+        	<div>
+        		<div id="chart2" style="width: 100%; height: 480px;margin-top: -70px;"></div>
+        	</div>
+        	<div>
+        		<ul class="shuju_list" style="margin-top: 109px;">
+        			<li>
+        				<div class="biao" style="background: #36d7b6"></div>
+        				<div>爱心药房 350 家，占比 <em>41.18%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #F2CD3C"></div>
+        				<div>爱心医院 130 家，占比 <em>15.29%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao"  style="background:#E7505A "></div>
+        				<div>职工服务中心 40 个，占比 <em>4.71%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao"  style="background: #3598DC"></div>
+        				<div>爱心超市 200 家，占比 <em>23.53%</em></div>
+        			</li>
+        			<li>
+        				<div class="biao"  style="background: #FF7132"></div>
+        				<div>爱心学校 130 所，占比 <em>15.29%</em></div>
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    <div class="data_box">
+        <div class="data_title">
+           基层工会活动
+        </div>
+        <div class="same_box">
+        	<div>
+        		<div id="chart3" style="width: 100%; height: 480px;margin-top: -70px;"></div>
+        	</div>
+        	<div>
+        		<ul class="shuju_list" style="margin-top: 109px;">
+        			<li>
+        				<div class="biao" style="background:#D91E19 "></div>
+        				<div>全市首批职工最可信赖的“娘家人” <em>10</em> 家</div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #36D7B6"></div>
+        				<div>阳泉市模范职工小家 <em>124</em> 家</div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background:#E74F5B "></div>
+        				<div>评选表彰阳泉市模范职工之家 <em>152</em> 家</div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background:#F3C301 "></div>
+        				<div>全市优秀工会工作者 <em>52</em> 人</div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background: #3598DC"></div>
+        				<div>职工小家 <em>72</em> 家</div>
+        			</li>
+        			<li>
+        				<div class="biao" style="background:#FF7132 "></div>
+        				<div>全市模范职工之家 <em>72</em> 家</div>
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+</div>
+	<div class="zg_bottom" style="border-top:2px solid #db2c28;background-color: #d9d9d9;padding: 20px;">
+		<div style="width:1200px;margin:30px auto;text-align:center;">
+			<div>地址：山西省阳泉市桃南东路192号   电话：2022724</div>
+			<div>E--mail:szghwgb@163.com</div>
+			<div>版权所有：© 阳泉市总工会 版权所有</div>
+			<div>备案：晋ICP备13007903-1</div>
+			<div class="copy_img">
+				<a href="javascript:;"><img src="images/footer_img.png"></a>
+			</div>
+		</div>
+	</div>
+	<div class="slide">
+		<ul>
+
+			<li class="open-hyzx">
+				<i class="icon iconfont icon-member"  style="margin-top: 10px"></i>
+				<a href="javascript:;">{{membercenter}}</a>
+			</li>
+			<li>
+				<i class="icon iconfont icon-xiaoxi" style="margin-top: 10px"></i><a href="##">消息通知</a>
+				<div class="tz-bage">
+					<span class="bage">10</span>
+				</div>
+			</li>
+			<li class="kefu"><i class="icon iconfont icon-kefu1" style="margin-top: 10px"></i><a href="javascript:;">智能客服</a></li>
+			<li><i class="icon iconfont icon-xinlang" style="margin-top: 10px"></i><a href="javascript:;">微博</a></li>
+			<li><i class="icon iconfont icon-weixin2" style="margin-top: 10px"></i><a href="javascript:;">微信</a></li>
+			<li><i class="icon iconfont icon-APP" style="margin-top: 10px"></i><a href="javascript:;">APP</a></li>
+			<li id="top"><i class="icon iconfont icon-fanhuidingbu-" style="margin-top: 10px"></i><a href="javascript:;">TOP</a></li>
+		</ul>
+		<div class="sina">
+			<a href="">
+				<img src="images/sina.png" width="100px" height="100px">
+			</a>
+			<p>新浪微博二维码</p>
+		</div>
+		<div class="ewm">
+			<a href="">
+				<img src="images/erweima.jpg" width="100px" height="100px">
+			</a>
+			<p>工会微信公众号</p>
+		</div>
+		<div class="exit">
+			<img :src="userHeaderPic" width="80px" height="80px" onclick="window.open('hyzx.html')"/>
+
+			<p class="phoneUser">{{userPhone}}</p>
+		
+			<button  @click="clear()">{{islogin}}</button>
+		</div>
+		<div class="appDoload">
+			<div class="ang">
+				<p>安卓用户下载</p>
+				<img src="images/android.jpg" alt="安卓系统下载">
+			</div>
+			<div class="ios">
+				<p>IOS用户下载</p>
+				<img src="images/android.jpg" alt="IOS系统下载">
+			</div>
+		</div>
+	</div>
+	<!--智能客服-->
+	<div class="customer-service" >
+		<div class="kf_box">
+			<div class="kf clearfix">
+				<div class="kf_left">
+					<a href=""><img src="images/gh_x.png" width="23px" height="23px"></a>
+					<span>工会智能小K</span>
+				</div>
+				<div class="kf_right">
+					<i class="icon iconfont icon-xiajiantou"></i>
+				</div>
+			</div>
+		</div>
+		<div class="chat_box">
+
+			<div id="chat" class="chat clearfix">
+				<div class="chat_left">
+					<a href=""><img src="images/gh_l.png" style="margin-bottom: 5px;"></a>
+					<span>客服</span>
+					<i>2019-3-22  12:12</i>
+					<p>我是阳泉工会智能机器人，请问您有什么需要吗？</p>
+				</div>
+			</div>
+			<div class="down"></div>
+			<div class="shuru">
+				<input type="text" placeholder="请输入文字..."  v-model="userinp"/>
+			</div>
+			<div class="send clearfix">
+				<div class="send_left">
+					<i class="icon iconfont icon-smiling" ></i>
+				</div>
+				<div class="send_right">
+					<button type="button" @click="sendModel">发送</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+	$(function () {
+
+	   /*微信矩阵 网站集群显示隐藏 复制*/
+        $('#showmask2').mouseenter(function () {
+		   $('.showmask2').show();
+		   $('.top-arrow2').show()
+		   $('.top-arrow2ccc').show()
+		   $('.showmask1').hide()
+		   $('.top-arrow1').hide()
+		   $('.top-arrow1ccc').hide()
+		});
+        $('.showmask2').mouseleave(function () {
+            $('.showmask2').hide()
+            $('.top-arrow2').hide()
+            $('.top-arrow2ccc').hide()
+        });
+        $('#showmask1').mouseenter(function () {
+            $('.showmask1').show()
+            $('.showmask2').hide()
+            $('.top-arrow2').hide()
+            $('.top-arrow2ccc').hide()
+            $('.top-arrow1').show()
+            $('.top-arrow1ccc').show()
+        });
+        $('.showmask1').mouseleave(function () {
+            $('.showmask1').hide()
+            $('.top-arrow1').hide()
+            $('.top-arrow1ccc').hide()
+        });
+
+
+        addactive('.list_online .list ul li','active');
+        addactive('.slide ul li','active');
+        addactive('.content_left ul li','active1');
+
+        $('.content_left li:nth-child(2)').addClass('active1')
+        
+      
+
+   })
+</script>
+<script src="js/vue2.5.22.js"></script>
+<script src="js/axios.0.18.0.js"></script>
+<script src="js/qs.6.60.js"></script>
+<script src="js/usertoken.js"></script>
+
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+<script>
+var vm = new Vue({
+	el: "#nameselect",
+	data: {
+		mask1left:[],
+		mask1right:[],
+		rightTop:[],
+		userinp:'',
+		userPhone:'',
+		islogin:'退出',
+		membercenter:'',
+		nowTime:'',
+		nowDay:'',
+		userHeaderPic:'',
+		serKwords:''
+	},
+	methods:{
+		//遮罩层1左侧菜单列表
+		getMask1LeftMenu(){
+			const that = this;
+			$.ajax({
+				url: baseUrl + "/api/category/list",
+				data:{
+					parentId:"290"
+				},
+				async: false,
+				dataType:"json",
+				success:  function (result) {
+					that.mask1left = (result.data);
+				}
+			})
+		},
+		
+		getMask1LeftContent(){
+			const that = this;
+			$.ajax({
+				url: baseUrl + "/api/category/list",
+				data:{
+					parentId:"290"
+				},
+				async: false,
+				dataType:"json",
+				success:  function (result) {
+					that.mask1left = result.data;
+				}
+			})
+            //红兵
+            $.ajax({
+                url: "http://ftu.dev.puluodike.cn/zgfww/system/cms/friendlink/group/getJsonData",
+                data:{
+
+                },
+                async: false,
+                dataType:"json",
+                success:  function (result) {
+                    console.log(result.data);
+                    that.firendZ = result.data
+                }
+            })
+		},
+		//根据左侧id 右侧数据变化
+		rightContent(id){
+			const that = this;
+			$.ajax({
+				url:baseUrl + "/api/content/list",
+				data:{
+					"categoryId" : id,
+					"num" : "1",
+					"pageSize" : "10"
+				},
+				dataType:"json",
+				success:  function (result) {
+					that.mask1right = result.data.list;
+				}
+			})
+
+			$.ajax({
+				url:baseUrl + "/api/content/list",
+				data:{
+					"categoryId" : id,
+					"num" : "1",
+					"pageSize" : "10"
+				},
+				dataType:"json",
+				success:  function (result) {
+					that.mask1right = result.data.list;
+					that.rightTop = that.mask1right[0];
+
+
+				}
+			})
+
+
+		},
+		//跳转详情页
+		sendId(id){
+		  window.open('xw_xq.html' + '?'+id)
+		},
+		clear(){
+			  sessionStorage.clear();
+			  window.open("denglu.html","_self")
+		},
+		goToSer(path){
+			const that=this
+			console.log(that.serKwords)
+			window.open(path,'_self')
+			localStorage.setItem("keywords",that.serKwords)
+		},
+		sendModel(){
+			kfhuifu();
+		},
+	},
+	mounted(){
+
+		const that = this;
+		that.getMask1LeftMenu();
+		that.getMask1LeftContent();
+
+		//当前时间
+		that.nowTime = nowTimeDay;
+		getDay();
+		that.nowDay = nowDay;
+
+
+
+
+		//新闻 默认显示id 306
+		$.ajax({
+			url:baseUrl + "/api/content/list",
+			data:{
+				"categoryId" : "306",
+				"num" : "1",
+				"pageSize" : "10"
+			},
+			dataType:"json",
+			success:  function (result) {
+				that.mask1right = result.data.list;
+				that.rightTop = that.mask1right[1];
+
+
+			}
+		});
+
+       //实名制查询   显示用户头像 名字
+             
+              if(userTok.token != null){
+                   $.ajax({
+                        type: 'post',
+                        url: unionUrl + "/passLaborweb/api/laborun/realnameRecord/queryRealnameRecord",
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                        "token": userTok.token
+                    }),
+                    async: false,
+                    success: function (result) {
+                    console.log(result);
+
+                    if (result.data.total == 1) {
+                        //用户头像
+                        that.userHeaderPic = result.data.content[0].portraitPic;
+                        console.log('已经实名制')
+                    } else if (result.data.total == 0) {
+                        that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    } else {
+                        that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    }
+
+
+                     }
+
+                   })
+              }
+	}
+
+})
+
+</script>
+<!--智能客服-->
+<script src="js/znkf.js"></script>
+
+</body>
+<script type="text/javascript">
+	// JavaScript Document
+var myChart1 = echarts.init(document.getElementById('chart1'));
+var myChart2 = echarts.init(document.getElementById('chart2'));
+var myChart3 = echarts.init(document.getElementById('chart3'));
+var myChart4 = echarts.init(document.getElementById('chart4'));
+
+option1 = {
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    series : [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius : '60%',
+            center: ['50%', '50%'],
+            data:[
+                {value:6900, name:'职业技能培训'},
+                {value:1900, name:'家政服务培训'},
+                {value:1300, name:'创业培训'},
+                {value:1500, name:'免费就业服务'},
+                {value:520, name:'帮助获得职业技能证书'}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ],
+    color:['#E7505A', '#3598DC', '#32C5D2', '#816EA3', '#F7CA17', '#F7CA17', '#FFF263', '#6AF9C4','#DDDF00']
+};
+option2 = {
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    calculable : true,
+    series : [
+        {
+            name:'困难帮扶措施',
+            type:'pie',
+            radius : [30, 110],
+            center : ['50%', '50%'],
+            roseType : 'area',
+            data:[
+                {value:40, name:'职工服务中心'},
+                {value:200, name:'爱心超市'},
+                {value:130, name:'爱心学校'},
+                {value:350, name:'爱心药房'},
+                {value:130, name:'爱心医院'}
+            ]
+        }
+    ],
+    color:['#E7505A', '#3598DC', '#FF7132', '#36D7B6', '#F0C005', '#FF9655', '#FFF263', '#6AF9C4','#DDDF00']
+};
+option3 = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    yAxis: {
+        type: 'value',
+        boundaryGap: [0, 0.01]
+    },
+    xAxis: {
+        type: 'category',
+        data: ['全市模范职工之家','职工小家','全市优秀工会工作者','评选表彰阳泉市模范职工之家','阳泉市模范职工小家','全市首批职工最可信赖的“娘家人”'],
+    },
+    series: [
+        {
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: false,
+                    textStyle: {
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            name: '2015年',
+            type: 'bar',
+            data: [10, 124, 152, 50, 72, 72],
+            barWidth : 36,
+            itemStyle: {
+                normal: {
+                     color: function(params) {
+                        // build a color map as your need.
+                        var colorList = [
+                         '#D91E19', '#36D7B6', '#E74F5B', '#F3C301', '#3598DC', '#FF7132', '#FFF263', '#6AF9C4','#DDDF00'
+                        ];
+                        return colorList[params.dataIndex]
+                    }
+                }
+            }
+        },
+    ],
+};
+
+
+option4 = {
+    tooltip: {
+        trigger: '阳泉市总工会',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    series: [
+        {
+            name:'会员情况',
+            type:'pie',
+            selectedMode: 'single',
+            radius: [0, '30%'],
+            center : ['50%', '50%'],
+            data:[
+                {value:400000, name:'非会员职工'},
+                {value:3900000, name:'农民工会员'},
+                {value:3300000, name:'非农民工会员'}
+            ]
+        },
+        {
+            name:'组织情况',
+            type:'pie',
+            radius: ['40%', '55%'],
+            center : ['50%', '50%'],
+            data:[
+
+                {value:40, name:'区县总工会', selected:true},
+                {value:1, name:'市级机关联合会'},
+                {value:1017, name:'乡镇街道工会'},
+                {value:40, name:'区县职工服务中心'},
+                {value:1400, name:'镇街帮扶站'}
+            ]
+        }
+    ],
+    color:['#3598DC', '#C8D046', '#E74F5B', '#FF7132', '#2F353B', '#F3C301', '#8E44AD', '#36D7B6']
+};
+myChart1.setOption(option1);
+			myChart2.setOption(option2);
+			myChart3.setOption(option3);
+			myChart4.setOption(option4);	
+</script>
+</html>

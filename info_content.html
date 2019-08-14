@@ -1,0 +1,707 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>阳泉市总工会</title>
+	<link rel="icon" href="images/picture.png" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="css/xw_xq.css" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<!--全局样式-->
+	<link rel="stylesheet" href="css/style.css">
+	<title>新闻资讯-详情</title>
+	<style>
+		.showmask2,.showmask1{
+			display: none;
+		}
+		.xq-contentPic{
+			margin: 20px auto 0;
+			width: 70%;
+
+		}
+		.xq-contentPic img{
+			width: 100%;
+		}
+		.text{
+			width: 380px;
+			height: 44px;
+			border: 1px solid #db2c28;
+			float: left;
+			border-right: none;
+			font-size: 14px;
+			color: #999999;
+			padding-left: 20px;
+		}
+		.bdshare-slide-style-l3{
+			top:220px !important;
+		}
+		.bdshare-slide-button{
+			display: none!important;
+		}
+	</style>
+</head>
+<body>
+<div class="nav_box" id="nameselect" v-cloak>
+	<div class="nav1">
+		<div class="nav_left">
+			<a href=""><img src="images/logo.png"></a>
+		</div>
+		<div class="tubiao">
+			<p>{{nowTime}}</p>
+			<p>{{nowDay}}</p>
+		</div>
+		<div class="nav_center clearfix">
+			<div class="tianqi">
+				<iframe width="350" scrolling="no" height="60" frameborder="0" allowtransparency="true"
+						src="//i.tianqi.com/index.php?c=code&id=12&icon=1&num=5&site=12"></iframe>
+			</div>
+		</div>
+		<!--微信矩阵开始-->
+		<div class="nav_right clearfix" >
+			<!--网站集群-->
+			<div class="juxing" id="showmask2">
+				<i class="icon iconfont icon-pingtai"></i>
+				<p>网站集群</p>
+
+				<div class="top-arrow1"></div>
+				<div class="top-arrow1ccc"></div>
+			</div>
+			<div class="wechat-mask clearfix">
+				<div class="jq showmask1">
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">市</a></li>
+							<li><a href="">阳泉</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">区/县</a></li>
+							<li><a href="">阳泉城区</a></li>
+							<li><a href="">阳泉矿区</a></li>
+							<li><a href="">阳泉郊区</a></li>
+							<li><a href="">平定县</a></li>
+							<li><a href="">盂县</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<!--微信矩阵-->
+			<div class="juxing pic" id="showmask1" >
+				<i class="icon iconfont icon-weixin2"></i>
+				<p>微信矩阵</p>
+				<div class="top-arrow2"></div>
+				<div class="top-arrow2ccc"></div>
+			</div>
+			<div class="wechat-mask clearfix">
+
+
+				<div class="jq showmask2">
+
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">市</a></li>
+							<li><a href="">阳泉</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">区/县</a></li>
+							<li><a href="">阳泉城区</a></li>
+							<li><a href="">阳泉矿区</a></li>
+							<li><a href="">阳泉郊区</a></li>
+							<li><a href="">平定县</a></li>
+							<li><a href="">盂县</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">产业工会</a></li>
+							<li><a href="">非公企业工会</a></li>
+							<li><a href="">财贸轻纺烟草工会</a></li>
+							<li><a href="">农林水工会</a></li>
+							<li><a href="">省煤炭工会</a></li>
+							<li><a href="">机冶建材工会</a></li>
+							<li><a href="">省直机关工会工委</a></li>
+							<li><a href="">省监狱工会</a></li>
+							<li><a href="">信息业工会</a></li>
+							<li><a href="">建筑业工会</a></li>
+							<li><a href="">直属基层工委</a></li>
+							<li><a href="">省公路运输工委</a></li>
+							<li><a href="">电业工会</a></li>
+							<li><a href="">教科文卫体工会</a></li>
+							<li><a href="">太铁工会</a></li>
+							<li><a href="">金融工委</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--微信矩阵结束-->
+
+	</div>
+	<div class="list_online">
+		<div class="search clearfix">
+
+			<input type="text" placeholder="请输入关键字" class="text searchText" id="ser-text" v-model="serKwords"/>
+			<input type="button" class="button serbutton" value="搜索" @click="goToSer('ssjg.html')"/>
+		</div>
+	</div>
+	<div class="list_box">
+		<div class="menu">
+			<ul class="clearfix">
+				<li class="hideMask">
+					<a href="index.html">
+						<i class="icon iconfont icon-shouye"></i>首页
+					</a>
+				</li>
+
+				<li class="tissue-jg">
+					<a href="zzjg.html">
+						<i class="icon iconfont icon-zuzhijigou1"></i>组织机构
+					</a>
+				</li>
+				<li class="news-zx ">
+					<a href="xwzx.html">
+						<i class="icon iconfont icon-xinwen2"></i>新闻资讯
+					</a>
+				</li>
+				<li class="hideMask">
+					<a href="zg_index.html">
+						<i class="icon iconfont icon-daohangtubiao_fuwudating"></i>服务大厅
+					</a>
+				</li>
+				<li class="hideMask">
+					<a href="ztzx.html">
+						<i class="icon iconfont icon-zhuanti"></i>专题中心
+					</a>
+				</li>
+				<li>
+					<a href="jnts.html">
+						<i class="icon iconfont icon-shu1"></i>技能提升
+					</a>
+				</li>
+				<li class="hideMask">
+					<a href="data.html">
+						<i class="icon iconfont icon-shuju"></i>数据中心
+					</a>
+				</li>
+				<li class="hideMask active">
+					<a href="zlzx.html">
+						<i class="icon iconfont icon-ziliao"></i>资料中心
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--新闻资讯-->
+		<div class="content clearfix">
+			<div class="content_left">
+				<ul>
+
+					<li @click="rightContent(item.categoryId)"
+						v-for="(item,index) in mask1left" :key="index">
+						<a href="##">{{item.categoryName}}</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="content_center">
+				<ul>
+					<li v-for="(item,name) in mask1right" @click="sendId(item.contentId)">
+						<a href="##">
+							<div class="circle"></div>
+							{{item.title}}
+						</a>
+						<span>【{{item.inputdate}}】</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--组织机构-->
+		<div class="xiala">
+			<div class="xiala_left">
+				<ul>
+					<li><a href="##">省总简介</a></li>
+					<li><a href="##">省总领导</a></li>
+					<li class="active1"><a href="##">内设机构</a></li>
+				</ul>
+			</div>
+			<div class="xiala_right">
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">市总部门：</a></li>
+						<li><a href="javascript:;">办公室</a></li>
+						<li><a href="javascript:;">组织部</a></li>
+						<li><a href="javascript:;">宣教部</a></li>
+						<li><a href="javascript:;">经济部</a></li>
+						<li><a href="javascript:;">保障部</a></li>
+						<li><a href="javascript:;">劳保部</a></li>
+						<li><a href="javascript:;">法工部</a></li>
+						<li><a href="javascript:;">女工部</a></li>
+						<li><a href="javascript:;">财务部</a></li>
+						<li><a href="javascript:;">网络部</a></li>
+						<li><a href="javascript:;">党工部</a></li>
+					</ul>
+				</div>
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">地方工会：</a></li>
+						<li><a href="javascript:;">平定县总工会</a></li>
+						<li><a href="javascript:;">盂县总工会</a></li>
+						<li><a href="javascript:;">城区总工会</a></li>
+						<li><a href="javascript:;">矿区总工会</a></li>
+						<li><a href="javascript:;">郊区总工会</a></li>
+						<li><a href="javascript:;">经济开发区总工会</a></li>
+					</ul>
+				</div>
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">产业工会：</a></li>
+						<li><a href="javascript:;">阳泉市煤矿电力工会</a></li>
+						<li><a href="javascript:;">阳泉市公交建通工会</a></li>
+						<li><a href="javascript:;">阳泉市文教卫生工会</a></li>
+						<li><a href="javascript:;">阳泉市财贸工会</a></li>
+						<li><a href="javascript:;">阳泉市市直机关工会</a></li>
+					</ul>
+				</div>
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">市直机关工会委员会：</a></li>
+						<li><a href="javascript:;">阳泉煤业(集团)有限责任公司工会</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="my_ghtitleleft" style="width: 100%;">
+			<i class="icon iconfont icon-shouye"></i>
+			<a href="index.html">当前位置：首页></a>
+			<span>资料中心详情</span>
+			<span style="float: right;margin-right: 20px;cursor: pointer;line-height: 31px;" onclick="javascript:window.history.back(-1);">返回上一页</span>
+		</div>
+		<div class="tt_text clearfix">
+			<h4>{{content.title}}</h4>
+			<div class="date">
+				<span>来源：{{content.author}} </span>
+				<span>发表时间：{{content.inputdate}}</span>
+				<div class="bdsharebuttonbox" style="width: 300px;float: right;">
+					<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+					<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+					<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+					<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+					<a href="#" class="bds_print" data-cmd="print" title="打印"></a>
+				</div>
+
+			</div>
+			<div class="xq-contentPic">
+				<img :src="content.thumb" alt="">
+			</div>
+			<p>
+				{{content.subTitle}}
+			</p>
+			<p class="xq-contPush">
+
+			</p>
+		</div>
+
+	</div>
+
+
+
+	<!--底部信息-->
+	<div class="zg_bottom" style="border-top:2px solid #db2c28;background-color: #d9d9d9;padding: 20px;">
+		<div style="width:1200px;margin:30px auto;text-align:center;">
+			<div>地址：山西省阳泉市桃南东路192号   电话：2022724</div>
+			<div>E--mail:szghwgb@163.com</div>
+			<div>版权所有：© 阳泉市总工会 版权所有</div>
+			<div>备案：晋ICP备13007903-1</div>
+			<div class="copy_img">
+				<a href="javascript:;"><img src="images/footer_img.png"></a>
+			</div>
+		</div>
+	</div>
+	<!--右侧功能栏-->
+	<div class="slide">
+		<ul>
+			<li class="open-hyzx">
+				<i class="icon iconfont icon-member"></i>
+				<a >{{membercenter}}</a>
+			</li>
+			<li>
+				<i class="icon iconfont icon-xiaoxi"></i><a href="##">消息通知</a>
+				<div class="tz-bage">
+					<span class="bage">10</span>
+				</div>
+			</li>
+			<li class="kefu"><i class="icon iconfont icon-kefu1 "></i><a href="##">智能客服</a></li>
+			<li><i class="icon iconfont icon-xinlang"></i><a href="##">微博</a></li>
+			<li><i class="icon iconfont icon-weixin2"></i><a href="##">微信</a></li>
+			<li><i class="icon iconfont icon-APP"></i><a href="##">APP</a></li>
+			<li id="top"><i class="icon iconfont icon-fanhuidingbu-"></i><a href="##">TOP</a></li>
+		</ul>
+		<div class="sina">
+			<a href="">
+				<img src="images/sina.png" width="100px" height="100px">
+			</a>
+			<p>新浪微博二维码</p>
+		</div>
+		<div class="ewm">
+			<a href="">
+				<img src="images/erweima.jpg" width="100px" height="100px">
+			</a>
+			<p>工会微信公众号</p>
+		</div>
+		<div class="exit">
+			<img :src="userHeaderPic" width="80px" height="80px" onclick="window.open('hyzx.html')"/>
+			<p class="phoneUser">{{userPhone}}</p>
+			<button @click="clear()">退出</button>
+		</div>
+		<div class="appDoload">
+			<div class="ang">
+				<p>安卓用户下载</p>
+				<img src="images/android.jpg" alt="安卓系统下载">
+			</div>
+			<div class="ios">
+				<p>IOS用户下载</p>
+				<img src="images/android.jpg" alt="IOS系统下载">
+			</div>
+		</div>
+	</div>
+	<!--智能客服-->
+	<div class="customer-service" >
+		<div class="kf_box">
+			<div class="kf clearfix">
+				<div class="kf_left">
+					<a href=""><img src="images/gh_x.png" width="23px" height="23px"></a>
+					<span>工会智能小K</span>
+				</div>
+				<div class="kf_right">
+					<i class="icon iconfont icon-xiajiantou"></i>
+				</div>
+			</div>
+		</div>
+		<div class="chat_box">
+			<div id="chat" class="chat clearfix">
+				<div class="chat_left">
+					<a href=""><img src="images/gh_l.png" style="margin-bottom: 5px;"></a>
+					<span>客服</span>
+					<!--<i>2019-3-22  12:12</i>-->
+					<p>我是阳泉工会智能机器人，请问您有什么需要吗？</p>
+				</div>
+
+
+			</div>
+			<div class="down"></div>
+			<div class="shuru">
+				<input type="text" placeholder="请输入文字..."  v-model="userinp"/>
+			</div>
+			<div class="send clearfix">
+				<div class="send_left">
+					<i class="icon iconfont icon-smiling" ></i>
+				</div>
+				<div class="send_right">
+					<button type="button" @click="sendModel">发送</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/usertoken.js"></script>
+<script>
+    $(function () {
+
+		/*微信矩阵 网站集群显示隐藏 复制*/
+        $('#showmask1').mouseenter(function () {
+            $('.showmask2').show();
+            $('.top-arrow2').show()
+            $('.top-arrow2ccc').show()
+            $('.showmask1').hide()
+            $('.top-arrow1').hide()
+            $('.top-arrow1ccc').hide()
+        });
+        $('.showmask2').mouseleave(function () {
+            $('.showmask2').hide()
+            $('.top-arrow2').hide()
+            $('.top-arrow2ccc').hide()
+        });
+        $('#showmask2').mouseenter(function () {
+            $('.showmask1').show()
+            $('.top-arrow1').show()
+            $('.top-arrow1ccc').show()
+            $('.showmask2').hide()
+            $('.top-arrow2').hide()
+            $('.top-arrow2ccc').hide()
+        });
+        $('.showmask1').mouseleave(function () {
+            $('.showmask1').hide()
+            $('.top-arrow1').hide()
+            $('.top-arrow1ccc').hide()
+        });
+
+
+        addactive('.list_online .list ul li','active');
+        addactive('.menu ul li','mu1');
+
+
+
+
+
+		/*组织机构 新闻资讯*/
+        $('.tissue-jg').mouseover(function () {
+
+            $('.xiala').show();
+            $('.content').hide()
+        });
+        $('.content').mouseleave(function () {
+            $('.xiala').hide();
+            $('.content').hide();
+        });
+        $('.news-zx').mouseover(function () {
+            $('.content').show();
+            $('.xiala').hide();
+        });
+        $('.xiala').mouseleave(function () {
+            $('.content').hide();
+            $('.xiala').hide();
+        })
+
+        $('.hideMask').mouseenter(function () {
+
+            $('.xiala').hide();
+            $('.content').hide()
+
+        })
+
+
+
+    })
+</script>
+<script src="js/vue2.5.22.js"></script>
+<script src="js/axios.0.18.0.js"></script>
+<script src="js/qs.6.60.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#nameselect",
+        data: {
+            mask1left:[],
+            mask1right:[],
+            rightTop:[],
+            userinp:'',
+            userPhone:'',
+            content:[],
+            contentCont:'',
+            membercenter:'',
+            nowTime:'',
+            nowDay:'',
+            userHeaderPic:'',
+            serKwords:'',
+
+        },
+        methods:{
+            //遮罩层1左侧菜单列表
+            getMask1LeftMenu(){
+                const that = this;
+                $.ajax({
+                    url: baseUrl + "/api/category/list",
+                    data:{
+                        parentId:"290"
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                        that.mask1left = (result.data);
+
+                    }
+                })
+            },
+            getMask1LeftContent(){
+                const that = this;
+                $.ajax({
+                    url: baseUrl + "/api/category/list",
+                    data:{
+                        parentId:"290"
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                        that.mask1left = (result.data);
+                    }
+                })
+            },
+            //根据左侧id 右侧数据变化
+            rightContent(id){
+                const that = this;
+                $.ajax({
+                    url:baseUrl + "/api/content/list",
+                    data:{
+                        "categoryId" : id,
+                        "num" : "1",
+                        "pageSize" : "10"
+                    },
+                    dataType:"json",
+                    success:  function (result) {
+                        that.mask1right = result.data.list;
+
+                    }
+                })
+            },
+
+            goToSer(path){
+				const that=this
+				console.log(that.serKwords)
+				window.open(path,'_self')
+				localStorage.setItem("keywords",that.serKwords)
+            },
+
+            //跳转详情页
+            sendId(id){
+                console.log(id);
+                window.location.href=('xw_xq.html' + '?'+id)
+            },
+            //详情数据
+            xqContent(){
+
+                var contentUrl = location.search;
+                var constentId = contentUrl.substring(1);
+                const that = this;
+                $.ajax({
+                    url:baseUrl + '/api/content/'+constentId,
+                    dataType:"json",
+
+                    success:  function (result) {
+                        console.log(result);
+                        that.content = result.data;
+                        if(result.data.thumb === ''){
+                            $('.xq-contentPic').css('display','none')
+                        }else{
+
+                        }
+                        console.log(that.content.content);
+                        //内容处理
+                        $('.xq-contPush').append(that.content.content)
+
+
+                    }
+                })
+            },
+
+            sendModel(){
+                kfhuifu();
+            }
+
+
+        },
+        mounted(){
+
+            const that = this;
+            that.getMask1LeftMenu();
+            that.getMask1LeftContent();
+            that.xqContent();
+            that.nowTime = nowTimeDay;
+
+            getDay();
+            that.nowDay = nowDay;
+
+
+
+            //新闻 默认显示id 306
+            $.ajax({
+                url:baseUrl + "/api/content/list",
+                data:{
+                    "categoryId" : "306",
+                    "num" : "1",
+                    "pageSize" : "10"
+                },
+                dataType:"json",
+                success:  function (result) {
+                    that.mask1right = result.data.list;
+                    that.rightTop = that.mask1right[1];
+                }
+            });
+			//实名制查询   显示用户头像 名字
+             
+              if(userTok.token != null){
+                   $.ajax({
+                        type: 'post',
+                        url: unionUrl + "/passLaborweb/api/laborun/realnameRecord/queryRealnameRecord",
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                        "token": userTok.token
+                    }),
+                    async: false,
+                    success: function (result) {
+                    console.log(result);
+
+                    if (result.data.total == 1) {
+                        //用户头像
+                        that.userHeaderPic = result.data.content[0].portraitPic;
+                        console.log('已经实名制')
+                    } else if (result.data.total == 0) {
+                        that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    } else {
+                        that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    }
+
+
+                     }
+
+                   })
+              }
+
+
+
+
+        }
+
+
+
+    })
+
+
+</script>
+<!--智能客服-->
+<script src="js/znkf.js"></script>
+
+<script>
+	window._bd_share_config = {
+		common : {
+			bdText : 'Custom share content',
+			bdDesc : 'Custom share summary',
+			bdUrl : 'Custom share URL address',
+			bdPic : 'Custom share pictures'
+		},
+		share : [{
+			"bdSize" : 16
+		}],
+		slide : [{
+			bdImg : 0,
+			bdPos : "right",
+			bdTop : 100
+		}],
+		image : [{
+			viewType : 'list',
+			viewPos : 'top',
+			viewColor : 'black',
+			viewSize : '16',
+			viewList : ['qzone','tsina','huaban','tqq','renren']
+		}],
+		selectShare : [{
+			"bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
+		}]
+	}
+
+
+</script>
+<script>
+	window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+</body>
+
+</html>

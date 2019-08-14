@@ -1,0 +1,202 @@
+﻿
+.nav_box{
+	width: 100%;
+	background: url(../images/top_banner.jpg) top center no-repeat;
+}
+.nav1{
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 40px 0;
+}
+.nav_left{
+	float: left;
+}
+
+.nav_center{
+	float: left;
+}
+.nav_right{
+	float: right;
+}
+.juxing{
+	float: left;
+	background: #db2c28;
+	width: 100px;
+	height: 90px;
+	border-radius: 5px;
+	text-align: center;
+}
+.juxing i{
+	display: block;
+	font-size: 38px;
+	color: #fff;
+}
+.juxing p{
+	font-size: 16px;
+	color: #fff;
+}
+.pic{margin-left: 30px;}
+.list_box{
+	width: 1200px;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.7);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.list_online{
+	width: 600px;
+	margin: 0 auto;
+}
+.list{
+	margin: 0 auto;
+}
+.list ul{margin: 0; padding: 0;}
+.list ul li{
+	overflow: hidden;
+	float: left;
+	width: 90px;
+	text-align: center;
+	margin-right: 30px;
+}
+.list ul li a{
+	font-size: 15px;
+	color: #666666;
+	line-height: 34px;
+	margin-left: 5px;
+}
+.list ul li i{
+	font-size: 16px;
+	line-height: 34px;
+}
+.list ul li i{color: #666666;}
+.list ul li a{color: #666666;}
+.list ul li:hover{
+	background: #db2c28;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.list ul li:hover a{color: #fff;}
+.list ul li:hover i{color: #fff;}
+.list ul li.active{
+	background: #db2c28;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.list ul li.active i{color: #fff;}
+.list ul li.active a{color: #fff;}
+
+.menu{
+	width: 1200px;
+	margin: 135px auto 0;
+}
+.menu ul{margin: 0;padding: 0;}
+.menu ul li{
+	float: left;
+	width: 150px;
+	padding: 15px 0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom: 3px solid #db2c28;
+}
+.menu ul li i{
+	display: block;
+	font-size: 36px;
+	color: #db2c28;
+	text-align: center;
+}
+.menu ul li a{
+	display: block;
+	line-height: 43px;
+	text-align: center;
+	font-size: 20px;
+	color: #db2c28;
+}
+.my_ghtitleleft{margin: 30px auto 0;}
+.my_ghtitleleft i{
+	font-size: 22px;
+	color: #db2c28;
+}
+.my_ghtitleleft a{
+	font-size: 14px;
+	color: #333333;
+}
+.my_ghtitleleft span{
+	font-size: 14px;
+	color: #db2c28;
+	font-weight: bold;
+}
+.my_ghcontent{margin-top: 20px;}
+.my_ghcontentleft{
+	float: left;
+	width: 285px;
+}
+.gh_listbox{
+	margin-bottom: 20px;	
+	background: #fff;
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.26);
+	padding-bottom: 20px;
+}
+.rh_list ul li{
+	overflow: hidden;
+	line-height: 30px;
+	border-bottom: 1px solid #cfcfcf;
+	padding: 15px 0;
+	margin: 0 15px;
+	cursor: pointer;
+	color: #333333;
+}
+.rh_list ul li p{
+	float: left;
+	font-size: 16px;
+	border-left: 3px solid #bfbfbf;
+	padding-left: 20px;
+}
+.rh_list ul li i{
+	float: right;
+}
+.zl_box ul li{
+	width: 845px;
+	border-bottom: 1px dashed #cccccc;
+	padding: 10px 0;
+	margin-bottom: 10px;
+}
+.zl_box ul li:hover h4{color: #db2c28;}
+.zl_box ul li.active h4{color: #db2c28;}
+.zl_box ul li.active a{color: #fff;background: #db2c28;}
+.zl_box ul li:hover a{color: #fff;background: #db2c28;}
+.zl_box ul li{
+	height: 60px;
+}
+.fangkuai{
+	float: left;
+	width: 12px;
+	height: 12px;
+	background: #cccccc;
+	margin: 12px 15px 0  5px ;
+	border-radius: 50%;
+}
+.zl_text h4{
+	font-size: 16px;
+	color: #333333;
+	font-weight: bold;
+	margin-top: 10px;
+	float: left;
+}
+.zl_text span{
+	float: right;
+	font-size: 14px;
+	color: #808080;
+	margin: 10px 10px 0 0;
+}
+.zl_text i{
+	font-size: 14px;
+	color: #808080;
+	font-style: normal;
+	margin-left: 50px;
+}
+
+
+.xiala_list ul li.active a{background: #db2c28;color: #fff;padding: 5px 10px;}
+.xiala_list ul li a:hover{background: #db2c28;color: #fff;padding: 5px 10px;}
+.xiala_list ul li:first-child a{background: none;color: #db2c28;}

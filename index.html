@@ -1,0 +1,1524 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" href="images/picture.png" type="image/x-icon"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+	<meta name="renderer"  content="webkit">
+	<title>阳泉市总工会</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<!--全局样式-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper/swiper.min.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+	<link rel="stylesheet" href="https://a.amap.com/amap-ui/static/1.0/ui/misc/MarkerList/examples/pagination.css">
+	<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.13&key=	c58795894e9041de8855c90c5ceff3d0&plugin=AMap.AdvancedInfoWindow"></script>
+	<script src="https://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+	<script type="text/javascript" src="js/map/addToolbar.js"></script>
+	<style>
+		.amap-icon img {
+			width: 25px;
+			height: 34px;
+		}
+		#keywords {
+			float: left;
+		}
+		#outer-box {
+			height: 100%;
+			padding-right: 300px;
+		}
+		#panel {
+			overflow-x: hidden;
+			height: 556px;
+			width: 338px;
+			z-index: 999;
+			border-left: 1px solid #eaeaea;
+			background: #fff;
+		}
+		#btnList {
+			position: absolute;
+			right: 300px;
+			top: 0;
+			padding: 0;
+			margin: 0;
+			z-index: 999;
+		}
+		#btnList li {
+			padding: 5px;
+		}
+		#btnList input {
+			padding: 3px 10px;
+			min-width: 120px;
+		}
+		li.poibox{
+			height: 150px;
+			border-bottom: 1px solid #eaeaea;
+			border-left: 2px solid rgba(0, 0, 0, 0);
+			padding: 10px 3px;
+			cursor: pointer;
+		}
+		li.poibox.selected {
+			border-left-color: #f00;
+			background: #f6f6f6;
+		}
+		li.poibox:hover {
+			background: #f6f6f6;
+		}
+		li.poibox:last-child {
+			border-bottom: none;
+		}
+		h3.poi-title {
+			margin: 3px 0;
+			font-size: 13px;
+		}
+		.poibox .poi-info-left {
+			padding-left: 8px
+		}
+		.poi-addr {
+			margin: 7px 0 0;
+		}
+		.poibox .poi-imgbox {
+			width: 100px;
+			height: 74px;
+			vertical-align: top;
+			float: right;
+			margin: 0 8px;
+			overflow: hidden
+		}
+		.poibox .poi-img {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+		.swiper-pagination-bullet{
+			background: #5cb85c !important;
+			opacity: 1 !important;
+		}
+		.zt-title{
+			width: 1200px;
+			margin: 30px auto 0;
+		}
+        .active1{
+			background-color: #ed9304 !important;
+		}
+         .xiala_left ul li:hover,.content_left ul li:hover{
+        	background: #ed9304;
+        }
+
+		 /*去 style.css*/
+		.info-title {
+			color: white;
+			font-size: 14px;
+			background-color: #25A5F7;
+			line-height: 26px;
+			padding: 0 0 0 6px;
+			font-weight: lighter;
+			letter-spacing: 1px
+		}
+		.info-content {
+			font: 12px Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial;
+			padding: 4px;
+			color: #666666;
+			line-height: 23px;
+		}
+		.info-content img {
+			float: left;
+			margin: 3px;
+		}
+		.amap-info-combo .keyword-input{
+			height: 25px;
+			border-radius: 2px 0 0 2px;
+		}
+	</style>
+
+</head>
+<body>
+
+<div class="nav_box" id="nameselect" v-cloak>
+	<div class="nav1">
+		<div class="nav_left" title="阳泉市总工会">
+			<a href="javascript:;"><img src="images/logo.png"></a>
+		</div>
+		<div class="tubiao">
+			<p>{{nowTime}}</p>
+			<p>{{nowDay}}</p>
+		</div>
+		<div class="nav_center clearfix">
+			<div class="tianqi">
+				<iframe width="350" scrolling="no" height="60" frameborder="0" allowtransparency="true"
+						src="//i.tianqi.com/index.php?c=code&id=12&icon=1&num=5&site=12"></iframe>
+			</div>
+		</div>
+
+		<!--微信矩阵开始-->
+		<div class="nav_right clearfix" >
+			<!--网站集群-->
+			<div class="juxing" id="showmask1">
+				<i class="icon iconfont icon-pingtai" style="margin-top: 0"></i>
+				<p>网站集群</p>
+				
+				<div class="top-arrow1"></div>
+				<div class="top-arrow1ccc"></div>
+				</div>
+			<div class="wechat-mask clearfix">
+					<div class="jq showmask1">
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">市</a></li>
+							<li><a href="">阳泉</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">区/县</a></li>
+							<li><a href="">阳泉城区</a></li>
+							<li><a href="">阳泉矿区</a></li>
+							<li><a href="">阳泉郊区</a></li>
+							<li><a href="">平定县</a></li>
+							<li><a href="">盂县</a></li>
+						</ul>
+					</div>
+	
+				</div>
+				</div>
+			<!--微信矩阵-->
+			<div class="juxing pic" id="showmask2" >
+				<i class="icon iconfont icon-weixin2" style="margin-top: 0"></i>
+				<p>微信矩阵</p>
+				<div class="top-arrow2"></div>
+				<div class="top-arrow2ccc"></div>
+			</div>
+			<div class="wechat-mask clearfix">
+					
+				
+				<div class="jq showmask2">
+
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">市</a></li>
+							<li><a href="">阳泉</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">区/县</a></li>
+							<li><a href="">阳泉城区</a></li>
+							<li><a href="">阳泉矿区</a></li>
+							<li><a href="">阳泉郊区</a></li>
+							<li><a href="">平定县</a></li>
+							<li><a href="">盂县</a></li>
+						</ul>
+					</div>
+					<div class="jq_list">
+						<ul class="clearfix">
+							<li><a href="">产业工会</a></li>
+							<li><a href="">非公企业工会</a></li>
+							<li><a href="">财贸轻纺烟草工会</a></li>
+							<li><a href="">农林水工会</a></li>
+							<li><a href="">省煤炭工会</a></li>
+							<li><a href="">机冶建材工会</a></li>
+							<li><a href="">省直机关工会工委</a></li>
+							<li><a href="">省监狱工会</a></li>
+							<li><a href="">信息业工会</a></li>
+							<li><a href="">建筑业工会</a></li>
+							<li><a href="">直属基层工委</a></li>
+							<li><a href="">省公路运输工委</a></li>
+							<li><a href="">电业工会</a></li>
+							<li><a href="">教科文卫体工会</a></li>
+							<li><a href="">太铁工会</a></li>
+							<li><a href="">金融工委</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			
+		</div>
+		<!--微信矩阵结束-->
+	</div>
+	<div class="list_online">
+		<div class="search clearfix">
+
+				<input type="text" placeholder="请输入关键字" style="height: 44px" class="text" id="ser-text" v-model="serKwords"/>
+				<input type="button" class="button serbutton" value="搜索" @click="goToSer('ssjg.html')"/>
+		</div>
+	</div>
+	<div class="list_box">
+		<div class="menu">
+			<ul class="clearfix">
+				<li class=" hideMask active">
+					<a href="javascript:;">
+						<i class="icon iconfont icon-shouye"></i>首页
+					</a>
+				</li>
+				<li class="tissue-jg">
+					<a href="zzjg.html">
+						<i class="icon iconfont icon-zuzhijigou1"></i>组织机构
+					</a>
+				</li>
+				<li class="news-zx">
+					<a href="xwzx.html">
+						<i class="icon iconfont icon-xinwen2"></i>新闻资讯
+					</a>
+				</li>
+				<li class="hideMask">
+					<a href="zg_index.html">
+						<i class="icon iconfont icon-daohangtubiao_fuwudating"></i>服务大厅
+					</a>
+				</li>
+				<li class="hideMask">
+					<a href="ztzx.html">
+						<i class="icon iconfont icon-zhuanti"></i>专题中心
+					</a>
+				</li>
+				<li class="hideMask">
+					<a href="jnts.html">
+						<i class="icon iconfont icon-shu1"></i>技能提升
+					</a>
+				</li>
+
+				<li class="hideMask">
+					<a href="data.html">
+						<i class="icon iconfont icon-shuju"></i>数据中心
+					</a>
+				</li >
+				<li class="hideMask">
+					<a href="zlzx.html">
+						<i class="icon iconfont icon-ziliao"></i>资料中心
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--新闻资讯-->
+		<div class="content clearfix">
+			<div class="content_left" style="margin-top: -10px">
+				<ul>
+
+					<li v-for="(item,index) in mask1left"
+						@click="rightContent(item.categoryId)"
+						 :key="index">
+						<a href="javascript:;">{{item.categoryName}}</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="content_center">
+				<ul>
+					<li v-for="(item,name) in mask1right" @click="sendId(item.contentId)">
+						<a href="javascript:;">
+							<div class="circle"></div>
+							{{item.title}}
+						</a>
+						<span>【{{item.inputdate}}】</span>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<!--组织机构-->
+		<div class="xiala">
+			<div class="xiala_left">
+				<ul>
+					<li><a href="javascript:;">市总简介</a></li>
+					<li><a href="javascript:;">市总领导</a></li>
+					<li class="active1"><a href="javascript:;">内设机构</a></li>
+				</ul>
+			</div>
+			<div class="xiala_right">
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">市总部门：</a></li>
+						<li><a href="javascript:;">办公室</a></li>
+						<li><a href="javascript:;">组织部</a></li>
+						<li><a href="javascript:;">宣教部</a></li>
+						<li><a href="javascript:;">经济部</a></li>
+						<li><a href="javascript:;">保障部</a></li>
+						<li><a href="javascript:;">劳保部</a></li>
+						<li><a href="javascript:;">法工部</a></li>
+						<li><a href="javascript:;">女工部</a></li>
+						<li><a href="javascript:;">财务部</a></li>
+						<li><a href="javascript:;">网络部</a></li>
+						<li><a href="javascript:;">党工部</a></li>
+					</ul>
+				</div>
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">地方工会：</a></li>
+						<li><a href="javascript:;">平定县总工会</a></li>
+						<li><a href="javascript:;">盂县总工会</a></li>
+						<li><a href="javascript:;">城区总工会</a></li>
+						<li><a href="javascript:;">矿区总工会</a></li>
+						<li><a href="javascript:;">郊区总工会</a></li>
+						<li><a href="javascript:;">经济开发区总工会</a></li>
+					</ul>
+				</div>
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">产业工会：</a></li>
+						<li><a href="javascript:;">阳泉市煤矿电力工会</a></li>
+						<li><a href="javascript:;">阳泉市公交建通工会</a></li>
+						<li><a href="javascript:;">阳泉市文教卫生工会</a></li>
+						<li><a href="javascript:;">阳泉市财贸工会</a></li>
+						<li><a href="javascript:;">阳泉市市直机关工会</a></li>
+					</ul>
+				</div>
+				<div class="xiala_list">
+					<ul class="clearfix">
+						<li><a href="javascript:;">市直机关工会委员会：</a></li>
+						<li><a href="javascript:;">阳泉煤业(集团)有限责任公司工会</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+</div>
+	<div class="matter_title">
+		<h4>
+			<a href="javascript:;" @click="sendId(titlearr.contentId)">{{titlearr.title}}</a>
+		</h4>
+		<span>[{{titlearr.subTitle}}]</span>
+		<div class="matter_more">
+			<a href="##">更多新闻</a>
+		</div>
+	</div>
+	<div class="matter">
+
+		<div class="matter_left">
+
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<!--轮播图-->
+					<div class="swiper-slide" v-for="item in bannerImages" @click="sendId(item.contentId)">
+						<a href="javascript:;">
+							<img :src="item.thumb" >
+						</a>
+						<div class="matter_position">
+							<p>{{item.title}}</p>
+						</div>
+					</div>
+				</div>
+				<!-- Add Pagination -->
+				<!-- <div class="swiper-pagination"></div> -->
+
+				<div class="swiper-button-prev" style="background: url(images/left.png)  no-repeat;"></div>
+				<div class="swiper-button-next" style="background: url(images/right.png) no-repeat;"></div>
+
+			</div>
+
+
+
+
+		</div>
+
+		<div class="matter_right">
+			<div class="matter_list">
+				<ul class="clearfix">
+					<li  v-for="(item,index) in mask1left"
+						 :class="{active:isactive == index}"
+						 @click="rightContent(item.categoryId)"
+						 :key="index">
+						<a href="javascript:;">{{item.categoryName}}</a>
+					</li>
+
+				</ul>
+				<div class="shixian"></div>
+			</div>
+			<div class="matter_text" @click="sendId(rightTop.contentId)">
+				<h4>{{rightTop.title}}</h4>
+				<p :title="rightTop.description" style="overflow: hidden">
+					{{rightTop.description}}
+				</p>
+
+			</div>
+			<div class="matter_details">
+				<ul>
+					<li v-for="(item,name) in mask1right" @click="sendId(item.contentId)">
+						<a href="javascript:;">
+							<div class="circle"></div>
+							{{item.title}}
+						</a>
+						<span>【{{item.inputdate}}】</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="service_box">
+		<div class="service">
+			<ul class="clearfix">
+
+				<li>
+					<a href="grrh.html" target="_self">
+						<div class="service_img">
+							<i class="icon iconfont icon-ruhuishenqing col3"></i>
+						</div>
+						<div class="service_text">
+							<p>个人入会</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="wyzh.html" target="_self">
+						<div class="service_img">
+							<i class="icon iconfont icon-tubiaozhizuomoban1 col4"></i>
+						</div>
+						<div class="service_text">
+							<p>我要转会</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="dwjh.html" target="_self">
+						<div class="service_img">
+							<i class="icon iconfont icon-danwei col5"></i>
+						</div>
+						<div class="service_text">
+							<p>单位建会</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="frzg.html" target="_self">
+						<div class="service_img">
+							<i class="icon iconfont icon-lvshi col6"></i>
+						</div>
+						<div class="service_text">
+							<p>法人资格</p>
+						</div>
+					</a>
+				</li>
+				<li style="cursor: pointer;" @click="gotoMain">
+					<div class="service_img">
+						<i class="icon iconfont icon-shuzizhengwujuchangxinxiang01 col1"></i>
+					</div>
+					<div class="service_text" >
+						<p>主席信箱</p>
+					</div>
+				</li>
+				<li>
+					<a href="http://www.dzzgsw.com/" >
+						<div class="service_img">
+							<i class="icon iconfont icon-iconset0184 col2"></i>
+						</div>
+						<div class="service_text">
+							<p>职工书屋</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="zg_index.html"  target="_self">
+						<div class="circle_pic clearfix">
+							<div class="circle_small"></div>
+							<div class="circle_small"></div>
+							<div class="circle_small"></div>
+						</div>
+						<div class="circle_text">
+							<p>更多服务</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="zt-title">
+		<ul class="nav nav-tabs" style="border-bottom: 3px solid #ddd">
+			<li style="border-bottom: solid #db2c28;margin-bottom:-3px">
+				<p style="color: #db2c28;font-weight:bold;font-size:20px;">
+					<span class="icon iconfont icon-zhuanti" style="font-size: 28px;"></span>
+					专题中心
+				</p>
+			</li>
+		</ul>
+	</div>
+	<div class="home_box">
+
+		<div class="home">
+
+			<div class="home_titlebox clearfix">
+				<div class="home_title">
+					<ul class="clearfix home_list">
+						<li  v-for="item in happyWorkList" @click="happyfam(item.id)">
+							<a href="javascript:;">{{item.name}}</a>
+						</li>
+					</ul>
+				</div>
+				<div class="home_more">
+					<a href="ztzx.html">更多>></a>
+				</div>
+			</div>
+			<div class="shixian1"></div>
+			<div class="home_content">
+				<ul class="clearfix">
+					<li v-for="(item,index) in femaleWorker" @click="sendId(item.contentId)">
+						<a href="javascript:;">
+							<div class="home_img">
+								<img :src="item.thumb" />
+							</div>
+							<div class="home_text">
+								<p>{{item.subTitle}}</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="ban">
+		<a href="jwn.html"><img src="images/small_banner.jpg"></a>
+	</div>
+	<div class="banner">
+		<div style="margin:30px 0">
+			<ul class="nav nav-tabs" style="border-bottom: 3px solid #ddd">
+				<li style="border-bottom: solid #db2c28;margin-bottom:-3px">
+					<p style="color: #db2c28;font-weight:bold;font-size:20px;">
+						<span class="icon iconfont icon-ditu" style="font-size: 28px;"></span>
+							工会地图
+					</p>
+				</li>
+			</ul>
+		</div>
+		<!--地图-->
+		<div>
+			<div style="width:340px;min-height: 700px;float:left;border:solid 1px #ccc;">
+				<ul class="nav nav-pills">
+					<li class="active" style="width:100%;float: left;">
+						<a href="#sousuo" data-toggle="tab" style="text-align:center;font-weight:bold;letter-spacing: 3px;font-size: 16px">工会搜索</a>
+					</li>
+					<button class="reback" style="color: #db2c28;font-weight: bold;background: none;border: none;float: right;padding: 10px 15px;">点击返回</button>
+				</ul>
+				<div class="tab-content">
+					<div style="margin:15px 20px;position: inherit">
+						<input type="text" style="width:246px;height:34px;margin-right: -8px;" id="keywords"
+							   value="阳泉市总工会">
+						<a href="#outer-box" data-toggle="tab" class="mapsecbut btn"
+						   style="width:51px;height:34px;line-height:28px;background-color: #db2c28;border: none;font-size:14px;color:#fff">
+							搜索
+						</a>
+					</div>
+					<div class="tab-pane active" id="sousuo"style="position: inherit" >
+						<div class="zg_ul mapList" style="padding:0 10px;position: static">
+							<div>
+								<a href="#outer-box" data-toggle="tab" class="qxgh" value="县工会，区工会">
+                                    <span class="zg_seach_yi"
+										  style="display:inline-block;width:90px;height:98px;margin:0px 30px 10px"></span>
+									<p style="font-size: 16px;text-align:center">区县工会</p>
+								</a>
+							</div>
+							<div>
+								<a href="#outer-box" data-toggle="tab" class="qxgh" value="工会">
+                                    <span class="zg_seach_er"
+										  style="display:inline-block;width:91px;height:98px;margin:0px 30px 10px"></span>
+									<p style="font-size: 16px;;text-align:center">产业工会</p>
+								</a>
+							</div>
+							<div>
+								<a href="#outer-box" data-toggle="tab" class="qxgh" value="妇女儿童，工会">
+                                    <span class="zg_seach_san"
+										  style="display:inline-block;width:90px;height:98px;margin:0px 30px 10px"></span>
+									<p style="font-size: 16px;;text-align:center">母婴关爱室</p>
+								</a>
+							</div>
+							<div>
+								<a href="#outer-box" data-toggle="tab" class="qxgh" value="工作室">
+                                    <span class="zg_seach_si"
+										  style="display:inline-block;width:91px;height:98px;margin:0px 30px 10px"></span>
+									<p style="font-size: 16px;;text-align:center">创新工作室</p>
+								</a>
+							</div>
+							<div>
+								<a href="#outer-box" data-toggle="tab" class="qxgh" value="爱心驿站">
+                                    <span class="zg_seach_wu"
+										  style="display:inline-block;width:90px;height:98px;margin:0px 30px 10px"></span>
+									<p style="font-size: 16px;;text-align:center">爱心驿站</p>
+								</a>
+							</div>
+							<div><a href="#outer-box" data-toggle="tab" class="qxgh" value="帮扶">
+                                    <span class="zg_seach_liu"
+										  style="display:inline-block;width:91px;height:98px;margin:0px 30px 10px"></span>
+								<p style="font-size: 16px;;text-align:center">帮扶工作站</p>
+							</a>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="outer-box">
+						<div id="panel" class="scrollbar1">
+							<ul id="pagination-demo" class="pagination-sm"></ul>
+							<ul id="myList"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="container" style="width:859px;min-height:700px;float:left;border:solid 1px #ccc">
+				<!-- <div ></div>  -->
+
+			</div>
+
+			<div style="clear:both"></div>
+		</div>
+
+	</div>
+	<div class="bottom_banner">
+		<a href="http://121.196.198.165/laborunweb/login.html?systemCode=S1003"><img src="images/bottom_banner.jpg"></a>
+	</div>
+	<!-- 友情链接 -->
+	<div style="width: 1185px;margin: 20px auto;min-height: 334px" class="clearfix">
+
+		<!--红兵-->
+		<ul class="nav nav-tabs cqiehuan" >
+			<li class="active" v-for="item in firendZ" v-if="item.id == 15">
+				<a href="#all" data-toggle="tab">{{item.groupName}}</a></li>
+			<li  v-else-if="item.id == 16"><a href="#qu" data-toggle="tab">{{item.groupName}}</a></li>
+			<li v-else-if="item.id == 17"><a href="#meiti" data-toggle="tab">{{item.groupName}}</a></li>
+		</ul>
+
+	    <div  class="tab-content qiehuan clearfix" id="qiehuan">
+					<div class="tab-pane active" id="all">
+						<div class="ship-gh">
+							<ul class="clearfix">
+								<li v-for="item in quanBox">
+									<a :href="item.linkUrl">
+										<img :src="item.img">
+										<p>{{item.linkName}}</p>
+									</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="qu">
+						<div class="ship-gh">
+							<ul class="clearfix">
+								<li v-for="item in meiBox">
+									<a :href="item.linkUrl">
+										<img :src="item.img">
+										<p>{{item.linkName}}</p>
+									</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="meiti">
+						<div class="ship-gh">
+							<ul class="clearfix">
+								<li v-for="item in meitiBox">
+									<a :href="item.linkUrl">
+										<img :src="item.img">
+										<p>{{item.linkName}}</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+    </div>
+	<!--底部信息-->
+	<div class="zg_bottom" style="border-top:2px solid #db2c28;background-color: #d9d9d9;padding: 20px;">
+		<div style="width:1200px;margin:30px auto;text-align:center;">
+			<div>地址：山西省阳泉市桃南东路192号   电话：2022724</div>
+			<div>E--mail:szghwgb@163.com</div>
+			<div>版权所有：© 阳泉市总工会 版权所有</div>
+			<div>备案：晋ICP备13007903-1</div>
+			<div class="copy_img">
+				<a href="javascript:;"><img src="images/footer_img.png"></a>
+			</div>
+		</div>
+	</div>
+	<!--右侧功能栏-->
+	<div class="slide">
+		<ul>
+
+			<li class="open-hyzx">
+				<i class="icon iconfont icon-member"></i>
+				<a href="javascript:;">{{membercenter}}</a>
+			</li>
+			<li>
+				<i class="icon iconfont icon-xiaoxi"></i><a href="##">消息通知</a>
+				<div class="tz-bage">
+					<span class="bage">10</span>
+				</div>
+			</li>
+			<li class="kefu"><i class="icon iconfont icon-kefu1 "></i><a href="javascript:;">智能客服</a></li>
+			<li><i class="icon iconfont icon-xinlang"></i><a href="javascript:;">微博</a></li>
+			<li><i class="icon iconfont icon-weixin2"></i><a href="javascript:;">微信</a></li>
+			<li><i class="icon iconfont icon-APP"></i><a href="javascript:;">APP</a></li>
+			<li id="top"><i class="icon iconfont icon-fanhuidingbu-"></i><a href="javascript:;">TOP</a></li>
+		</ul>
+		<div class="sina">
+			<a href="">
+				<img src="images/sina.png" width="100px" height="100px">
+			</a>
+			<p>新浪微博二维码</p>
+		</div>
+		<div class="ewm">
+			<a href="">
+				<img src="images/erweima.jpg" width="100px" height="100px">
+			</a>
+			<p>工会微信公众号</p>
+		</div>
+		<div class="exit">
+			<img :src="userHeaderPic"  onclick="window.open('hyzx.html','_self')"/>
+			<p class="phoneUser">{{userPhone}}</p>
+			<button  @click="clear()">退出</button>
+		</div>
+
+		<div class="appDoload">
+			<div class="ang">
+				<p>安卓用户下载</p>
+				<img src="images/android.jpg" alt="安卓系统下载">
+			</div>
+			<div class="ios">
+				<p>IOS用户下载</p>
+				<img src="images/android.jpg" alt="IOS系统下载">
+			</div>
+		</div>
+	</div>
+	<!--智能客服-->
+	<div class="customer-service" >
+		<div class="kf_box">
+			<div class="kf clearfix">
+				<div class="kf_left">
+					<a href=""><img src="images/gh_x.png" width="23px" height="23px"></a>
+					<span>工会智能小K</span>
+				</div>
+				<div class="kf_right">
+					<i class="icon iconfont icon-xiajiantou"></i>
+				</div>
+			</div>
+		</div>
+		<div class="chat_box">
+
+			<div id="chat" class="chat clearfix">
+				<div class="chat_left">
+					<a href=""><img src="images/gh_l.png" style="margin-bottom: 5px;"></a>
+					<span>客服</span>
+					<i>2019-3-22  12:12</i>
+					<p>我是阳泉工会智能机器人，请问您有什么需要吗？</p>
+				</div>
+			</div>
+			<div class="down"></div>
+			<div class="shuru">
+				<input type="text" placeholder="请输入文字..."  v-model="userinp" style="border: none;height: 70px;"/>
+			</div>
+			<div class="send clearfix">
+				<div class="send_left">
+					<i class="icon iconfont icon-smiling" ></i>
+				</div>
+				<div class="send_right">
+					<button type="button" @click="sendModel">发送</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/ui/1.0/plug/ext/jquery-1.12.4.min.js?v=1.0.11"></script>
+<script type="text/javascript" src="https://a.amap.com/amap-ui/static/1.0/ui/misc/MarkerList/examples/jquery.twbsPagination.min.js?v=1.0.11"></script>
+<script>
+	$(function () {
+
+	   /*微信矩阵 网站集群显示隐藏 复制*/
+        $('#showmask2').mouseenter(function () {
+		   $('.showmask2').show();
+		   $('.top-arrow2').show();
+		   $('.top-arrow2ccc').show();
+		   $('.showmask1').hide();
+		   $('.top-arrow1').hide();
+		   $('.top-arrow1ccc').hide()
+		});
+        $('.showmask2').mouseleave(function () {
+            $('.showmask2').hide();
+            $('.top-arrow2').hide();
+            $('.top-arrow2ccc').hide()
+        });
+        $('#showmask1').mouseenter(function () {
+            $('.showmask1').show();
+            $('.showmask2').hide();
+            $('.top-arrow2').hide();
+            $('.top-arrow2ccc').hide();
+            $('.top-arrow1').show();
+            $('.top-arrow1ccc').show()
+        });
+        $('.showmask1').mouseleave(function () {
+            $('.showmask1').hide();
+            $('.top-arrow1').hide();
+            $('.top-arrow1ccc').hide();
+        });
+
+        addactive('.list_online .list ul li','active');
+        addactive('.home_list li','active');
+        addactive('.slide ul li','active');
+        addactive('.menu ul li','mu1');
+        addactive('.matter_list ul li','active');
+        addactive('.xiala_left ul li','active1');
+
+        $('.home_list li:nth-child(1)').addClass('active')
+
+   })
+</script>
+<script src="js/vue2.5.22.js"></script>
+<script src="js/axios.0.18.0.js"></script>
+<script src="js/qs.6.60.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/usertoken.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#nameselect",
+        data: {
+			mask1left:[],
+			mask1right:[],
+            isactive:false,
+			titlearr:[],
+			rightTop:[],
+            active:false,
+            userinp:'',
+			userPhone:'',
+            membercenter:'',
+            femaleWorker:[],
+			happyWorkList:[
+				{id:216,name:'职工风采'},
+				{id:351,name:'劳动创新'},
+				{id:201,name:'素质提升'},
+				{id:350,name:'运动会'}
+			],
+			bannerImages:[],
+			nowTime:'',
+			nowDay:'',
+		    //用户头像
+		    userHeaderPic:'',
+		    firendList:[],
+		    quanBox:[],  //全总
+		    meiBox:[],   //区县阳煤
+			firendZ:[] , //红兵
+			meitiBox:[],
+			serKwords:''
+
+        },
+        methods:{
+			//遮罩层1左侧菜单列表
+			getMask1LeftMenu(){
+                const that = this;
+                $.ajax({
+                    url: baseUrl + "/api/category/list",
+                    data:{
+                        parentId:"290"
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                        that.mask1left = (result.data);
+
+                    }
+                })
+			},
+            getMask1LeftContent(){
+              const that = this;
+              $.ajax({
+                 url: baseUrl + "/api/category/list",
+                 data:{
+                    parentId:"290"
+                 },
+                 async: false,
+                 dataType:"json",
+                 success:  function (result) {
+                    that.mask1left = (result.data);
+                 }
+              })
+           },
+            //友情链接
+            getfriendship(){
+
+				/*
+				 http://ftu.dev.puluodike.cn/zgfww/api/friendlink/list  友情链接接口
+				 http://ftu.dev.puluodike.cn/zgfww/system/cms/friendlink/group/getJsonData  这个是分组
+				 http://ftu.dev.puluodike.cn/zgfww/api/friendlink/list
+				 这个是分组里面的  需要分组ID  groupId=1
+				 */
+                const that = this;
+				//红兵
+                $.ajax({
+                    url: "http://ftu.dev.puluodike.cn/zgfww/system/cms/friendlink/group/getJsonData",
+                    data:{
+
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                        console.log(result);
+                        that.firendZ = result.data
+                    }
+                })
+
+
+
+
+
+                $.ajax({
+                    url: "http://ftu.dev.puluodike.cn/zgfww/api/friendlink/list",
+                    data:{
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                         console.log(result);
+                        that.firendList=result.data;
+                        for (var i = 0; i<that.firendList.length; i++) {
+                        	 // console.log(that.firendList[i].groupId)
+                        	 if (that.firendList[i].groupId==17) {
+                        	 	that.meitiBox.push(that.firendList[i])
+                        	 }else if (that.firendList[i].groupId==16) {
+                        	 	
+                        	 	that.meiBox.push(that.firendList[i])
+                        	 }else if (that.firendList[i].groupId==15) {
+                        	 	
+                        	 	that.quanBox.push(that.firendList[i])
+                        	 }
+                        }
+                    }
+                })
+
+            },
+            //根据左侧id 右侧数据变化
+            rightContent(id){
+                const that = this;
+                $.ajax({
+                    url:baseUrl + "/api/content/list",
+
+                    data:{
+                        "categoryId" : id,
+                        "num" : "1",
+                        "pageSize" : "10"
+                    },
+                    dataType:"json",
+                    success:  function (result) {
+                       console.log(result)
+
+                        that.mask1right = result.data.list;
+
+                    }
+                })
+
+
+				//右侧标题以及描述更换
+                $.ajax({
+                    url:baseUrl + "/api/content/list",
+                    data:{
+                        "categoryId" : id,
+                        "num" : "1",
+                        "pageSize" : "10"
+                    },
+                    dataType:"json",
+                    success:  function (result) {
+
+                        that.mask1right = result.data.list;
+                        console.log(result)
+                        that.rightTop = that.mask1right[0];
+                    }
+                })
+
+
+			},
+            ddd(){
+                const that = this;
+                $.ajax({
+                    url:'http://112.35.108.131:8012/api/content/865',
+                    data:{
+                        "categoryId" : 865,
+
+                    },
+                    dataType:"json",
+                    success:  function (result) {
+                    }
+                })
+
+            },
+			//跳转详情页
+            sendId(id){
+				console.log(id)
+               window.location.href=('xw_xq.html' + '?'+id)
+            },
+			//请求标题数据
+			getTitleData(){
+                const that = this;
+                $.ajax({
+                    url: baseUrl + "/api/content/list",
+                    data:{
+                        "num":"1",
+                        "pageSize":"10",
+						"headline":true
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                        that.titlearr = (result.data.list[0]);
+                    }
+                })
+
+			},
+            goToSer(path){
+            	const that=this
+            	console.log(that.serKwords)
+                window.open(path,'_self')
+                localStorage.setItem("keywords",that.serKwords)
+            },
+            //跳转主席信箱 携id
+            gotoMain(){
+                window.location.href=('jjs.html?'+4)
+			},
+            //智能客服
+            sendModel(){
+                kfhuifu();
+			},
+			//轮播图
+			banner(){
+				var that = this;
+
+                    $.ajax({
+                        url: baseUrl + "/api/content/list",
+                        data:{
+                            "num":"0",
+                            "pageSize":"5",
+                            "recommend":"1"
+                        },
+                        async: false,
+                        dataType:"json",
+                        success:  function (result) {
+                            that.bannerImages = result.data.list;
+
+                        }
+                    })
+
+
+			},
+			//幸福女工
+			happy(){
+			    var that = this;
+                $.ajax({
+                    url: baseUrl + "/api/content/list",
+                    data:{
+                        "categoryId":216,
+                        "num":"1",
+                        "pageSize":"4",
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                        that.femaleWorker = result.data.list
+                    }
+                })
+			},
+			//幸福女工 职工风采 根据栏目id切换
+            happyfam(id){
+                var that = this;
+                $.ajax({
+                    url: baseUrl + "/api/content/list",
+                    data:{
+                        "categoryId":id,
+                        "num":"1",
+                        "pageSize":"4",
+                    },
+                    async: false,
+                    dataType:"json",
+                    success:  function (result) {
+                        that.femaleWorker = result.data.list
+                    }
+                })
+			}
+		},
+		mounted(){
+
+            const that = this;
+            that.getMask1LeftMenu();
+            that.getMask1LeftContent();
+            that.getTitleData();
+            that.getfriendship();
+            that.banner();
+            that.happy();
+
+            that.nowTime = nowTimeDay;
+            getDay();
+            that.nowDay = nowDay;
+            //新闻 默认显示id 306 通知公告
+            $.ajax({
+                url: baseUrl + "/api/content/list",
+                data: {
+                    "categoryId": "306",
+                    "num": "1",
+                    "pageSize": "10"
+                },
+                dataType: "json",
+                success: function (result) {
+                    that.mask1right = result.data.list;	//默认10条新闻
+                    that.rightTop = that.mask1right[1]; //轮播图右侧第一条
+
+                }
+            });
+
+            //实名制查询   显示用户头像 名字
+            if(userTok.token != null){
+                   $.ajax({
+                        type: 'post',
+                        url: unionUrl + "/passLaborweb/api/laborun/realnameRecord/queryRealnameRecord",
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                        "token": userTok.token
+                    }),
+                    async: false,
+                    success: function (result) {
+
+                    if (result.data.total == 1) {
+                        //用户头像
+                        that.userHeaderPic = result.data.content[0].portraitPic;
+                        console.log('已经实名制')
+                    } else if (result.data.total == 0) {
+                        that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    } else {
+                        that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    }
+
+
+                     }
+
+                   })
+              };
+
+           
+
+
+        }
+
+
+    })
+
+</script>
+<!--智能客服-->
+<script src="js/znkf.js"></script>
+<!-- UI组件库 1.0 -->
+<script src="https://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+<script type="text/javascript">
+    //创建地图
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        center: [113.5741532400,37.8565094400],
+        zoom: 13
+        // scrollWheel:false,
+    });
+    var localAddress = ''//当前地址
+    map.clearMap();  // 清除地图覆盖物
+    //获取位置信息
+    map.plugin('AMap.Geolocation', function () {
+        geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,//是否使用高精度定位，默认:true
+            timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+            maximumAge: 0,           //定位结果缓存0毫秒，默认：0
+            convert: true,           //自动偏移坐标，偏移后的坐标为高德坐标，默认：true
+            showButton: false,        //显示定位按钮，默认：true
+            buttonPosition: 'LB',    //定位按钮停靠位置，默认：'LB'，左下角
+            buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+            showMarker: false,        //定位成功后在定位到的位置显示点标记，默认：true
+            showCircle: false,        //定位成功后用圆圈表示定位精度范围，默认：true
+            panToLocation: false,     //定位成功后将定位到的位置作为地图中心点，默认：true
+            zoomToAccuracy:false      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+        });
+        map.addControl(geolocation);
+        geolocation.getCurrentPosition();
+        AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+        AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+		function onComplete(msg) {
+            localAddress = msg.formattedAddress
+        }
+    });
+    AMapUI.loadUI(['misc/MarkerList', 'overlay/SimpleMarker', 'overlay/SimpleInfoWindow'],
+        function (MarkerList, SimpleMarker, SimpleInfoWindow) {
+
+            var $ = MarkerList.utils.$;
+
+            var defaultIconStyle = function (index) {
+                    return 'red-' + (index + 1);
+                }, //默认的图标样式
+                hoverIconStyle = function (index) {
+                    return 'blue-' + (index + 1);
+                }, //鼠标hover时的样式
+                selectedIconStyle = function (index) {
+                    return 'blue-' + (index + 1);
+                }; //选中时的图标样式
+            var markerList = new MarkerList({
+                map: map,
+                //ListElement对应的父节点或者ID
+                listContainer: "myList", //document.getElementById("myList"),
+                //选中后显示
+                //从数据中读取位置, 返回lngLat
+                getPosition: function (item) {
+//                    console.log(item.location)
+                    return item.location;
+                },
+                getDataId: function (item, index) {
+                    return item.id;
+                },
+                getInfoWindow: function (data, context, recycledInfoWindow) {
+                    // if (recycledInfoWindow) {
+                    //     recycledInfoWindow.setInfoTitle(data.name);
+                    //     recycledInfoWindow.setInfoBody(data.address);
+                    //     return recycledInfoWindow;
+                    // }
+                    var content = '<div class="info-title">'+data.name+'</div><div class="info-content" style="min-height: 60px;">' +
+                        // '<img src="https://webapi.amap.com/images/amap.jpg">' +
+                        ''+data.cityname+data.adname+data.address+'<br/>' +
+                        // '<a target="_blank" href = "https://mobile.amap.com/">点击下载高德地图</a></div>';
+                        '</div>';
+                    setTimeout(function () {
+                        $('.keyword').val(localAddress)
+                        $('.amap-info-tabs .tab:last-child').trigger("click")//自动触发点击事件
+                    },100)
+                    //返回一个新的InfoWindow
+                    return new AMap.AdvancedInfoWindow({
+                        // autoMove:true,
+                        asDestination:true,
+                        asOrigin:true,
+                        content: content,
+                        placeSearch:false,
+                        offset: new AMap.Pixel(0, -30)
+                    });
+                },
+                //构造marker用的options对象, content和title支持模板，也可以是函数，返回marker实例，或者返回options对象
+                getMarker: function (data, context, recycledMarker) {
+                    // *******************************************************************************
+//                    console.log(data);
+                    if (recycledMarker) {
+                        recycledMarker.setIconStyle(defaultIconStyle(context.index));
+                        return;
+                    }
+
+                    return new SimpleMarker({
+                        iconTheme: 'numv1',
+                        containerClassNames: 'my-marker',
+                        iconStyle: defaultIconStyle(context.index),
+                    });
+                },
+                //构造列表元素，与getMarker类似，可以是函数，返回一个dom元素，或者模板 html string
+                getListElement: function (data, context, recycledListElement) {
+//                    console.log(data);
+
+                    var label = '' + (context.index + 1);
+
+                    //使用模板创建
+                    var innerHTML = MarkerList.utils.template(
+                        '<% if(data.photos && data.photos[0]) { %>' +
+                        '<div class="poi-imgbox">' +
+                        '    <span class="poi-img" style="background-image:url(<%- data.photos[0].url %>)"></span>' +
+                        '</div>' +
+                        '<% } %>' +
+                        '<div class="poi-info-left">' +
+                        '    <h3 class="poi-title">' +
+                        '        <%- label %>. <%- data.name %>' +
+                        '    </h3>' +
+                        '    <div class="poi-info">' +
+                        '        <p class="poi-addr">地址：<%- data.address %></p>' +
+                        '<% if(data.tel ){ %>' +
+                        '        <p class="poi-addr">电话：<%- data.tel %></p>' +
+                        '<% } %>' +
+                        '    </div>' +
+                        '</div>' +
+                        '<div class="clear"></div>', {
+                            data: data,
+                            label: label
+                        });
+
+                    if (recycledListElement) {
+                        recycledListElement.innerHTML = innerHTML;
+                        return recycledListElement;
+                    }
+
+                    return '<li class="poibox">' +
+                        innerHTML +
+                        '</li>';
+                },
+                //列表节点上监听的事件
+                listElementEvents: ['click', 'mouseenter', 'mouseleave'],
+                //marker上监听的事件
+                markerEvents: ['click', 'mouseover', 'mouseout'],
+                //makeSelectedEvents:false,
+                selectedClassNames: 'selected',
+                autoSetFitView: true
+            });
+
+            window.markerList = markerList;
+
+            AMap.plugin(["AMap.PlaceSearch"], function () {
+
+                var placeSearch = new AMap.PlaceSearch({ //构造地点查询类
+                    pageSize: 10,
+                    pageIndex: 1,
+                    extensions: 'all',
+                    city: "0353" //城市
+                });
+
+                var $pagination = $('#pagination-demo');
+
+                function initPagination(page, totalPages) {
+
+                    //初始化分页器
+                    $pagination.twbsPagination({
+                        totalPages: totalPages,
+                        startPage: page,
+                        prev: null,
+                        first: '首页',
+                        next: '下一页',
+                        last: null,
+                        initiateStartPageClick: false,
+                        onPageClick: function (event, page) {
+                            goPage(page);
+                        }
+                    });
+                }
+
+                var inited = false;
+
+                var $keywords = $('#keywords');
+                var $mapsecbut = $('.mapsecbut');
+
+                function goPage(page) {
+
+                    //设置当前页
+                    placeSearch.setPageIndex(page);
+                    //关键字查询
+                    placeSearch.search($keywords.val(), function (status, result) {
+
+                        if (status !== 'complete') {
+                            alert('暂无结果!');
+                        }
+
+                        //render当前页的数据
+                        markerList.render(result.poiList.pois);
+
+                        if (!inited) {
+                            inited = true;
+                            //首次初始化
+                            initPagination(page, Math.ceil(result.poiList.count / result.poiList.pageSize));
+                        }
+
+                    });
+                }
+
+                goPage(1);
+
+                //底部菜单点击地图搜索
+                function goPageLIst(page, t) {
+                    console.log($(t));
+                    //设置当前页
+                    placeSearch.setPageIndex(page);
+                    //关键字查询
+                    placeSearch.search($(t).attr('value'), function (status, result) {
+
+                        if (status !== 'complete') {
+                            alert('暂无结果!');
+                        }
+
+                        //render当前页的数据
+                        markerList.render(result.poiList.pois);
+
+                        if (!inited) {
+                            inited = true;
+                            //首次初始化
+                            initPagination(page, Math.ceil(result.poiList.count / result.poiList.pageSize));
+                        }
+
+                    });
+                }
+
+                $mapsecbut.on('click', function (e) {
+                    $('.reback').show();
+                    $('.nav-pills .active').width('60%');
+                    $("#outer-box").removeClass('active');
+                    $("#sousuo").addClass('active');
+                    inited = false;
+                    $pagination.twbsPagination('destroy');
+                    goPage(1);
+
+                });
+                $('.qxgh').on('click', function (e) {
+                    $('.reback').show();
+                    $('.nav-pills .active').width('60%');
+                    $("#outer-box").removeClass('active');
+                    $("#sousuo").addClass('active');
+                    inited = false;
+                    $pagination.twbsPagination('destroy');
+                    goPageLIst(1, this);
+
+                });
+            });
+
+            markerList.on('selectedChanged', function (event, info) {
+
+                if (info.selected) {
+
+                    if (info.selected.marker) {
+                        //更新为选中样式
+                        info.selected.marker.setIconStyle(selectedIconStyle(info.selected.index));
+                    }
+                }
+
+                if (info.unSelected && info.unSelected.marker) {
+                    //更新为默认样式
+                    info.unSelected.marker.setIconStyle(defaultIconStyle(info.unSelected.index));
+                }
+            });
+
+
+            markerList.on('listElementMouseenter markerMouseover', function (event, record) {
+
+                if (record && record.marker) {
+                    //非选中的id
+                    if (!this.isSelectedDataId(record.id)) {
+                        //设置为hover样式
+                        record.marker.setIconStyle(hoverIconStyle(record.index));
+                        //this.closeInfoWindow();
+                    }
+                }
+            });
+
+            markerList.on('listElementMouseleave markerMouseout', function (event, record) {
+
+                if (record && record.marker) {
+
+                    if (!this.isSelectedDataId(record.id)) {
+                        //恢复默认样式
+                        record.marker.setIconStyle(defaultIconStyle(record.index));
+                    }
+                }
+            });
+
+
+        });
+    $('.reback').on('click',function(){
+        $('.nav-pills .active').width('100%');
+        $(this).hide();
+        $("#outer-box").removeClass('active');
+        $("#sousuo").addClass('active');
+    })
+</script>
+<script type="text/javascript">
+	var swiper = new Swiper('.swiper-container', {
+	    autoplay: true,
+        speed:1000,
+        setWrapperSize: true,
+        loop:true,
+      	navigation: {
+        	nextEl: '.swiper-button-next',
+        	prevEl: '.swiper-button-prev',
+      	},
+    });
+   
+</script>
+</body>
+
+</html>

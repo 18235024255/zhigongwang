@@ -1,0 +1,172 @@
+﻿.sm_text span{
+	font-size: 16px;
+}
+#demo3{
+	float: left;
+}
+.rh_text{margin-bottom: 50px;}
+.rh_text h4{
+	font-size: 28px;
+	color: #404040;
+	text-align: center;
+	font-weight: bold;
+}
+.rh_text span{
+	display: block;
+	font-size: 16px;
+	color: #404040;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.rh_text p{
+	font-size: 14px;
+	color: #404040;
+	line-height: 36px;
+	text-indent: 16px;
+}
+.sp_title h4{
+	font-size: 28px;
+	color: #404040;
+	text-align: center;
+	font-weight: bold;
+}
+.sp_list{
+	margin-top: 60px;
+	margin-left: 30px;
+}
+.sp_list ul{width: 885px;margin: 0 -10px;clear: both;}
+.sp_list ul li{
+	float: left;
+	width: 100px;
+	margin: 0 10px;
+}
+.sp_list ul li.active i{color: #fff;background: #db2c28;}
+.sp_list ul li.next.active p{color: #db2c28;}
+.sp_list ul li a{text-decoration: none;}
+.sp_tubiao i{
+	font-size: 70px;
+	color: #e5e2e2;
+}
+.sp_img{text-align: center;}
+.sp_img i{
+	display: block;
+	font-size: 25px;
+	color: #a6a6a6;
+	text-align: center;
+	background: #e5e2e2;
+	border-radius: 50%;
+	padding: 30px;
+}
+.sp_text p{
+	text-align: center;
+	font-size: 16px;
+	color: #333333;
+	width: 100px;
+	margin-top: 15px;
+}
+.zg_box{
+	width:100%;
+	background: url(../images/banner1.png) top center no-repeat;
+}
+
+.zg_top{
+	height:480px;
+	padding-top: 40px;
+}
+.nav_left{
+	float: left;
+}
+.nav_center{
+	float: left;
+}
+.nav_righter{
+	float: right;
+}
+.nav_righter i{
+	font-size: 20px;
+	color: #db2c28;
+}
+.nav_righter a{
+	font-size: 14px;
+	color: #db2c28;
+}
+
+.my_gh{
+	background: #fff;
+	padding: 15px;
+	margin-bottom: 100px;
+}
+.rh_list ul li{
+	cursor: pointer;
+	overflow: hidden;
+	line-height: 30px;
+	border-bottom: 1px solid #cfcfcf;
+	padding: 15px 0;
+	margin: 0 15px;
+}
+.rh_list ul li p{
+	float: left;
+	font-size: 16px;
+	color: #333333;
+	border-left: 3px solid #bfbfbf;
+	padding-left: 20px;
+}
+
+.rh_list ul li i{
+	float: right;
+}
+.sq{
+	text-align: center;
+}
+.sq_list h4{
+	font-size: 28px;
+	color: #404040;
+	text-align: center;
+	font-weight: bold;
+}
+.sm_box{
+	margin: 30px 0;
+}
+.sm_text{
+	float: left;
+	position: relative;
+}
+.sm_text a{
+	font-size: 16px;
+	color: #333333;
+	margin-top: 10px;
+}
+.sm_text i{
+	font-style: normal;
+	color: #db2c28;
+	margin-right: 5px;
+}
+.sm_text a:hover{text-decoration: none;}
+
+.tianjia{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.tianjia input{
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	opacity:0;
+	position: relative;
+	z-index: 10;
+}
+.tianjia img{
+	cursor: pointer;
+	position: absolute;
+	left: 100px;
+	top: 50px;
+}
+.sm_img{
+	float:left;
+	width: 240px;
+	height: 140px;
+	border: 1px solid #cccccc;
+	margin-left: 15px;
+}

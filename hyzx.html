@@ -1,0 +1,1418 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阳泉市总工会</title>
+	<link rel="icon" href="images/picture.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+	<link rel="stylesheet" href="css/demo.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/hyzx.css">
+	<!--智能客服样式-->
+	<link rel="stylesheet" href="css/znkf.css">
+	<link rel="stylesheet" href="css/grrh.css">
+	<!--全局样式-->
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.sm_img{
+			background: url('images/jiahao.png') no-repeat;
+			background-position: center;
+		}
+		#renxiang{
+			opacity:0 ;
+			width: 100%;
+			height: 100%;
+		}
+		.my-fuwu{
+			transition: 1s;
+			height:0 ;
+			overflow: hidden;
+		}
+		.hei{
+			height: 315px;
+		}
+		.rotate{
+			transform: rotate(90deg);
+			transition: 1s;
+		}
+		.my-fuwu li p{
+			border-left: none !important;
+			margin-left: 30px;
+		}
+
+
+		.IDzheng-wrap{
+			position: absolute;
+			left: 109px;
+			top: 1px;
+			width: 236px;
+			height: 137px;
+			z-index: 5;
+			margin-left: 15px;
+		}
+		.IDzheng-wrap img {
+			width: 100%;
+			height: 100%;
+		}
+		.green{
+			color: green;
+		}
+         input[type=date]::-webkit-inner-spin-button { 
+          visibility: hidden; 
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+          display: inline-block;
+          width: 13px;
+          height: 13px;
+          background-color: transparent;
+          background:url(images/select.png) 470px center no-repeat;
+        }
+		.email_list{
+			background: #f7f7f7;
+			height: 598px;
+			margin-top: 15px;
+		}
+		.email_list ul li{
+			width: 90%;
+			height: 30px;
+			line-height: 30px;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+
+		.email_list ul li:hover{
+			background: #d5d5d5;
+			color: #fff;
+		}
+		.email_list ul li .xiexin_text{
+			margin-top: 0;
+		}
+		.xiexin_content{
+			margin-top: 30px;
+		}
+		.xiexin_content ul li:hover a,.xiexin_content ul li:hover span{
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+<div id="nameselect" v-cloak>
+
+	<div class="zg_box">
+		<div class="zg_info">
+			<div class="zg_top">
+				<div class="nav_left">
+					<a href="##"><img src="images/logo.png"></a>
+				</div>
+				<div class="tubiao">
+					<p>{{nowTime}}</p>
+					<p>{{nowDay}}</p>
+				</div>
+				<div class="nav_center clearfix">
+					<div class="tianqi">
+						<iframe width="350" scrolling="no" height="60" frameborder="0" allowtransparency="true"
+								src="//i.tianqi.com/index.php?c=code&id=12&icon=1&num=5&site=12"></iframe>
+					</div>
+				</div>
+				<div class="nav_righter" onclick="window.open('index.html','_self')">
+					<i class="icon iconfont icon--fanhuishouye"></i>
+					<a href="javascript:;">返回首页</a>
+				</div>
+			</div>
+			<!--选项卡区-->
+			<div class="my_gh clearfix">
+				<div class="my_ghtitle clearfix">
+					<div class="my_ghtitleleft">
+						<i class="icon iconfont icon-shouye"></i>
+						<a href="index.html">当前位置：首页></a>
+						<span>会员中心</span>
+					</div>
+					<div class="my_ghtitleright">
+						<a href="zg_index.html"> < 返回服务大厅</a>
+					</div>
+				</div>
+
+				<div class="my_ghcontent  clearfix">
+					<div class="my_ghcontentleft">
+						<div class="rh_title">
+							<h4>会员中心</h4>
+						</div>
+						<div class="rh_list">
+							<ul>
+
+								<li class="personalinfo">
+									<p class="bordred">个人信息</p>
+									<i class="icon iconfont icon-jiaobiao" style="color: rgb(219, 44, 40);"></i>
+								</li>
+
+								<li class="nameAttest" >
+									<p>实名认证</p>
+									<i class="icon iconfont icon-jiaobiao"></i>
+								</li>
+								<li class="ChairmanMailbox">
+									<p>修改密码</p>
+									<i class="icon iconfont icon-jiaobiao"></i>
+								</li>
+								<li class="notification">
+									<p>消息通知</p>
+									<i class="icon iconfont icon-jiaobiao"></i>
+								</li>
+
+								<li class="securitySettings">
+									<p >我的服务</p>
+									<i class="icon iconfont icon-jiaobiao"></i>
+								</li>
+								  <ul class="my-fuwu">
+									<li class="my-union" @click="grRh()">
+										<p>我的入会</p>
+										<i class="icon iconfont icon-jiaobiao"></i>
+									</li>
+									<li class="my-transfer" @click="wyZh()">
+										<p>我的转会</p>
+										<i class="icon iconfont icon-jiaobiao"></i>
+
+									</li>
+									<li class="unit-crate" @click="dwJh()">
+										<p>单位建会</p>
+										<i class="icon iconfont icon-jiaobiao"></i>
+
+									</li>
+									<li class="legal-person" @click="frZG()">
+										<p>法人资格办理</p>
+										<i class="icon iconfont icon-jiaobiao"></i>
+
+									</li>
+									<li class="my-letter" @click="myXinxiang()">
+										<p>我的信箱</p>
+										<i class="icon iconfont icon-jiaobiao"></i>
+									</li>
+								</ul>
+
+							</ul>
+						</div>
+					</div>
+					<div class="toggWrap clearfix">
+					<!--个人信息-->
+					<div class="my_personalinfo tab-togg on" style="margin-top: 50px;">
+						<div class="person clearfix">
+							<div class="person_left">
+								<img :src='showPerpeo' alt="">
+							</div>
+							<div class="person_right">
+								<ul class="clearfix">
+									<li style="margin-top: 40px;">
+										<span>真实姓名：{{loginName}}</span>
+									</li>
+									<li style="margin-top: 40px;" class="sm-green zs">
+										<i class="icon iconfont icon-cedaohang-kehuguanli green"></i>
+										<span class="green">{{renzheng}}</span>
+									</li>
+
+									<li style="margin-top: 20px;">
+										<span >用户状态：{{userStrat}}</span>
+									</li>
+
+									<li style="margin-top: 20px;" class="sm-green zt">
+										<i class="icon iconfont icon-yuangongliebiao green"></i>
+										<span class="green">{{addUnion}}</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="hy_box">
+							<form action="" method="post">
+								<div class="sq_content">
+									<span><i>*</i>登录账号：</span>
+									<input type="text" name="zh"  v-model="loginAccount"
+										   style="margin-left: 20px;" disabled/>
+								</div>
+								<div class="sq_content">
+									<span><i>*</i>真实姓名：</span>
+									<input type="text" name="xm" v-model="loginName"
+										   style="margin-left: 20px;" disabled/>
+								</div>
+								<div class="sq_content">
+									<span><i>*</i>手机号码：</span>
+									<input type="text" name="sjh" v-model="loginNumber"
+										   style="margin-left: 20px;" disabled/>
+								</div>
+								<!--<div class="anniu" style="margin-bottom: 20px">-->
+									<!--<input type="button" value="修改个人信息" onclick="javascrtpt:window.open('grxx.html')"/>-->
+
+								<!--</div>-->
+							</form>
+						</div>
+					</div>
+					<!--实名认证-->
+					<div class="shiming tab-togg " >
+						<form action="" method="post">
+							<div class="sm_box clearfix" >
+
+								<div class="sm_text">
+									<span><i>*</i>人像采集：</span>
+									<div class="tianjia" >
+										<img src="images/greyheader.jpg" :src='showPerpeo' id="idimg" />
+									</div>
+								</div>
+
+								<div class="sm_img">
+									<input class="stopClick" type="file" id="renxiang"  onchange="previewFile()"
+										   @change="renupdate" style="cursor: pointer">
+								</div>
+
+							</div>
+
+
+
+							<div class="sm_box clearfix">
+								<div class="sm_text">
+									<span><i>*</i>上传证件：</span>
+									<div class="IDzheng-wrap">
+										<img src="images/sfz_z.png" :src="showIdzheng" id="idimg1"/>
+
+									</div>
+								</div>
+								<!--身份证正面-->
+								<div class="zj_img zj_pic">
+									<div class="tianjia1">
+										<input class="stopClick" id="idfile1" type="file" @change="IDzhengupdate" onchange="previewFile1()" >
+									</div>
+								</div>
+
+								<!--身份证反面-->
+								<div class="zj_img zj_fanpic" >
+									<div class="tianjia1">
+										<input class="stopClick" type="file" id="idfile2" @change="IDfanupdate" onchange="previewFile2()">
+									</div>
+									<div class="idfan-wrap">
+										<img src="images/sfz_f.png" :src='showIdfan' id="idimg2" />
+
+									</div>
+								</div>
+							</div>
+							<div class="zj_content">
+								<span><i>*</i>姓名：</span>
+								<input type="text" name="name" v-model="userName" class="stopClick stopcli1"
+									    disabled="disabled" />
+							</div>
+							<div class="zj_content">
+								<span><i>*</i>性别：</span>
+
+								<input class="st1 stopClick stopcli1 " type="" name="" v-model="xngbie" disabled="disabled">
+								<!-- <input id="man" type="radio" checked="checked" name="sex"  />男
+								<input id="woman" type="radio"  name="sex" />女 -->
+							</div>
+
+							<div class="zj_content" >
+								<span><i>*</i>民族：</span>
+								<input class="st1 stopClick  stopcli1" type="" name="" v-model="nationality" disabled="disabled">
+								<!-- <select  class="st1 stopClick " v-model="nationality" >
+									<option  v-for="item in Nationality">{{item.name}}</option>
+								</select> -->
+							</div>
+
+							<div class="zj_content">
+								<span><i>*</i>出生日期：</span>
+
+		                          <input  class="st2 stopClick stopcli1" type='text' v-model="birthday" style="float: right;" disabled="disabled">
+
+							</div>
+							<div class="zj_content">
+								<span><i>*</i>证件号码：</span>
+								<input class="stopClick stopcli1" type="text"
+									   name="hm" maxlength="18"  v-model="IDnumber" disabled="disabled"/>
+							</div>
+							<div class="zj_content">
+								<span><i>*</i>用户名：</span>
+								<input  type="text" name="sjh" v-model="loginNumber" disabled="disabled"/>
+							</div>
+							<div class="anniu" style="margin: 0 auto;width: 180px;">
+								<input type="button" class="tijiao yinc" value="提交" @click="authenticate" />
+
+							</div>
+						</form>
+					</div>
+					<!--修改密码-->
+					<div class="xinxiang  tab-togg">
+						<div class="hy_box">
+							<form action="" method="post">
+								<div class="sq_content" style="margin-bottom: 20px">
+									<span><i>*</i>原密码：</span>
+									<input type="password" name="ymm" placeholder="请输入原密码"
+										   v-model="oldpassword"
+										   />
+								</div>
+								<div class="gotoPass" >
+									<a href="zhmm.html">
+										<i class="icon iconfont icon-zhuyi1"></i>
+										<span>原密码忘记？请点击这里</span>
+									</a>
+								</div>
+								<div class="sq_content">
+									<span><i>*</i>新密码：</span>
+									<input type="password" name="xmm" placeholder="请输入新密码"
+										   id="newpassword"   v-model="newpassword"
+										   />
+								</div>
+								<div class="attention">
+									<i class="icon iconfont icon-zhuyi1"></i>
+									<span>密码长度6～18个字符,需要包含数字、大小写字母和标点符号(除空格外)中至少两种</span>
+								</div>
+								<div class="sq_content">
+									<span><i>*</i>确认新密码：</span>
+									<input type="password" name="nxmm" placeholder="请重新输入密码"
+										   v-model="yespassword"
+										   id="connewpassword"/>
+								</div>
+								<div class="anniu" style="margin-bottom: 20px">
+									<input type="button" value="确认"
+									@click="changePassword" style="background: #db2c28;"/>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--消息通知-->
+					<div class="tab-togg xiaoxi">
+						<div class="add-info">
+							<div class="Notice clearfix">
+								<h4>系统消息</h4>
+								<span>2019-07-24 14:30</span>
+							</div>
+							<div class="Notice-text">
+								<p>您的入会申请已经通过审核。</p>
+							</div>
+						</div>
+
+
+						<div class="add-info">
+							<div class="Notice clearfix">
+								<h4>系统消息</h4>
+								<span>2019-07-24 14:30</span>
+							</div>
+							<div class="Notice-text">
+								<p>您的建会申请已经上传到工会 工会人员稍后会联系你。</p>
+							</div>
+						</div>
+						<div class="add-info">
+							<div class="Notice clearfix">
+								<h4>系统消息</h4>
+								<span>2019-07-24 14:30</span>
+							</div>
+							<div class="Notice-text">
+								<p>您的法人资格申请已经成功 你现在是法人了。</p>
+							</div>
+						</div>
+					</div>
+					<!--我的服务介绍-->
+					<div class="tab-togg service-introduction">
+						<div class="rh_text">
+							<h4>我的服务</h4>
+							<span>入会办理：</span>
+							<p>1、如在已建立工会的企业工作,可向企业工会组织申请加入而成为工会会员。</p>
+							<p>2、如所在企业未建立工会组织，请按个人入会完善相应信息申请，我们将及时与您取得联系。</p>
+
+							<span>转会办理：</span>
+							<p>请按个人转会完善相应信息申请，我们将及时与您取得联系</p>
+							<p>
+								坚持职工劳动（工作）关系在哪里、会员组织关系就在哪里、会员组织关系随劳动（工作）关系流动的原则。会员劳动（工作）关系发生变化后，由调出单位工会在《工会会员证》“组织关系接转”栏目中填写有关内容，并加盖公章。会员的《工会会员登记表》随个人档案一并移交。会员关系由凭“介绍信”接转改为凭“会员证”接转。
+							</p>
+
+							<span>单位建会办理：</span>
+							<p>请按单位建会完善相应信息申请，我们将及时与您取得联系。</p>
+							<p>查看您的所有的单位建会申请表，以及建会进度！</p>
+
+
+							<p>1、办理工会法人资格登记，可以确保工会经费有稳定的来源。未进行法人资格登记，无法设立工会独立的银行账户。</p>
+							<p>2、办理工会法人资格登记，能更好的为职工服务。工会经费主要用于为职工服务和工会活动。</p>
+							<p>3、办理工会法人资格登记，能保障基层工会在民事活动中的法律地位。取得工会法人资格，依法独立享有民事权利、承担民事义务。</p>
+
+
+							<span>我的信箱办理：</span>
+							<p>1、如您已经是工会会员，可以向主席发送信件 主席收到后会回复给您。</p>
+							<p>2、请按主席信箱相应信息填写，我们将及时与您取得联系。</p>
+
+						</div>
+
+					</div>
+					<!--我的入会-->
+					<div class="my-enterUnion tab-togg">
+						<div class="xiexin">
+							<a href="grrh.html">我要入会</a>
+						</div>
+						<div class="znawu_box rh_wu">
+							   	 <div class="zanwu_img">
+							   	 	<img src="images/zanwu.png">
+							   	 </div>
+							   	 <p>暂无数据</p>
+						</div>
+						<div class="xiexin_content rh">
+							<ul>
+							   <li @click="grrhTan()" title="点击查看详情">
+								   <div class="xiexin_bg" >
+									   <h4 v-if="grrhList.status == 0" style="background-color: #09f709;">已完成</h4>
+									   <h4 v-else-if="grrhList.status == 5" style="background-color: #db2c28;">被拒绝</h4>
+									   <h4 v-else style="background-color: #cccc33;">进行中</h4>
+								   </div>
+									     <div class="xiexin_text clearfix">
+									       <a>《{{newName}}入会申请书》</a>
+										    <span>日期：{{grrhList.memshipTime}}</span>
+									   </div>
+							   </li>
+							</ul>
+						</div>
+
+					</div>
+					<!--我的转会-->
+					<div class="my-turnUnion  tab-togg">
+						<div class="xiexin">
+							<a href="wyzh.html">我要转会</a>
+						</div>
+						<div class="znawu_box zh_wu">
+							   	 <div class="zanwu_img">
+							   	 	<img src="images/zanwu.png">
+							   	 </div>
+							   	 <p>暂无数据</p>
+						</div>
+						<div class="xiexin_content zh">
+							<ul>
+								<li v-for="(item,index) in zhList"  title="点击查看详情" :key="index" @click="jinduz(index)">
+									<div class="xiexin_bg" >
+										<h4 v-if="item.status == 2" style="background-color: #09f709;">已完成</h4>
+										<h4 v-else-if="item.status == 5" style="background-color: #db2c28;">被拒绝</h4>
+										<h4 v-else style="background-color: #cccc33;">进行中</h4>
+									</div>
+									<div class="xiexin_text clearfix">
+									    <a>{{newName}}转会申请书</a>
+										<span>日期：{{item.submitTime}}</span>
+									</div>
+								</li>
+						</ul>
+						</div>
+
+					</div>
+					<!--单位建会-->
+					<div class="unit-building  tab-togg">
+						<div class="xiexin">
+							<a href="dwjh.html">我要建会</a>
+						</div>
+						<div class="znawu_box dw_jh">
+							   	 <div class="zanwu_img">
+							   	 	<img src="images/zanwu.png">
+							   	 </div>
+							   	 <p>暂无数据</p>
+						</div>
+						<div class="xiexin_content  jh">
+							<ul>
+								<li v-for="(item,index) in jinduList" title="点击查看详情" :key="index" @click="jinduTan(index)">
+									<div class="xiexin_bg" >
+										<h4 v-if="item.status == 1" style="background-color: #09f709;">已完成</h4>
+										<h4 v-else-if="item.status == 0" style="background-color: #db2c28;">申请中</h4>
+										<h4 v-else-if="item.status == 2" style="background-color: #cccc33;">审批中</h4>
+										<h4 v-else style="background-color: #cccc33;">进行中</h4>
+									</div>
+									<div class="xiexin_text clearfix">
+										<a>《{{item.unitName}}》建会申请书</a>
+										<span>日期：{{item.submitTime}}</span>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+
+					</div>
+					<!--法人资格办理-->
+					<div class="legal-content  tab-togg">
+						<div class="xiexin">
+							<a href="frzg.html">去办理</a>
+						</div>
+						<div class="znawu_box fr_zg">
+							   	    <div class="zanwu_img">
+							   	 	   <img src="images/zanwu.png">
+							   	    </div>
+							   	    <p>暂无数据</p>
+							      </div>
+						<div class="xiexin_content  fr">
+							<ul>
+								     <li v-for="(item,index) in zigeList" :key="index" @click="jinduFa(index)">
+										 <div class="xiexin_bg" >
+											 <h4 v-if="item.status == 1" style="background:rgb(51,190,116)">已完成</h4>
+											 <h4 v-else-if="item.status == 2" style="background-color: #cccc33;">审批中</h4>
+											 <h4 v-else-if="item.status == 0" style="background-color: #db2c28;">被拒绝</h4>
+											 <h4 v-else style="background-color: #cccc33;">进行中</h4>
+										 </div>
+									    <div class="xiexin_text clearfix">
+										   <a>《{{item.laborunName}}》法人资格申请书申请书</a>
+										   <span>日期：{{item.submitTime}}</span>
+									    </div>
+								     </li>
+
+							</ul>
+						</div>
+					</div>
+					<!--我的信箱-->
+					<div class="my-letterbox  tab-togg">
+						<div class="xiexin" @click="gotoMain">
+							<a href="javascript:;">我要写信</a>
+						</div>
+						<div class="xiexin_content email_list">
+							<ul>
+
+								<li v-for="item in huifuList" @click="sendId(item.id)">
+									<div class="xiexin_bg" style="background: #ee3939;">
+										<h4 v-if="item.isReply == false">未回复</h4>
+										<h4 v-else="" style="background:rgb(51,190,116)">已回复</h4>
+
+									</div>
+									<div class="xiexin_text clearfix">
+										<a>《{{item.title}}》</a>
+										<span>发送日期：{{item.createTime}}</span>
+									</div>
+								</li>
+
+
+							</ul>
+						</div>
+
+				    </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!--模态框-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		 aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" style="height: 100%; overflow: hidden">
+			<div class="modal-content" >
+				<div class="modal-header">
+
+					<div class="tishi_title clearfix">
+						<span>温馨提示</span>
+						<button type="button" class="close"
+								data-dismiss="modal" aria-hidden="true" style="font-size: 30px">
+							&times;
+						</button>
+					</div>
+					<div class="tishi">
+
+						<div class="tishi_box">
+							<div class="mm_cz">
+								<i class="icon iconfont icon-zhuyi"></i>
+								<span>您尚未进行实名认证！</span>
+							</div>
+							<div class="dl_anniu" style="margin-bottom: 55px;text-align: center;" >
+								<button class="mLogin" @click="goToAttest">登录</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<div class="zg_bottom" style="border-top:2px solid #db2c28;background-color: #d9d9d9;padding: 20px;">
+		<div style="width:1200px;margin:30px auto;text-align:center;">
+			<div>地址：山西省阳泉市桃南东路192号   电话：2022724</div>
+			<div>E--mail:szghwgb@163.com</div>
+			<div>版权所有：© 阳泉市总工会 版权所有</div>
+			<div>备案：晋ICP备13007903-1</div>
+			<div class="copy_img">
+				<a href="javascript:;"><img src="images/footer_img.png"></a>
+			</div>
+		</div>
+	</div>
+	<!--右侧功能栏-->
+	<div class="slide">
+		<ul>
+			<li class="open-hyzx">
+				<i class="icon iconfont icon-member"></i>
+				<a>{{membercenter}}</a>
+			</li>
+			<li>
+				<i class="icon iconfont icon-xiaoxi"></i><a href="##">消息通知</a>
+				<div class="tz-bage">
+					<span class="bage">10</span>
+				</div>
+			</li>
+			<li class="kefu"><i class="icon iconfont icon-kefu1 "></i><a href="##">智能客服</a></li>
+			<li><i class="icon iconfont icon-xinlang"></i><a href="##">微博</a></li>
+			<li><i class="icon iconfont icon-weixin2"></i><a href="##">微信</a></li>
+			<li><i class="icon iconfont icon-APP"></i><a href="##">APP</a></li>
+			<li id="top"><i class="icon iconfont icon-fanhuidingbu-"></i><a href="##">TOP</a></li>
+		</ul>
+		<div class="sina">
+			<a href="">
+				<img src="images/sina.png" width="100px" height="100px">
+			</a>
+			<p>新浪微博二维码</p>
+		</div>
+		<div class="ewm">
+			<a href="">
+				<img src="images/erweima.jpg" width="100px" height="100px">
+			</a>
+			<p>工会微信公众号</p>
+		</div>
+		<div class="exit">
+			<img :src='showPerpeo' width="80px" height="80px" />
+			<p class="phoneUser">{{userPhone}}</p>
+			<button @click="clear()">退出</button>
+		</div>
+		<div class="appDoload">
+			<div class="ang">
+				<p>安卓用户下载</p>
+				<img src="images/android.jpg" alt="安卓系统下载">
+			</div>
+			<div class="ios">
+				<p>IOS用户下载</p>
+				<img src="images/android.jpg" alt="IOS系统下载">
+			</div>
+		</div>
+	</div>
+	<!--智能客服-->
+	<div class="customer-service" >
+		<div class="kf_box">
+			<div class="kf clearfix">
+				<div class="kf_left">
+					<a href=""><img src="images/gh_x.png" width="23px" height="23px"></a>
+					<span>工会智能小K</span>
+				</div>
+				<div class="kf_right">
+					<i class="icon iconfont icon-xiajiantou"></i>
+				</div>
+			</div>
+		</div>
+		<div class="chat_box">
+			<div id="chat" class="chat clearfix">
+				<div class="chat_left">
+					<a href=""><img src="images/gh_l.png" style="margin-bottom: 5px;"></a>
+					<span>客服</span>
+					<i>{{kfnowTime}}</i>
+					<p>我是阳泉工会智能机器人，请问您有什么需要吗？</p>
+				</div>
+
+			</div>
+			<div class="down"></div>
+			<div class="shuru">
+				<input type="text" placeholder="请输入文字..."  v-model="userinp"/>
+			</div>
+			<div class="send clearfix">
+				<div class="send_left">
+					<i class="icon iconfont icon-smiling" ></i>
+				</div>
+				<div class="send_right">
+					<button type="button" @click="sendModel">发送</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/vue2.5.22.js"></script>
+<script src="js/axios.0.18.0.js"></script>
+<script src="js/qs.6.60.js"></script>
+<script src="js/usertoken.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#nameselect",
+        data: {
+            isactive:false,
+            oldpassword:'',
+            yespassword:'',
+            newpassword:'',
+            phone:'',
+            userinp:'',
+			userPhone:'',
+            usertoken:'',
+
+			/*实名认证*/
+			renpic:'',      //人像采集
+			IDzhengpic:'',	//正面身份证
+			IDfanpic:'',    //反面身份证
+            userName:'',	//姓名
+            nationality:'汉族', //民族
+            birthday:'',	//出生日期
+            IDnumber:'',	//证件号码
+            IDpositive:'',
+            IDanti:'',
+
+            showIdfan:'',   //身份证反面回显
+			showIdzheng:'',	//身份证正面回显
+			showPerpeo:'',  //人像回显
+
+         	/*个人信息*/
+            loginAccount:'',  //登录账号
+            loginName:'',	  //真实姓名
+			loginNumber:'',   //手机号码
+            membercenter:'',
+			kfnowTime:'',
+            Nationality:[],
+
+			//实名认证信息回填
+			renzheng:'',    //是否已经认证
+			userStrat:'正常',	//用户状态
+			addUnion:'',		//是否入会
+
+            idceshi:'',
+            huifuList:[],
+
+            nowTime:'',
+            nowDay:'',
+            zheng:'',
+            jinduList:[],
+            zigeList:[],
+            zhList:[],
+            grrhList:[],
+            xngbie:'',
+			newName:'',
+
+        },
+        methods:{
+
+            //修改密码
+            changePassword(){
+
+                var that = this;
+                if(that.yespassword != that.newpassword){
+                	$('#myModal').modal();
+					$('.mm_cz>span').html("两次输入的密码不一致，请您重新输入！");
+					$(".dl_anniu").hide();
+                    // alert('两次输入的密码不一致 请您重新输入')
+                    that.yespassword = '';
+                    that.newpassword = '';
+				}else{
+
+
+                    $.ajax({
+                        url: unionUrl + "/sso/ssoUser/updatePassword",
+                        data: {
+                            "password":that.oldpassword,
+                            "newPassword": that.newpassword,
+							"token":userTok.token
+                        },
+                        async:true,
+                        dataType: "json",
+                        success: function (result) {
+
+							if(result.code == 0){
+							$('#myModal').modal();
+							$('.mm_cz>span').html("修改密码成功，重新登录！");
+								setTimeout(function () {
+                                    clear()
+                                },2000)
+							}else{
+							    $('#myModal').modal();
+					            $('.mm_cz>span').html(result.msg);
+                                $(".dl_anniu").hide();
+								that.oldpassword = '';
+								that.yespassword = '';
+								that.newpassword = '';
+							}
+                        }
+                    })
+				}
+
+
+
+
+            },
+            // 我的信箱
+            myXinxiang(){
+            	var that = this;
+            	$.ajax({
+					    type:'get',
+                        url: baseUrl + "/api/cms/message",
+					   contentType: 'application/json',
+                        data: {
+					    	 "index":1,
+							 "size":20,
+							 "token":userTok.token
+                        },
+                        async:true,
+                        dataType: "json",
+                        success: function (result) {
+					        console.log(result)
+							that.huifuList=result.data
+
+						
+                        }
+                    })
+            },
+            sendId(id){
+            	console.log(id);
+            	 window.location.href=('zzxx.html' + '?'+id)
+            },
+            // 单位建会查询
+            dwJh(){
+            	 var that = this
+                $.ajax({
+                    type:'post',
+                    url: unionUrl + "/passLaborweb/api/laborun/union/getLaborunApplyList",
+					contentType: 'application/json',
+                    data:JSON.stringify({
+                        "token":userTok.token
+                    }),
+                    async: false,
+                    dataType:'json',
+                    success: function (result){
+                    	console.log(result.data);
+                    	that.jinduList = result.data
+                    	 if (result.data.length==0) {
+                        	$(".jh").hide();
+                        	$(".dw_jh").show();
+                        }else{
+                          $(".jh").show();
+                          $(".dw_jh").hide();
+
+                        }
+                    }
+                })
+            },
+            jinduTan(id,status){
+             var that=this
+             console.log(id)
+              window.open("dwjh_info.html" + '?'+id,"_self");
+            },
+            jinduFa(id){
+              var that=this
+             console.log(id)
+              window.open("frzg_info.html" + '?'+id,"_self");
+            },
+            jinduz(id){
+            	 var that=this
+                 console.log(id)
+                  window.open("wyzh_info.html" + '?'+id,"_self");
+            },
+            frZG(){
+            	var that = this
+                $.ajax({
+                    type:'post',
+                    url: unionUrl + "/passLaborweb/api/laborun/laborunLegal/getLegalApplyList",
+					contentType: 'application/json',
+                    data:JSON.stringify({
+                    	// "laborunName":that.unionName,
+                     //    "applyName":that.personName,
+                     //    "applyPhone":that.number,
+                        "token":userTok.token
+                    }),
+                    async: false,
+                    dataType:'json',
+                    success: function (result){
+                    	console.log(result);
+                    	that.zigeList=result.data;
+                    	 if (result.data.length==0) {
+                        	$(".fr").hide();
+                        	$(".fr_zg").show();
+                        }else{
+                          $(".fr").show();
+                          $(".fr_zg").hide();
+
+                        }
+                    	
+                    	
+                    }
+                })
+            },
+            wyZh(){
+            	var  that=this
+            	$.ajax({
+                    type:'post',
+                    url: unionUrl + "/passLaborweb/api/laborun/a10BaseInfo/queryTransferStatus",
+                    contentType: 'application/json',
+                    data:JSON.stringify({
+                        "token": userTok.token
+                    }),
+                    async: false,
+                    success: function (result){
+                        if (result.data==0) {
+                        	$(".zh").hide();
+                        	$(".zh_wu").show();
+                        }else{
+                          $(".zh").show();
+                          $(".zh_wu").hide();
+
+                        }
+                        console.log(result);
+                        that.zhList =result.data
+                       
+                    }
+              })
+            },
+            grrhTan(){
+            	 var that=this;
+             // console.log(id)
+              window.open("grrh_info.html","_self");
+            },
+            grRh(){
+            	var that=this
+                $.ajax({
+                    type:'post',
+                    url: unionUrl + "/passLaborweb/api/laborun/a10BaseInfo/queryMembershipStatus",
+                    contentType: 'application/json',
+                    data:JSON.stringify({
+                        "token": userTok.token
+                    }),
+                    async: false,
+                    success: function (result){
+                        console.log(result.data);
+
+                        if (result.data.status==-1) {
+                        	$(".rh").hide();
+                        	$(".rh_wu").show();
+                        }else{
+                          $(".rh").show();
+                          $(".rh_wu").hide();
+
+                        }
+                        that.grrhList =result.data;
+                        console.log(that.grrhList)
+                         
+
+
+                    }
+                })
+            },
+            //实名制查询
+			nameInquire(){
+				
+                var that = this;
+                $.ajax({
+                    type:'post',
+                    url: unionUrl + "/passLaborweb/api/laborun/realnameRecord/queryRealnameRecord",
+                    contentType: 'application/json',
+                    data:JSON.stringify({
+                        "token": userTok.token
+                    }),
+                    async: false,
+                    success: function (result){
+                        console.log(result.data.content);
+						console.log(result);
+						var userinfo = [];
+                        userinfo = result.data.content[0];
+                        console.log(userinfo);
+                       if(userinfo == undefined){
+						   console.log('还未认证');
+                           $('.stopcli1').attr('disabled','disabled');
+                            that.showPerpeo = 'images/greyheader.jpg',  //人像采集
+							that.showIdfan  = 'images/sfz_f.png',		//正面身份证
+							that.showIdzheng = 'images/sfz_z.png',  	//反面身份证
+							that.userName = '',			//姓名
+							that.nationality = '', 		//民族
+							that.birthday = '',			//出生日期
+							that.IDnumber = '',			//证件号码
+                            that.renzheng ='您尚未实名认证',
+                            that.addUnion = '未入会',
+						    that.loginName = '无'
+                            $('.sm-green i').css('color','grey');
+                            $('.sm-green span').css('color','grey');
+						}else{
+                           console.log('已经认证');
+						   that.newName=result.data.content[0].realName;
+						   console.log(that.newName);
+							$('.stopClick').attr('disabled','disabled');
+							that.loginName = userinfo.realName;
+						    that.showPerpeo = userinfo.portraitPic ;     	//人像采集
+						    that.showIdfan = userinfo.cardReversePic;		//正面身份证
+						    that.showIdzheng = userinfo.cardFrontPic ;    	//反面身份证
+						    that.userName = userinfo.realName;				//姓名
+						    that.nationality = userinfo.nation;			//民族
+						    that.birthday = userinfo.birthDate;				//出生日期
+						    that.IDnumber = userinfo.cardNo;			    //证件号码
+						    that.renzheng ='已通过实名认证';
+                            that.xngbie = userinfo.sexText;
+                             $(".yinc").hide();
+							$.ajax({
+                                 type:'post',
+                                 url: unionUrl + "/passLaborweb/api/laborun/a10BaseInfo/queryMembershipStatus",
+                                 contentType: 'application/json',
+                                 data:JSON.stringify({
+                                 "token": userTok.token
+                               }),
+                               async: false,
+                               success: function (result){
+
+                                     console.log( result);
+                                     if (result.data.status== 0 ) {
+                                     	 that.addUnion = '已入会';
+                                          $('.sm-green i').css('color','green');
+						                  $('.sm-green span').css('color','green')
+                                        
+                                     }else{
+                                     	  that.addUnion = '未入会';
+                                        $('.zs i').css('color','green');
+						                $('.zs span').css('color','green');
+                                        $('.zt i').css('color','grey');
+						                $('.zt span').css('color','grey')
+
+                                         
+                                     }
+
+                    }
+                })
+
+					   }
+                    },
+                    error:function (err) {
+                        console.log('您掉线了 请重新登录！');
+						console.log(err)
+                    }
+
+                })
+
+			},
+            //客服
+            sendModel(){
+                kfhuifu();
+			},
+			//实名认证
+            authenticate(){
+				var that = this
+				console.log(that.birthday);
+				if (that.userName=='') {
+					     $('#myModal').modal();
+					     $('.mm_cz>span').html('姓名不能为空！');
+					     $(".dl_anniu").hide();
+				}else if (that.xngbie=='') {
+					    $('#myModal').modal();
+					    $('.mm_cz>span').html('性别不能为空！');
+					     $(".dl_anniu").hide();
+				}else if ( that.nationality=='') {
+					     $('#myModal').modal();
+					     $('.mm_cz>span').html('民族不能为空！');
+					     $(".dl_anniu").hide();
+				}else if (that.birthday=='') {
+					     $('#myModal').modal();
+                         $('.mm_cz>span').html('生日不能为空！');
+					     $(".dl_anniu").hide();
+				}else if (that.IDnumber=='') {
+					     $('#myModal').modal();
+					     $('.mm_cz>span').html('身份证号码不能为空！');
+					     $(".dl_anniu").hide();
+				}else{
+                   axios({
+						method: 'POST',
+						url:  unionUrl + "/passLaborweb/api/laborun/realnameRecord/add",
+                        contentType: 'application/json',
+						data:{
+						   "realName": that.userName,
+						   "phone": that.loginNumber,
+						   "sex": 1,
+						   "nation": that.nationality,
+						   "birthDate": that.birthday,
+						   "cardNo": that.IDnumber,
+						   "cardFrontPic": that.IDzhengpic,
+						   "cardReversePic":that.IDfanpic,
+						   "portraitPic":that.renpic ,
+						   "channel": 3,
+						   "remark":'山西',
+						   "token": userTok.token
+                    }
+
+                  }).then( res => {
+                    console.log(res.data);
+					console.log(that.userName);
+					console.log(that.loginNumber);
+					console.log(that.xngbie);
+					console.log(that.nationality);
+                    console.log(that.birthday);
+                    console.log(that.IDnumber);
+                    console.log(that.IDzhengpic);
+                    console.log(that.IDfanpic);
+                    console.log(that.renpic);
+                    console.log(userTok.token);
+
+					   
+                       if(res.data.code === "0"){
+                    	 $('#myModal').modal();
+                    	 $(".dl_anniu").show();
+					     $('.mm_cz>span').html(res.data.data.realName+'实名认证成功');
+					     $(".mLogin").html("确定");
+					     // $(".anniu").hide();
+                        // alert(res.data.data.realName+'实名认证成功')
+					}else{
+						 $('#myModal').modal();
+					     $('.mm_cz>span').html(res.data.msg);
+					     $(".dl_anniu").hide();
+                        // alert(res.data.msg)
+					}
+				  }).catch(err =>{
+				    console.log(err)
+				  })
+				}
+               
+
+			},
+			goToAttest(){
+				if ($(".mLogin").html()=="确定") {
+                   window.open("hyzx.html","_self");
+				}else if ($(".mLogin").html()=="登录") {
+					window.open("denglu.html","_self");
+				}
+				
+			},
+			//人像采集上传
+            renupdate (e){  // 上传照片
+				var that = this
+                var self = this;
+                let file = e.target.files[0];
+                console.log(file)
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                //FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+                        that.renpic   = response.data.data.newFileName;
+						console.log(response.data.data.newFileName)
+                    })
+
+            },
+            IDzhengupdate (e){  // 上传照片
+				var that = this
+                var self = this;
+                let file = e.target.files[0];
+                that.zheng=file;
+                var form = new FormData();
+                form.append("file",that.zheng);
+                form.append("type",1);
+                // form.append("token",userTok.token);
+                $.ajax({
+                    type:'post',
+                    url: unionUrl + "/passLaborweb/api/laborun/file/uploadCard",
+                    data:form,
+                    contentType:false,
+                    processData:false,
+                    async: false,
+                    success: function (result){
+                        console.log(result);
+                        that.userName=result.data.memName;
+                        //时间分割修改
+                        var a = result.data.birthDate;
+                        var b1 =  a.substring(0,4);
+                        var b2 =  a.substring(4,6);
+                        var b3 =  a.substring(6,8);
+                        that.birthday=b1 +'-'+b2 + '-'+b3;
+                        that.nationality=result.data.nation;
+                        that.IDnumber=result.data.cardNo;
+                        that.xngbie=result.data.sex;
+
+
+                        }
+
+                });
+
+
+                //创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                };
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(response => {
+                        that.IDzhengpic= response.data.data.newFileName;
+
+                        console.log(that.IDzhengpic)
+
+
+                    })
+
+
+
+            },
+            IDfanupdate (e){  // 上传照片
+				var that = this;
+                var self = this;
+                let file = e.target.files[0];
+                 //创建form对象
+                 var param = new FormData();
+                 param.append('file', file, file.name);// 通过append向form对象添加数据
+                 //param.append('chunk', '0') // 添加form表单中其他数据
+                 // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                 let config = {
+                     headers: {'Content-Type': 'multipart/form-data'}
+                 };
+                 axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                     .then(response => {
+                        that.IDfanpic= response.data.data.newFileName;
+
+                        console.log(response.data.data.newFileName)
+
+
+                     })
+            },
+            clear(){
+            	  sessionStorage.clear();
+            	  window.open("denglu.html","_self")
+            },
+			//获取用户信息
+			getUserInfo(){
+                var that = this;
+                that.loginAccount = userTok.phone;  //登录账号
+                that.loginNumber = userTok.phone    //手机号码
+			},
+            gotoAdd(){
+			    window.open('grrh.html')
+			},
+            //跳转主席信箱 携id
+            gotoMain(){
+                window.open('jjs.html?'+4)
+            },
+
+        },
+        mounted(){
+             
+            const that = this;
+            that.getUserInfo();
+			that.nameInquire();
+            that.nowTime = nowTimeDay;
+
+            getDay();
+            that.nowDay = nowDay;
+
+			//获取用户手机号
+            var chanpass = location.search;
+            that.usertoken = chanpass.substring(1);
+			that.kfnowTime = nowTime   //获取客服当前时间
+
+
+
+			
+
+        }
+
+
+
+    })
+
+
+</script>
+<!--智能客服-->
+<script src="js/znkf.js"></script>
+<!--上传图片 显示缩略图-->
+<script>
+
+    function previewFile() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg');
+        var file = document.getElementById('renxiang').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+
+
+    function previewFile1() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg1');
+        var file = document.getElementById('idfile1').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+
+
+    function previewFile2() {
+        // 通过标签选择器获取HTML元素
+        var preview = document.getElementById('idimg2');
+        var file = document.getElementById('idfile2').files[0];
+        // Js内置文件流
+        var reader = new FileReader();
+
+        // 更新img标签的src属性为图片的本地路径，就可以显示了
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+
+        // 图片文件不空就显示
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            // 图片文件是空的
+            preview.src = "";
+        }
+    }
+
+
+</script>
+<script>
+	$(function () {
+
+		/*
+		*  1.要点击的元素 类名
+		*	2.要切换的元素 tab
+		* */
+		var heig = $('.my_personalinfo').height();
+		$('.my_ghcontent').css('height',heig);
+
+
+        tabtogg('.nameAttest','.shiming','.nameAttest p','.nameAttest i') //实名认证
+        tabtogg('.ChairmanMailbox','.xinxiang','.ChairmanMailbox p','.ChairmanMailbox i');//修改密码
+        tabtogg('.notification','.xiaoxi','.notification p','.notification i');//消息通知
+        tabtogg('.securitySettings','.service-introduction','.securitySettings p','.securitySettings i'); //我的服务
+		tabtogg('.personalinfo','.my_personalinfo','.personalinfo p','.personalinfo i'); //个人信息
+
+
+		tabtogg('.my-union','.my-enterUnion','.my-union p','.my-union i'); //我的入会
+        tabtogg('.my-transfer','.my-turnUnion','.my-transfer p','.my-transfer i'); //我的转会
+        tabtogg('.unit-crate','.unit-building','.unit-crate p','.unit-crate i'); //单位建会
+		tabtogg('.legal-person','.legal-content','.legal-person p','.legal-person i');//法人资格
+		tabtogg('.my-letter','.my-letterbox','.my-letter p','.my-letter i')		//我的信箱
+
+		//我的服务展开列表
+		$('.securitySettings').click(function (){
+			if($('.my-fuwu').hasClass('hei')){
+                $('.my-fuwu').removeClass('hei');
+                $('.securitySettings i').removeClass('rotate')
+			}else{
+                $('.my-fuwu').addClass('hei');
+                $('.securitySettings i').addClass('rotate')
+			}
+        })
+
+   })
+</script>
+</html>

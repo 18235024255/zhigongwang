@@ -1,0 +1,498 @@
+.my_ghtitleright a {
+	font-size: 14px;
+	color: #db2c28;
+	font-weight: bold;
+}
+.layer-table{display: none;}
+.layer-table.acted{display: block;}
+.sq{
+	text-align: center;
+}
+.sq_list h4{
+	width: 840px;
+	font-size: 28px;
+	color: #404040;
+	text-align: center;
+	font-weight: bold;
+}
+.sq_content,.mz_content,.zj_content,.sm_box{margin-top: 30px;overflow: hidden;}
+.sq_content span,.mz_content span,.zj_sex span,.mz_content span,
+.zj_content span,.sm_box span{
+	float: left;
+	width: 200px;
+	font-size: 16px;
+	color: #333333;
+	text-align: right;
+	margin-right: 65px;
+	margin-top: 10px;
+}
+.sq_content i,.mz_content i,.zj_content i,.sm_box i{
+	font-style: normal;
+	color: #db2c28;
+	margin-right: 5px;
+}
+.sq_content input,.mz_content input,.zj_content input{
+	float: left;
+	color: #999999;
+	font-size: 14px;
+	width: 500px;
+	height: 40px;
+	border: 1px solid #cccccc;
+	padding-left: 10px;
+}
+.sq_content select,.mz_content select{
+	float: left;
+	width: 500px;
+	height: 40px;
+	border: 1px solid #cccccc;
+	color: #999999;
+	padding-left: 10px;
+ 	-moz-appearance:none;
+ 	-webkit-appearance:none;
+}
+.sq_content select.st1,.mz_content select.st1{
+ 	background: url(../images/select.png) 470px center no-repeat; 			
+}
+.sq_content textarea,.mz_content textarea{
+	float: left;
+	width: 500px;
+	height: 150px;
+	padding-left: 10px;
+	padding-top: 10px;
+	resize: none;
+}
+.sq_content button,.mz_content button{
+	width: 140px;
+	height: 40px;
+	float: left;
+	border: none;
+	background: #db2c28;
+	border-radius: 5px;
+	font-size: 15px;
+	color: #fff;
+	margin-left: 20px;
+}
+
+
+.layer-title h4{
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+}
+.layer-title span{
+	float: left;
+	font-size: 14px;
+	padding-left: 10px;
+	color: #db2c28;
+}
+.layer-titlebox p.lpic{
+	width: 800px;
+	margin-top: 20px;
+	font-size: 14px;
+	color: #979899;
+	line-height: 24px;
+}
+.layer-titlebox i{
+	display: block;
+	font-size: 14px;
+	font-style: normal;
+	color: #7d7e80;
+	line-height: 40px;
+}
+.layer-content{
+	border-bottom: 2px solid #e6e6e6;
+}
+.layer-content i{
+	float: left;
+	font-size: 20px;
+	color: #db2c28;
+	line-height: 40px;
+}
+.layer-content span{
+	float: left;
+	font-size: 18px;
+	color: #000;
+	line-height: 40px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+.layer-person{
+	margin-top: 30px;
+}
+.layer-img{
+	float: left;
+	width: 60px;
+	height: 60px;
+}
+.layer-img img{
+	width: 100%;
+	height: 100%;
+}
+.layer-text{
+	float: left;
+	padding-left: 20px;
+}
+.layer-text h4{
+	font-size: 16px;
+	color: #333333;
+}
+.layer-text span{
+	font-size: 14px;
+	color: #b3b3b3;
+}
+.layer-text p{
+	font-size: 14px;
+	color: #333333;
+}
+.flypic{
+	margin-top: 30px;
+}
+.rh_text{
+	margin-bottom: 20px;
+	margin-left: 30px;
+}
+.rh_text h4{
+	font-size: 28px;
+	color: #404040;
+	text-align: center;
+	font-weight: bold;
+}
+.rh_text i{
+	display: block;
+	font-size: 18px;
+	color: #db2c28;
+	font-weight: bold;
+	font-style: normal;
+	margin-top: 20px;
+}
+.rh_text span{
+	display: block;
+	font-size: 16px;
+	color: #404040;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.rh_text p{
+	font-size: 14px;
+	color: #404040;
+	line-height: 36px;
+	text-indent: 16px;
+}
+.dl_more{
+	margin-left: 30px;
+}
+.dl_more input{float: left;}
+.dl_more label{
+	float: left;
+	padding-left: 10px;
+	color: #db2c28;
+}
+.layer-btn{
+	margin-top: 30px;
+	text-align: center;
+}
+.layer-btn button{
+	width: 180px;
+	height: 40px;
+	background-color: #db2c28;
+	border-radius: 8px;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+}
+.rh_textbox{display: none;}
+.answer-circle{
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	background: #db2c28;
+	text-align: center;
+	border-radius: 18px;
+}
+.answer-circle i{
+	font-size: 20px;
+	color: #fff;
+}
+.answer-circle span{
+	font-size: 16px;
+	color: #fff;
+}
+.answer-textarea{
+	margin-top: 20px;
+	padding: 10px 0 0 10px;
+	width: 800px;
+	height: 160px;
+	background-color: #ffffff;
+	border: solid 1px #e6e6e6;
+	resize: none;	
+}
+.answer-btn{
+	margin-top: 30px;
+	text-align: right;
+}
+.answer-btn button{
+	width: 150px;
+	height: 40px;
+	background-color: #db2c28;
+	border-radius: 8px;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+}
+.xian{
+	width: 800px;
+	height: 2px;
+	background: #e6e6e6;
+	margin: 20px 0;
+}
+.ly_contentbox{
+	width: 840px;
+	margin-top: 10px;
+}
+.ly_content{
+	float: left;
+	width: 24%;
+	text-align: right;
+}
+.ly_list{
+	float: left;
+	width: 70%;
+	margin-left: 44px;
+}
+.ly_list ul li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #cccccc;
+	margin: 10px 20px;
+	text-align: center;
+}
+.ly_content a {
+	display: block;
+    font-size: 16px;
+    color: #333333;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.ly_content i {
+    font-style: normal;
+    color: #db2c28;
+}
+.sm_box {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.sm_text {
+	float: left;
+	position: relative;
+}
+.sm_img {
+	float: left;
+	width: 260px;
+	height: 180px;
+	position: relative;
+}
+.tjpic{
+	position: absolute;
+    left: 147px;
+    top: 0;
+    width: 233px;
+    height: 170px;
+}
+.my-overcount{
+	width: 67%;
+}
+.success{
+	border-bottom: 1px solid #e6e6e6;
+	padding: 15px 0;
+	line-height: 42px;
+}
+.success-text{
+	float: left;
+}
+.success-text span{
+	font-size: 18px;
+	color: #1a1f24;
+}
+.success-time{
+	float: right;
+}
+.success-time i{
+	font-size: 14px;
+	color: #7d7e80;
+	font-style: normal;
+}
+.details{
+	margin: 20px auto 0;
+	width: 840px;
+}
+.details i{
+	font-size: 20px;
+	color: #db2c28;
+}
+.details span{
+	font-size: 18px;
+	color: #1b1b1b;
+	font-weight: bold;
+	padding-left: 10px;
+}
+.details-list{
+	margin-top: 50px;
+}
+.details-list ul{ 
+	width: 100%; 
+}
+.details-list ul li{
+	float: left;
+}
+.details-list ul li i{
+	display: block;
+	font-size: 55px;
+	color: #e5e2e2;
+	font-weight: bold;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 2px solid #e5e2e2;
+	line-height: 50px;
+	text-align: center;
+	padding-top: 25px;
+}
+.details-list ul li p{
+	width: 110px;
+	font-size: 18px;
+	color: #e5e2e2;
+	text-align: center;
+	margin-top: 10px;
+}
+.user-content i{
+	float: left;
+	font-size: 20px;
+	color: #db2c28;
+	line-height: 40px;
+}
+.user-content span{
+	float: left;
+	font-size: 18px;
+	color: #000;
+	line-height: 40px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+.ftop{
+	margin-top: 60px;
+}
+.answer-textarea span{
+	display: block;
+	margin: 10px 0 0 10px;
+	font-size: 14px;
+	color: #cccccc;
+}
+.sh_tubiao {
+    width: 130px;
+    height: 5px;
+    background-color: #e5e2e2;
+    margin: 50px 0px 0 -10px;
+}
+.information{
+	margin-top: 15px;
+}
+.information ul li{
+	float: left;
+	margin-right: 40px;
+	overflow: hidden;
+}
+.information ul li i{
+	float: left;
+	font-size: 16px;
+	color: #0e97d6;
+	line-height: 40px;
+}
+.information ul li span{
+	float: left;
+	font-size: 16px;
+	color: #1a1f24;
+	line-height: 40px;
+	padding-left: 10px;
+}
+.channel{
+	margin: 15px 0;
+}
+.channel ul li{
+	float: left;
+	margin-right: 40px;
+	font-size: 16px;
+	color: #7d7e80;
+}
+.channel-list{
+	width: 75%;
+	margin: 50px auto 0;
+}
+.channel-list ul{ 
+	width: 100%; 
+}
+.channel-list ul li{
+	float: left;
+}
+.channel-list ul li i{
+	display: block;
+	font-size: 55px;
+	color: #e5e2e2;
+	font-weight: bold;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 2px solid #e5e2e2;
+	line-height: 50px;
+	text-align: center;
+	padding-top: 25px;
+}
+.channel-list ul li p{
+	width: 110px;
+	font-size: 18px;
+	color: #e5e2e2;
+	text-align: center;
+	margin-top: 10px;
+}
+.protection p{
+	font-size: 18px;
+	color: #1a1f24;
+}
+.information ul li i.incol{
+	color: #ff7fb2;
+}
+.ly_list ul li.mao{
+	background: #db2c28;
+	color: #fff;
+	border: #db2c28;
+}
+.zj_sex{
+	margin-top: 30px;
+}
+.zj_sex a{
+	float: left;
+	width: 100px;
+	font-size: 16px;
+	color: #333333;
+	text-align: right;
+	margin-right: 35px;
+	margin-top: 10px;
+}
+.zj_sex i{
+	font-style: normal;
+	color: #db2c28;
+	margin-right: 5px;
+}
+.zj_input{
+	float: left;
+	margin-top: 10px;
+}
+.my_ghcontentleft{
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.26);
+}
+.ly_content span{
+	font-size: 16px;
+	display: block;
+	margin-top: 10px;
+}

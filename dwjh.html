@@ -1,0 +1,903 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>阳泉市总工会</title>
+	<link rel="icon" href="images/picture.png" type="image/x-icon"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/dwjh.css">
+	<link rel="stylesheet" href="css/grrh.css">
+	<!--智能客服样式-->
+	<link rel="stylesheet" href="css/znkf.css">
+	<!--全局样式-->
+	<link rel="stylesheet" href="css/style.css">
+	
+
+	<style>
+
+		/*阳泉新添加*/
+		.sm_box {
+			margin-left: 100px;
+			margin-bottom: 30px;
+			margin-top: 45px;
+			width: 80%;
+		}
+		.sm_text {
+			float: left;
+			position: relative;
+		}
+		.sm_img {
+			background: url(images/jiahao.png) no-repeat;
+			background-position: center;
+		}
+		.sm_img {
+			float: left;
+			width: 260px;
+			height: 180px;
+			margin-left: 18px;
+		}
+		#renxiang {
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.tianjia img {
+			width: 100%;
+			height: 100%;
+		}
+		.tianjia {
+			position: absolute;
+			left: 30px;
+			top: -58px;
+			width: 255px;
+			height: 176px;
+		}
+		.sq_content select{
+			width: 118px !important;
+		}
+		.sm_img{
+			border: none;
+		}
+		#demo3 select{
+			margin-right: 6px;
+		}
+		.more{
+        	color: red;
+        	text-align: center;
+        	margin-top: 10px;
+        	cursor: pointer;
+        }
+	</style>
+</head>
+<body>
+<div id="nameselect" v-cloak>
+		<div class="zg_box">
+			<div class="zg_info">
+				<div class="zg_top">
+					<div class="nav_left">
+						<a href="index.html"><img src="images/logo.png"></a>
+					</div>
+					<div class="tubiao">
+						<p>{{nowTime}}</p>
+						<p>{{nowDay}}</p>
+					</div>
+					<div class="nav_center clearfix">
+						<div class="tianqi">
+							<iframe width="350" scrolling="no" height="60" frameborder="0" allowtransparency="true"
+									src="//i.tianqi.com/index.php?c=code&id=12&icon=1&num=5&site=12"></iframe>
+						</div>
+					</div>
+				<div class="nav_righter" onclick="window.open('index.html','_self')">
+					<i class="icon iconfont icon--fanhuishouye"></i>
+					<a href="javascript:;">返回首页</a>
+				</div>
+				</div>
+				<div class="my_gh clearfix">
+					<div class="my_ghtitle clearfix">
+						<div class="my_ghtitleleft">
+							<i class="icon iconfont icon-shouye"></i>
+							<a href="index.html">当前位置：首页></a>
+							<span>单位建会</span>
+						</div>
+						<div class="my_ghtitleright">
+							<a href="zg_index.html"><返回服务大厅</a>
+						</div>
+					</div>
+					<div class="my_ghcontent clearfix">
+						<div class="my_ghcontentleft">
+							<div class="rh_title">
+								<h4>单位建会</h4>
+							</div>
+							<div class="rh_list">
+								<ul>
+									<li class="work-guide">
+										<p class="bordred">办理指南</p>
+										<i class="icon iconfont icon-jiaobiao" style="color: rgb(219, 44, 40);"></i>
+									</li>
+									<li class="work-process">
+										<p>办理流程</p>
+										<i class="icon iconfont icon-jiaobiao"></i>
+									</li>
+									<li class="work-online" @click="wq_tijiao">
+										<p>在线办理</p>
+										<i class="icon iconfont icon-jiaobiao"></i>
+									</li>
+									<li class="work-query" @click="jhChaxun()">
+										<p>进度查询</p>
+										<i class="icon iconfont icon-jiaobiao"></i>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="toggWrap clearfix">
+
+							<!--建会申请表-->
+							<div class="my_ghcontentright tab-togg on">
+								<div class="rh_text" style="margin-top: 30px;">
+									<h4>单位建会申请表</h4>
+									<span>单位建会办理：</span>
+									<p>请按单位建会完善相应信息申请，我们将及时与您取得联系。</p>
+									<span>单位建会的好处：</span>
+									<p>1、中国特色社会主义下的工会组织既保障企业方的利益，又保障工人合法权益，缓冲工人与企业的矛盾</p>
+									<p>2、现在工会经费由税务部门代收，建立工会可以充分利用合理经费，保障了企业的利益。</p>
+									<p>3、建立工会组织的企业可参与评选劳模、建设工人先锋号等社会荣誉，</p>
+									<p>4、工会开展的社会主义劳动竞塞，有助于提高企业生产效率，技术革新等</p>
+									<p>5、工会有自己独立的宣传媒体，可以充分利用这一媒体宣传企业文化，同时也是企业管理规范，制度健全的一个标志。</p>
+								</div>
+							</div>
+							<!--办理流程-->
+							<div class="banli-process tab-togg">
+									<img src="images/liucheng/jh-lc.jpg" alt="" style="width: 100%;">
+
+							</div>
+							<!-- 在线办理-->
+							<div class="banli-online tab-togg">
+								<div class="sq">
+									<div class="sq_list" style="margin-top: 30px;">
+										<h4>单位建会申请表</h4>
+									</div>
+									<form action="" method="">
+										<div class="sq_content">
+											<span><i>*</i>上级工会：</span>
+											<input type="text" placeholder="请输入所在单位名称" name="text" v-model="shangjiunion" @click="showList" />
+										</div>
+
+										<div class="sq_content">
+											<span><i>*</i>单位名称：</span>
+											<input type="text" placeholder="请输入所在单位名称" name="text" v-model="unitName" />
+										</div>
+
+
+										<div class="sm_box clearfix" style="margin-left: 105px">
+
+											<div class="sm_text">
+												<span><i>*</i>营业执照：</span>
+												<div class="tianjia" >
+													<img src="images/yingyepic.png" id="idimg"/>
+												</div>
+											</div>
+
+											<div class="sm_img">
+												<input type="file" id="renxiang"  onchange="previewFile()"
+													   @change="yingyePicSend" style="cursor: pointer">
+											</div>
+
+										</div>
+
+
+
+
+
+
+
+
+
+
+
+
+										<div class="sq_content" >
+											<span><i>*</i>社会统一信用代码：</span>
+											<input type="text" maxlength="18" placeholder="请输入社会统一信用代码" name="text" v-model="uniteCode" />
+										</div>
+										<div class="sq_content">
+											<span><i>*</i>单位地址：</span>
+											<input type="text" placeholder="请输入单位地址" name="text" v-model="unitaddress" />
+										</div>
+
+										<div class="sq_content">
+											<span><i>*</i>行政区划：</span>
+
+											<div id="demo3" class="citys">
+												<p>
+													<select name="province" id="province"></select>
+													<select name="city"></select>
+													<select name="area"></select>
+													<select name="town"></select>
+
+												</p>
+
+											</div>
+
+
+										</div>
+
+
+										<div class="sq_content" >
+											<span><i>*</i>联系人：</span>
+											<input type="text" placeholder="请输入联系人姓名" name="text"  v-model="contact"/>
+										</div>
+										<div class="sq_content">
+											<span><i>*</i>联系电话：</span>
+											<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" placeholder="请输入联系人电话（手机号码）" name="text" v-model="contactPhone" />
+										</div>
+										<div class="sq_content">
+											<span><i>*</i>验证码：</span>
+											<input type="text" placeholder="请输入验证码" name="text" class="input-val" style="width: 158px; height: 40px;"/>
+											<button type="button">点击获取验证码</button>
+										</div>
+										<div class="anniu">
+											<button type="button" class="tijiao active" @click="addUnit">提交</button>
+											<button type="reset" class="chongzhi">重置信息</button>
+										</div>
+									</form>
+								</div>
+							</div>
+							<!--进度查询-->
+							<div class="jindu-query tab-togg">
+								<div class="sp_title" style="margin-top: 30px;">
+									<h4>审批状态</h4>
+								</div>
+								<div class="znawu_box">
+							   	    <div class="zanwu_img">
+							   	 	   <img src="images/zanwu.png">
+							   	    </div>
+							   	    <p>暂无数据</p>
+							      </div>
+								<div class="xiexin_content">
+							         <ul>
+								         <li v-for="(item,index) in jinduList" :key="index" @click="jinduTan(index)">
+											 <div class="xiexin_bg" >
+												 <h4 v-if="item.status == 1" style="background-color: #09f709;">已完成</h4>
+												 <h4 v-else-if="item.status == 0" style="background-color: #db2c28;">申请中</h4>
+												 <h4 v-else-if="item.status == 2" style="background-color: #cccc33;">审批中</h4>
+												 <h4 v-else style="background-color: #cccc33;">进行中</h4>
+											 </div>
+									            <div class="xiexin_text clearfix">
+									          	   <a>《{{item.unitName}}》建会申请书</a>
+										           <span>发布日期：{{item.submitTime}}</span>
+									          </div>
+								         </li>      
+							         </ul>
+						        </div>
+								
+
+								
+							</div>
+						</div>
+
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		<div class="shu-union" v-show="isShow">
+	<div class="shu-unionnei">
+		<div class="union-title">
+		<p >选择信息</p>
+        <span class="cha" @click="btnClose()"></span>
+	</div>
+    <div class="union-content" style="display: block;" >
+        <div class="content-small-title">
+			   <!-- <p v-if="unionList">{{unionList}}</p> -->
+			   <!-- <p v-else>选择工会</p> -->
+			   <input class="p" type="" disabled="disabled" class="val1" v-model="MOhuyunion" name="" value="选择工会">
+
+			<input type="text" id="sousuo" placeholder="请输入工会名称"
+				   v-model="MOhuyunion" >
+				   <button @click="btnSousuo()">搜索</button>
+        </div>
+		<ul id="union-name" style="overflow: auto; height:70%;">
+		    <li v-for="(item,index) in unionList"
+				 :title="item.laborun_name"
+				 :key="index" @click="hideList(item.laborun_code,item.laborun_name)">
+				 {{item.laborun_name}}
+			</li>
+			
+
+
+
+
+		</ul>
+        <p @click="loadMore" class="more"  v-show="isLoad">
+				加载更多
+	           <i class=" iconfont icon-shuangxiajiantou-" style="color: red;font-size: 12px"></i>
+		</p>
+    </div>
+	</div>
+</div>
+		<!-- 底部 -->
+	<div class="zg_bottom" style="border-top:2px solid #db2c28;background-color: #d9d9d9;padding: 20px;">
+	<div style="width:1200px;margin:30px auto;text-align:center;">
+		<div>地址：山西省阳泉市桃南东路192号   电话：2022724</div>
+		<div>E--mail:szghwgb@163.com</div>
+		<div>版权所有：© 阳泉市总工会 版权所有</div>
+		<div>备案：晋ICP备13007903-1</div>
+		<div class="copy_img">
+			<a href="javascript:;"><img src="images/footer_img.png"></a>
+		</div>
+	</div>
+</div>
+	<!--右侧功能栏-->
+	<div class="slide">
+		<ul>
+			<li class="open-hyzx">
+				<i class="icon iconfont icon-member"></i>
+				<a >{{membercenter}}</a>
+			</li>
+			<li>
+				<i class="icon iconfont icon-xiaoxi"></i><a href="##">消息通知</a>
+				<div class="tz-bage">
+					<span class="bage">10</span>
+				</div>
+			</li>
+			<li><i class="icon iconfont icon-kefu1 kefu"></i><a href="##">智能客服</a></li>
+			<li><i class="icon iconfont icon-xinlang"></i><a href="##">微博</a></li>
+			<li><i class="icon iconfont icon-weixin2"></i><a href="##">微信</a></li>
+			<li><i class="icon iconfont icon-APP"></i><a href="##">APP</a></li>
+			<li id="top"><i class="icon iconfont icon-fanhuidingbu-"></i><a href="##">TOP</a></li>
+		</ul>
+		<div class="sina">
+			<a href="">
+				<img src="images/sina.png" width="100px" height="100px">
+			</a>
+			<p>新浪微博二维码</p>
+		</div>
+		<div class="ewm">
+			<a href="">
+				<img src="images/erweima.jpg" width="100px" height="100px">
+			</a>
+			<p>工会微信公众号</p>
+		</div>
+		<div class="exit">
+			<img :src="userHeaderPic" width="80px" height="80px" onclick=" window.location.href = 'hyzx.html'"/>
+
+			<p class="phoneUser">{{userPhone}}</p>
+			<button @click="clear()">退出</button>
+		</div>
+		<div class="appDoload">
+			<div class="ang">
+				<p>安卓用户下载</p>
+				<img src="images/android.jpg" alt="安卓系统下载">
+			</div>
+			<div class="ios">
+				<p>IOS用户下载</p>
+				<img src="images/android.jpg" alt="IOS系统下载">
+			</div>
+		</div>
+	</div>
+	<!--智能客服-->
+	<div class="customer-service" >
+		<div class="kf_box">
+			<div class="kf clearfix">
+				<div class="kf_left">
+					<a href=""><img src="images/gh_x.png" width="23px" height="23px"></a>
+					<span>工会智能小K</span>
+				</div>
+				<div class="kf_right">
+					<i class="icon iconfont icon-xiajiantou"></i>
+				</div>
+			</div>
+		</div>
+		<div class="chat_box">
+			<div id="chat" class="chat clearfix">
+				<div class="chat_left">
+					<a href=""><img src="images/gh_l.png" style="margin-bottom: 5px;"></a>
+					<span>客服</span>
+					<!--<i>2019-3-22  12:12</i>-->
+					<p>我是阳泉工会智能机器人，请问您有什么需要吗？</p>
+				</div>
+
+
+			</div>
+			<div class="down"></div>
+			<div class="shuru">
+				<input type="text" placeholder="请输入文字..."  v-model="userinp"/>
+			</div>
+			<div class="send clearfix">
+				<div class="send_left">
+					<i class="icon iconfont icon-smiling" ></i>
+				</div>
+				<div class="send_right">
+					<button type="button" @click="sendModel">发送</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--模态框-->
+	<div class="modal fade" id="myModal" tabindex="-1"
+	 role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="height: 100%; overflow: hidden">
+		<div class="modal-content" >
+			<div class="modal-header">
+
+				<div class="tishi_title clearfix">
+					<span>温馨提示</span>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size: 30px">
+						&times;
+					</button>
+				</div>
+				<div class="tishi">
+					<div class="tishi_box">
+						<div class="mm_cz">
+							<i class="icon iconfont icon-zhuyi"></i>
+							<span>您尚未进行实名认证！</span>
+						</div>
+						 <div class="dl_anniu" style="margin-bottom: 55px;text-align: center;">
+							 <button class="mLogin"  @click="goToAttest">立即认证</button>
+						 </div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vue2.5.22.js"></script>
+<script src="js/axios.0.18.0.js"></script>
+<script src="js/qs.6.60.js"></script>
+<script src="js/usertoken.js"></script>
+<script src="js/jquery.cities.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: "#nameselect",
+        data: {
+            userinp:'',
+            userPhone:'',
+            membercenter:'',
+            yingyePic:'',
+            isShow:false,
+            MOhuyunion:'',
+            unionList:'',
+            isLoad:false,
+
+
+
+            //建会
+            unitName:'',
+            uniteCode:'',
+            contact:'',
+            contactPhone:'',
+            unitaddress:'',
+            xzAddress:'',
+
+            shangjiunion:'',
+            nowTime:'',
+            nowDay:'',
+            unioinNum:20,
+            jinduList:'',
+            userHeaderPic:'',
+	
+
+        },
+        methods:{
+
+            sendModel(){
+                kfhuifu();
+            },
+           
+            //单位建会
+            addUnit(){
+				var that = this
+				var aaa = selectedAddress.province + selectedAddress.city+selectedAddress.area + selectedAddress.town
+
+                that.xzAddress = aaa;
+                $.ajax({
+                    type:'post',
+                    url: unionUrl + '/passLaborweb/api/laborun/union/appEstablish',
+                    contentType:'application/json;charset=UTF-8',
+                    data:JSON.stringify({
+
+						"parentLaborunName":that.shangjiunion ,
+                        "unitName":that.unitName,
+						"socialCreditCode":that.uniteCode,
+						"businessLicensePic":that.yingyePic,
+						"administratName":that.xzAddress,
+                        "unitAddr":"山西省阳泉市",
+						"principal":that.contact,
+						"principalPhone":that.contactPhone,
+						"source":'3',
+						"token":userTok.token
+                    }),
+
+                    success:  function (result) {
+                
+                        console.log(result)
+                       /* console.log(that.shangjiunion)
+                         console.log(that.unitName)
+						console.log(that.xzAddress)
+						console.log(that.uniteCode)*/
+                        if (result.code == "30001"){
+							$('#myModal').modal();
+						}
+						else if (result.code == 0) {
+                            $('#myModal').modal();
+                            $('.mm_cz span').html(result.msg)
+							$(".dl_anniu").hide();
+							
+						}else{
+							$('#myModal').modal();
+                            $('.mm_cz span').html(result.msg)
+							$(".dl_anniu").hide();
+						}
+                    }
+                });
+
+			},
+			//去认证
+			goToAttest(){
+				if ($(".mLogin").html()=="立即认证") {
+					window.open("hyzx.html","_self");
+				}else if ($(".mLogin").html()=="登录") {
+					window.open("denglu.html","_self");
+
+				}
+
+			},
+			showList(){
+				const that = this;
+                that.isShow = true;
+                 
+                 $.ajax({
+                    type:"post",
+                    url:unionUrl + "/passLaborweb/api/laborun/union/getLaborunListJsonPage",
+                    contentType:'application/json;charset=UTF-8',
+                    data:JSON.stringify({
+                    	"laborunName":that.laborun_name,
+                    	"page":"1",
+                    	"size":"20",
+						"token":userTok.token
+                    }),
+                    async: false,
+                    /*dataType:"json",*/
+                    success:  function (result) {
+
+                    	console.log(result.data.content);
+
+                        that.unionList=result.data.content;
+                        $("#union-name").scroll(function(){
+                            var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
+                            var nScrollTop = 0;   //滚动到的当前位置
+                            var nDivHight = $("#union-name").height();
+
+                            nScrollHight = $(this)[0].scrollHeight;
+                            nScrollTop = $(this)[0].scrollTop;
+
+                            if(nScrollTop + nDivHight >= nScrollHight){
+                                //显示加载更多
+                                that.isLoad = true
+							}else{
+                                //隐藏加载更多
+                                that.isLoad = false
+							}
+                        });
+                    }
+                });
+			},
+			loadMore(){
+
+                var that = this;
+                that.isLoad=false;
+                that.unioinNum+=20;
+                $.ajax({
+                    type:"post",
+					url:unionUrl + "/passLaborweb/api/laborun/union/getLaborunListJsonPage",
+                    contentType:'application/json;charset=UTF-8',
+                     data:JSON.stringify({
+                         "laborunName":that.unitName,
+                         "page":"1",
+                         "size":that.unioinNum,
+                         "token":userTok.token
+                     }),
+                    async: true,
+                    dataType:"json",
+                    success:  function (result) {
+						console.log(result.data.content);
+						// console.log(result);
+						that.unionList=result.data.content;
+
+                    }
+                });
+			},
+			//获取当前li 的文本
+            hideList(code,name){
+                this.shangjiunion =  name;
+                console.log(name);
+                this.isShow = false;
+                console.log(code);	
+                this.nameCode=code;
+
+			},
+			wq_tijiao(){
+                  if (userTok.token == null) {
+            	       // alert("请登录")
+            	       $('#myModal').modal();
+            	       $(".close").hide();
+				       $('.mm_cz>span').html("该业务需要您登录之后才能操作！");
+				       $(".dl_anniu").hide();
+				       setTimeout(function(){
+				       	window.location.href="denglu.html";
+				       },2000)
+                    }
+            },
+			// 工会搜索
+			btnSousuo(){
+				const that = this;
+				  $.ajax({
+                    type:"post",
+                    url:unionUrl + "/passLaborweb/api/laborun/union/getLaborunListJsonPage",
+                    contentType:'application/json;charset=UTF-8',
+                    data:JSON.stringify({
+                    	"laborunName":that.MOhuyunion,
+                    	"page":"1",
+                    	"size":"20",
+						"token":userTok.token
+                    }),
+                    async: false,
+                    /*dataType:"json",*/
+                    success:  function (result) {
+
+                    	console.log(result.data.content);
+
+                        that.unionList=result.data.content;
+                        $("#union-name").scroll(function(){
+                            var nScrollHight = 0; //滚动距离总长(注意不是滚动条的长度)
+                            var nScrollTop = 0;   //滚动到的当前位置
+                            var nDivHight = $("#union-name").height();
+
+                            nScrollHight = $(this)[0].scrollHeight;
+                            nScrollTop = $(this)[0].scrollTop;
+
+                            if(nScrollTop + nDivHight >= nScrollHight){
+                                //显示加载更多
+                                that.isLoad = true
+							}else{
+                                //隐藏加载更多
+                                that.isLoad = false
+							}
+                        });
+                    }
+                });
+			},
+			btnClose(){
+            	var that=this;
+            	that.isShow = false;
+            	that.shangjiunion='';
+            	console.log(that.shangjiunion);
+            	window.location.reload()
+            	// $(".val1").val("");
+            },
+            //营业执照
+            yingyePicSend (e){  // 上传照片
+                var that = this;
+                var self = this;
+                let file = e.target.files[0];
+				/* eslint-disable no-undef */
+                // 创建form对象
+                var param = new FormData();
+                param.append('file', file, file.name);// 通过append向form对象添加数据
+                //param.append('chunk', '0') // 添加form表单中其他数据
+                // FormData私有类对象，访问不到，可以通过get判断值是否传进去
+                let config = {
+                    headers: {'Content-Type': 'multipart/form-data'},
+                };
+
+                axios.post(unionUrl + '/passLaborweb/api/laborun/file/upload', param, config)
+
+                    .then(res => {
+                        that.yingyePic = res.data.data.newFileName;
+                        console.log(res.data.data.newFileName)
+                    })
+					.catch(err => {
+					    alert('图片错误')
+					})
+
+            },
+
+			//查询入会状态
+             Getdu(){
+                 var that = this
+                 $.ajax({
+                     type:'post',
+                     url: unionUrl + "/passLaborweb/api/laborun/a10BaseInfo/queryMembershipStatus",
+                     contentType: 'application/json',
+                     data:JSON.stringify({
+                         "token": userTok.token
+                     }),
+                     async: false,
+                     success: function (result){
+
+                         that.shangjiunion = result.data.laborunName
+
+
+                     }
+                 })
+             },
+			//建会状态查询
+            jhChaxun(){
+                var that = this
+                $.ajax({
+                    type:'post',
+                    url: unionUrl + "/passLaborweb/api/laborun/union/getLaborunApplyList",
+					contentType: 'application/json',
+                    data:JSON.stringify({
+                        "token":userTok.token
+                    }),
+                    async: false,
+                    dataType:'json',
+                    success: function (result){
+                    	console.log(result);
+                    	that.jinduList = result.data
+                    	var index=result.data.length-1;
+                        if (result.data.length==0) {
+                        	$(".xiexin_content").hide();
+                        	$(".znawu_box").show();
+                        }else{
+                          $(".xiexin_content").show();
+                          $(".znawu_box").hide();
+
+                        }
+
+                    }
+                })
+
+
+            },
+            jinduTan(id,status){
+             var that=this
+             console.log(id)
+              window.open("dwjh_info.html" + '?'+id,"_self");
+            },
+
+        },
+        mounted(){
+
+            const that = this;
+            that.nowTime = nowTimeDay;
+            getDay();
+            that.nowDay = nowDay;
+               if (userTok.token==null) {
+            	$(".xiexin_content").hide();
+                $(".znawu_box").show();
+            }
+            //实名制查询   显示用户头像 名字
+             
+              if(userTok.token != null){
+                   $.ajax({
+                        type: 'post',
+                        url: unionUrl + "/passLaborweb/api/laborun/realnameRecord/queryRealnameRecord",
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                        "token": userTok.token
+                    }),
+                    async: false,
+                    success: function (result) {
+                    console.log(result);
+
+                    if (result.data.total == 1) {
+                        //用户头像
+                        that.userHeaderPic = result.data.content[0].portraitPic;
+                        console.log('已经实名制')
+                    } else if (result.data.total == 0) {
+                        that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    } else {
+                        that.userHeaderPic = 'images/user.png'; //默认头像
+                        console.log('您还未实名制')
+                    }
+
+
+                     }
+
+                   })
+              }
+
+
+
+
+        }
+
+
+
+    })
+
+
+</script>
+<script type="text/javascript">
+    var selectedAddress = {'province':'', 'city':'', 'area':'', 'town':''};
+    var $town = $('select[name="town"]');
+    var clearTown = function(){
+        $town.hide().empty();
+    }
+    var townFormat = function(info){
+        clearTown();
+        if(info['code']%1e4&&info['code']<7e5){ //是否为“区”且不是港澳台地区
+            $.ajax({
+                url:'http://passer-by.com/data_location/town/'+info['code']+'.json',
+                dataType:'json',
+                success:function(town){
+                    $town.show();
+                    $town.append('<option value=""> - 街道、乡镇 - </option>');
+                    for(i in town){
+                        $town.append('<option value="'+i+'">'+town[i]+'</option>');
+                    }
+                }
+            });
+        }
+    };
+    $('#demo3').citys({
+        onChange: function(info){
+            clearTown();
+            selectedAddress.province = info.province;
+            selectedAddress.city = info.city;
+            selectedAddress.area = info.area;
+        },
+        onAreaChange:function(info){
+            townFormat(info);
+        }
+    },function(api){
+        var info = api.getInfo();
+        townFormat(info);
+    });
+    $town.on('change', function(){
+        selectedAddress.town = $(this).find("option:selected").text();
+    });
+
+</script>
+<script>
+
+        function previewFile() {
+
+            // 通过标签选择器获取HTML元素
+            var preview = document.getElementById('idimg');
+            var file = document.getElementById('renxiang').files[0];
+            // Js内置文件流
+            var reader = new FileReader();
+
+            // 更新img标签的src属性为图片的本地路径，就可以显示了
+            reader.onloadend = function () {
+                preview.src = reader.result;
+            }
+
+            // 图片文件不空就显示
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                // 图片文件是空的
+                preview.src = "images/yingyepic.png";
+            }
+        }
+
+</script>
+<!--智能客服-->
+<script src="js/znkf.js"></script>
+<script>
+	$(function () {
+
+        tabtogg('.work-guide','.my_ghcontentright','.work-guide p',' .work-guide i')
+        tabtogg('.work-process','.banli-process','.work-process p',' .work-process i')
+        tabtogg('.work-online','.banli-online','.work-online p',' .work-online i')
+        tabtogg('.work-query','.jindu-query','.work-query p',' .work-query i')
+
+    })
+</script>
+
+
+</html>
